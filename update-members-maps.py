@@ -63,7 +63,7 @@ for page_number in range(1, number_of_pages+1):
                 os.system(command)
                 topic_subject = "{}'s Map".format(member_name)
                 map_url = "{0}/people/{1}/".format(map_url, member_alias)
-                topic_message = "[{0}/{1}/]<a href=\"{0}/{1}\"><b>{2}</b></a>\'s Map: <b>{3}</b>".format(photos_url, member_alias, member_name, map_url)
+                topic_message = "[{0}/{1}/]<a href=\"{0}/{1}\"><b>{2}</b></a>\'s Map: <a href=\"{3}\"><b>{3}</b></a>".format(photos_url, member_alias, member_name, map_url)
                 flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
             # generate/update member's map
             command = "{0}/generate_map.py".format(member_path)
