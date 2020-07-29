@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 
-# This generates a report with photos that need to be removed
-# or kept in a groups. It is useful for groups based in cameras,
-# lenses or anything exif related.
-#
 # Author: Haraldo Albergaria
-# Date  : Jan 01, 2018
+# Date  : Jul 29, 2020
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
