@@ -46,15 +46,14 @@ members_per_page = int(members['members']['perpage'])
 
 # iterate over each members page
 for page_number in range(1, number_of_pages+1):
-    members = flickr.groups.members.getList(api_key=api_key, group_id=group_id, page=page_number, per_page=members_per_page)
+    members = flickr.groups.members.getList(api_key=api_key, group_id=group_id, page=page_number, per_page=members_per_page)['members']['member']
     # iterate over each member in page
-    for member_number in range(members_per_page):
+    for member_number in range(len(members)):
         try:
-            member_name = members['members']['member'][member_number]['username']
-            member_id = members['members']['member'][member_number]['nsid']
-            try:
-                member_alias = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['path_alias']
-            except:
+            member_name = members[member_number]['username']
+            member_id = members[member_number]['nsid']
+            member_alias = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['path_alias']
+            if member_alias == None:
                 member_alias = member_id
             member_path = people_path + "/" + member_alias
             # create member directory and topic if doesn't exist yet
