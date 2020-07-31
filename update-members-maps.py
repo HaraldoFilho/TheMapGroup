@@ -57,16 +57,26 @@ for page_number in range(1, number_of_pages+1):
                 member_alias = member_id
             member_path = people_path + "/" + member_alias
             # create member directory and topic if doesn't exist yet
+            is_new_member = False
             if not os.path.isdir(member_path):
                 command = "{0}/setup-user.sh {1}".format(people_path, member_alias)
                 os.system(command)
+                is_new_member = True
+            # generate/update member's map
+            command = "{0}/generate_map.py".format(member_path)
+            # upload map
+            os.system(member_path + '/generate-map.py')
+            os.system("git pull origin master")
+            os.system("git add {0}/{1}".format(people_path, member_alias))
+            os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
+            os.system("git push origin master")
+            print('Uploaded map')
+            if is_new_member:
                 topic_subject = "{}'s Map".format(member_name)
                 map_url = "{0}/people/{1}/".format(map_url, member_alias)
                 topic_message = "[{0}/{1}/]<a href=\"{0}/{1}/\"><b>{2}</b></a>\'s Map: <a href=\"{3}\"><b>{3}</b></a>".format(photos_url, member_alias, member_name, map_url)
                 flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
-            # generate/update member's map
-            command = "{0}/generate_map.py".format(member_path)
-            os.system(member_path + '/generate-map.py')
+                print('Created discussion topic for new member')
         except:
             pass
 
