@@ -72,7 +72,7 @@ for page_number in range(1, number_of_pages+1):
             print('Uploaded map')
             os.system("rm {0}/{1}/index.html".format(people_path, member_alias))
             if is_new_member:
-                topic_subject = "{}'s Map".format(member_name)
+                topic_subject = "[MAP] {}".format(member_name)
                 map_url = "{0}/people/{1}/".format(map_url, member_alias)
                 topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, map_url)
                 flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
