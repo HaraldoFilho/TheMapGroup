@@ -65,19 +65,39 @@ for page_number in range(1, number_of_pages+1):
             # generate/update member's map
             command = "{}/generate-map.py".format(member_path)
             os.system(command)
+            if os.path.exists("{}/map.html".format(member_path)) and os.path.exists("{}/statcounter".format(member_path)):
+                map_file = open("{}/map.html".format(member_path))
+                map = map_file.readlines()
+                map_file.close()
+                stats_file = open("{}/statcounter".format(member_path))
+                stats = stats_file.readlines()
+                stats_file.close()
+                index_file = open("{}/index.html".format(member_path), 'w')
+            else:
+                sys.exit()
+
+            for map_line in map:
+                if map_line == "</body>\n":
+                    for stats_line in stats:
+                        index_file.write(stats_line)
+                    index_file.write('\n')
+                index_file.write(map_line)
+            index_file.close()
+
             # upload map
-            if os.path.exists("{}/index.html".format(member_path)):
-                os.system("git add -f {}/index.html".format(member_path))
-                os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
-                os.system("git push origin master")
-                print('Uploaded map')
-                os.system("rm {}/index.html".format(member_path))
-                if is_new_member:
-                    topic_subject = "[MAP] {}".format(member_name)
-                    map_url = "{0}/people/{1}/".format(map_url, member_alias)
-                    topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, map_url)
-                    flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
-                    print('Created discussion topic for new member')
+            os.system("git add -f {}/index.html".format(member_path))
+            os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
+            os.system("git push origin master")
+            print('Uploaded map')
+            os.system("rm {}/map.html".format(member_path))
+            os.system("rm {}/index.html".format(member_path))
+            if is_new_member:
+                topic_subject = "[MAP] {}".format(member_name)
+                map_url = "{0}/people/{1}/".format(map_url, member_alias)
+                topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, map_url)
+                flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
+                print('Created discussion topic for new member')
+
         except:
             pass
 
