@@ -119,5 +119,7 @@ for page_number in range(1, number_of_pages+1):
            pass
 
 updateGroup('the-map-group')
-os.system("rm {}/index.html".format(repo_path))
+
+if os.path.exists("{}/index.html".format(repo_path)):
+    os.system("rm {}/index.html".format(repo_path))
 
