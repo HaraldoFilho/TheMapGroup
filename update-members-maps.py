@@ -59,7 +59,7 @@ for page_number in range(1, number_of_pages+1):
             # create member directory and topic if doesn't exist yet
             is_new_member = False
             if not os.path.isdir(member_path):
-                command = "{0}/setup-user.sh {1}".format(people_path, member_alias)
+                command = "{0}/setup-member.sh {1}".format(people_path, member_alias)
                 os.system(command)
                 is_new_member = True
             # generate/update member's map
