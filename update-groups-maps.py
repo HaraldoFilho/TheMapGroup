@@ -73,11 +73,7 @@ def updateGroup(map_group_alias):
 
         # upload map
         if os.path.exists("{}/index.html".format(map_group_path)):
-            if map_group_alias == 'the-map-group':
-                os.system("cp {0}/index.html {1}".format(map_group_path, repo_path))
-                os.system("git add -f {}/index.html".format(repo_path))
-            else:
-                os.system("git add -f {}/index.html".format(map_group_path))
+            os.system("git add -f {}/index.html".format(map_group_path))
             os.system("git commit -m \"Updated map for group \'{}\'\"".format(map_group_name))
             os.system("git push origin master")
             print('Uploaded map')
@@ -119,7 +115,3 @@ for page_number in range(1, number_of_pages+1):
            pass
 
 updateGroup('the-map-group')
-
-if os.path.exists("{}/index.html".format(repo_path)):
-    os.system("rm {}/index.html".format(repo_path))
-
