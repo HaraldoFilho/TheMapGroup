@@ -21,7 +21,7 @@ user_id = api_credentials.user_id
 
 group_url = "https://www.flickr.com/groups/the-map-group/"
 photos_url = "http://www.flickr.com/photos"
-map_url = "https://the-map-group.pictures"
+map_group_url = "https://the-map-group.pictures"
 
 # Flickr api access
 flickr = flickrapi.FlickrAPI(api_key, api_secret, format='parsed-json')
@@ -93,8 +93,8 @@ for page_number in range(1, number_of_pages+1):
             os.system("rm {}/index.html".format(member_path))
             if is_new_member:
                 topic_subject = "[MAP] {}".format(member_name)
-                map_url = "{0}/people/{1}/".format(map_url, member_alias)
-                topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, map_url)
+                member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
+                topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, member_map)
                 flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
                 print('Created discussion topic for new member')
 

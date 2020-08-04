@@ -80,7 +80,7 @@ def updateGroup(map_group_alias):
             os.system("rm {}/map.html".format(map_group_path))
             os.system("rm {}/index.html".format(map_group_path))
             if is_new_group:
-                reply_message = "Group map link: {0}/groups/{1}/".format(map_url, map_group_alias)
+                reply_message = "Group name: {0}\nURL: {1}\nMap link: {2}/groups/{3}/".format(map_group_name, map_group_url, map_url, map_group_alias)
                 flickr.groups.discuss.replies.add(api_key=api_key, group_id=map_group_id, topic_id=topic_id, message=reply_message)
                 print('Replied with the link for the new group')
     except:
