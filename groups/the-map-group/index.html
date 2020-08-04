@@ -36,6 +36,7 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
         zoom: 1.5
     });
 
+    map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
     map.addControl(new mapboxgl.NavigationControl());
 
     var layerList = document.getElementById('menu');
@@ -57,13 +58,20 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
     function addMarker(value) {
         new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
             .setLngLat(value[0])
-            .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(value[1]))
+            .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(value[1]))
             .addTo(map);
     }
 
     function getLocations() {
 
         var locations = [
+            [[12.498894, 41.890808], "<a href=\"https://www.flickr.com/photos/15029120@N00/50098384346/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50098384346_b2e106ea86_s.jpg\"/></a> "],
+            [[-94.043468, -77.515296], "<a href=\"https://www.flickr.com/photos/31155442@N03/49474469967/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/49474469967_c8976828c9_s.jpg\"/></a> "],
+            [[12.482372, 41.905925], "<a href=\"https://www.flickr.com/photos/15029120@N00/50097802853/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50097802853_bb03a6bd83_s.jpg\"/></a> "],
+            [[-71.409877, 41.825014], "<a href=\"https://www.flickr.com/photos/8121206@N07/50185170271/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50185170271_30b039a4f6_s.jpg\"/></a> "],
+            [[12.483372, 41.900830], "<a href=\"https://www.flickr.com/photos/15029120@N00/50098386221/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50098386221_0362c7e309_s.jpg\"/></a> "],
+            [[-79.887750, 43.334316], "<a href=\"https://www.flickr.com/photos/31155442@N03/50184509692/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50184509692_3a32018062_s.jpg\"/></a> "],
+            [[7.828702, 62.438958], "<a href=\"https://www.flickr.com/photos/30717887@N05/50184809086/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50184809086_e45747c937_s.jpg\"/></a> "],
             [[90.290811, 30.896877], "<a href=\"https://www.flickr.com/photos/15470975@N03/50177376551/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50177376551_3006e3d7b2_s.jpg\"/></a> "],
             [[14.431847, 50.069675], "<a href=\"https://www.flickr.com/photos/46721940@N00/35670901400/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/4323/35670901400_96d1e6ee3a_s.jpg\"/></a> "],
             [[-2.629323, 51.602918], "<a href=\"https://www.flickr.com/photos/22572253@N08/50061743133/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50061743133_4a6ce20c44_s.jpg\"/></a> "],
