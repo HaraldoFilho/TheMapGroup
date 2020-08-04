@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+  <title>CJphoto83 | Photos Map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+#menu { position: absolute; background: #fff; padding: 10px;
+font-family: 'Open Sans', sans-serif; cursor: default; }
+</style>
+</head>
+
+<body>
+
+<div id="map"></div>
+<div id="menu">
+<input id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked" />
+<label for="streets-v11">streets</label>
+<input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors" />
+<label for="outdoors-v11">outdoors</label>
+<input id="satellite-v9" type="radio" name="rtoggle" value="satellite" />
+<label for="satellite-v9">satellite</label>
+</div>
+
+<script>
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyYWxkby1maWxobyIsImEiOiJja2Q0aGpzbm0wMWFuMnduMDFiZHhrdnNtIn0.UAiJqFUU6E02Kk7iwvO4Qw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [0, 30],
+        zoom: 1.5
+    });
+
+    map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
+    map.addControl(new mapboxgl.NavigationControl());
+
+    var layerList = document.getElementById('menu');
+    var inputs = layerList.getElementsByTagName('input');
+
+    function switchLayer(layer) {
+        var layerId = layer.target.id;
+        map.setStyle('mapbox://styles/mapbox/' + layerId);
+    }
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].onclick = switchLayer;
+    }
+
+    var locations = getLocations();
+
+    locations.forEach(addMarker);
+
+    function addMarker(value) {
+
+        if (value[2] <= 35) {
+
+            new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
+                .setLngLat(value[0])
+                .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(value[1]))
+                .addTo(map);
+        } else {
+
+            new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
+                .setLngLat(value[0])
+                .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(value[1]))
+                .addTo(map);
+        }
+
+    }
+
+    function getLocations() {
+
+        var locations = [
+            [[116.265735, 39.991619], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50189945982\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50189945982_b5c8f5b30e_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/50189685931\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50189685931_48548eaec8_s.jpg\"/></a> </div>", 2],
+            [[116.396820, 39.933091], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50185460113\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50185460113_c126b48452_s.jpg\"/></a> </div>", 1],
+            [[116.487693, 39.984648], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50156809361\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50156809361_a7ab3d6578_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/50157043632\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50157043632_839f87d1e2_s.jpg\"/></a> </div>", 2],
+            [[103.856270, 1.280771], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50156806861\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50156806861_47d4bacd4a_s.jpg\"/></a> </div>", 1],
+            [[103.853416, 1.295227], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50156250623\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50156250623_ccf32217d5_s.jpg\"/></a> </div>", 1],
+            [[-111.991883, 33.364386], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50152676116\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50152676116_d2c929480f_s.jpg\"/></a> </div>", 1],
+            [[103.860604, 1.283774], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50151995508\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50151995508_32a6b1ff6d_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/12764551745\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7433/12764551745_7c289064b3_s.jpg\"/></a> </div>", 2],
+            [[116.437225, 39.914451], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50151994913\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50151994913_44f5f2064b_s.jpg\"/></a> </div>", 1],
+            [[103.853256, 1.293779], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50142127577\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50142127577_667ea258f1_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/8747339254\" target=\"_blank\"><img src=\"https://live.staticflickr.com/8399/8747339254_90cc5f0348_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/8747209806\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7295/8747209806_ce88b86b63_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/8726428486\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7440/8726428486_b7954ef3be_s.jpg\"/></a> </div>", 4],
+            [[103.852944, 1.286434], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/50091125543\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50091125543_32e1ebcc2e_s.jpg\"/></a> </div>", 1],
+            [[103.854671, 1.287043], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/48638289702\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/48638289702_b3aea484c9_s.jpg\"/></a> </div>", 1],
+            [[116.383323, 39.903694], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/25144626104\" target=\"_blank\"><img src=\"https://live.staticflickr.com/1680/25144626104_45525fa199_s.jpg\"/></a> </div>", 1],
+            [[116.390190, 39.991760], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/15745597964\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7356/15745597964_888e092ca3_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/16329418401\" target=\"_blank\"><img src=\"https://live.staticflickr.com/8577/16329418401_a1234f7904_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/15180001953\" target=\"_blank\"><img src=\"https://live.staticflickr.com/5606/15180001953_040a2b4c03_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/9382908863\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7409/9382908863_d618fe2c66_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/9339000683\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3699/9339000683_30e635a5cc_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/5261914813\" target=\"_blank\"><img src=\"https://live.staticflickr.com/5206/5261914813_9006a77709_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/4057798566\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2787/4057798566_4e52608ae7_s.jpg\"/></a> </div>", 7],
+            [[103.860561, 1.287536], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/15725342283\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7467/15725342283_10871db758_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/12895319713\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7406/12895319713_e9812b351d_s.jpg\"/></a> </div>", 2],
+            [[103.858952, 1.286689], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/16337396312\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7552/16337396312_5821f4a5be_s.jpg\"/></a> </div>", 1],
+            [[116.391563, 39.898053], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/14724554403\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3868/14724554403_b272a46b91_s.jpg\"/></a> </div>", 1],
+            [[103.865776, 1.284187], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/14389669599\" target=\"_blank\"><img src=\"https://live.staticflickr.com/5537/14389669599_a9d20e5c42_s.jpg\"/></a> </div>", 1],
+            [[116.390533, 39.916755], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/13995228953\" target=\"_blank\"><img src=\"https://live.staticflickr.com/5551/13995228953_f0b878c9ed_s.jpg\"/></a> </div>", 1],
+            [[116.404094, 39.881238], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/9553915287\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3822/9553915287_0caa3a2bf0_s.jpg\"/></a> </div>", 1],
+            [[103.844350, 1.281347], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/9485812568\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3701/9485812568_46b038f83f_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/9339012755\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2806/9339012755_0d71cc8178_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/9341799106\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3780/9341799106_bc878a75a5_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/9339013143\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3825/9339013143_94216c4dda_s.jpg\"/></a> </div>", 4],
+            [[103.953308, 1.311329], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/8725312395\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7336/8725312395_ced6a647e3_s.jpg\"/></a> </div>", 1],
+            [[103.827713, 1.365579], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/8724628025\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7368/8724628025_86569f7593_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/8725634076\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7406/8725634076_c32cb88465_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/8725562698\" target=\"_blank\"><img src=\"https://live.staticflickr.com/7437/8725562698_4951f62ac5_s.jpg\"/></a> </div>", 3],
+            [[116.400146, 39.924482], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/6324743798\" target=\"_blank\"><img src=\"https://live.staticflickr.com/6235/6324743798_17eaae07d8_s.jpg\"/></a> </div>", 1],
+            [[116.451537, 39.911038], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/4270956900\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2617/4270956900_9317bdb1cf_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/4196107878\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2535/4196107878_fe064593ca_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/4115674793\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2585/4115674793_57d5face0d_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/chris_macdonald1983/4098800961\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2567/4098800961_c962bed6cc_s.jpg\"/></a> </div>", 4],
+            [[116.392765, 39.983350], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/4049299755\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2515/4049299755_649b6453ff_s.jpg\"/></a> </div>", 1],
+            [[-112.012653, 33.362147], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/3593903339\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3378/3593903339_b57e4931ff_s.jpg\"/></a> </div>", 1],
+            [[-106.237792, 38.754083], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/3594708808\" target=\"_blank\"><img src=\"https://live.staticflickr.com/2425/3594708808_748d62fa59_s.jpg\"/></a> </div>", 1],
+            [[-105.550910, 38.997840], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/3593897069\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3638/3593897069_c7cbdff19d_s.jpg\"/></a> </div>", 1],
+            [[-81.427299, 42.091899], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/3593894271\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3328/3593894271_308a2c27bd_s.jpg\"/></a> </div>", 1],
+            [[-111.937937, 33.418023], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/3062155242\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3040/3062155242_d679921abb_s.jpg\"/></a> </div>", 1],
+            [[114.148292, 22.273966], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/3061311473\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3269/3061311473_3520f5db39_s.jpg\"/></a> </div>", 1],
+            [[103.857021, 1.292286], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/chris_macdonald1983/3062148528\" target=\"_blank\"><img src=\"https://live.staticflickr.com/3245/3062148528_c9f4024cd1_s.jpg\"/></a> </div>", 1],
+        ]
+
+        return locations;
+
+    }
+
+</script>
+
+
+<!-- Default Statcounter code for the map group
+https://the-map-group.pictures/ -->
+<script type="text/javascript">
+var sc_project=12369344; 
+var sc_invisible=1; 
+var sc_security="e25c0508"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/12369344/0/e25c0508/1/"
+alt="Web Analytics Made Easy -
+StatCounter"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
+
