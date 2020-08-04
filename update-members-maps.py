@@ -91,6 +91,7 @@ for page_number in range(1, number_of_pages+1):
             print('Uploaded map')
             os.system("rm {}/map.html".format(member_path))
             os.system("rm {}/index.html".format(member_path))
+            os.system("rm -fr {}/__pycache__".format(member_path))
             if is_new_member:
                 topic_subject = "[MAP] {}".format(member_name)
                 member_map = "{0}/people/{1}/".format(map_group_url, member_alias)

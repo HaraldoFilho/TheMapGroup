@@ -73,12 +73,14 @@ def updateGroup(map_group_alias):
 
         # upload map
         if os.path.exists("{}/index.html".format(map_group_path)):
-            os.system("git add -f {}/index.html".format(map_group_path))
-            os.system("git commit -m \"Updated map for group \'{}\'\"".format(map_group_name))
-            os.system("git push origin master")
-            print('Uploaded map')
+            if map_group_alias != 'the-map-group':
+                os.system("git add -f {}/index.html".format(map_group_path))
+                os.system("git commit -m \"Updated map for group \'{}\'\"".format(map_group_name))
+                os.system("git push origin master")
+                print('Uploaded map')
+                os.system("rm {}/index.html".format(map_group_path))
             os.system("rm {}/map.html".format(map_group_path))
-            os.system("rm {}/index.html".format(map_group_path))
+            os.system("rm -fr {}/__pycache__".format(map_group_path))
             if is_new_group:
                 reply_message = "Group name: {0}\nURL: {1}\nMap link: {2}/groups/{3}/".format(map_group_name, map_group_url, map_url, map_group_alias)
                 flickr.groups.discuss.replies.add(api_key=api_key, group_id=map_group_id, topic_id=topic_id, message=reply_message)
@@ -115,3 +117,7 @@ for page_number in range(1, number_of_pages+1):
            pass
 
 updateGroup('the-map-group')
+os.system("git add {}/map/index.html".format(repo_path))
+os.system("git commit -m 'Updated group map'")
+os.system("git push origin master")
+os.system("rm {}/map/index.html".format(repo_path))
