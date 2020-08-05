@@ -74,11 +74,14 @@ def updateGroup(map_group_alias):
         # upload map
         if os.path.exists("{}/index.html".format(map_group_path)):
             if map_group_alias != 'the-map-group':
+                os.system("cp {0}/favicon.ico {1}".format(repo_path, map_group_path))
                 os.system("git add -f {}/index.html".format(map_group_path))
+                os.system("git add -f {}/favicon.ico".format(map_group_path))
                 os.system("git commit -m \"Updated map for group \'{}\'\"".format(map_group_name))
                 os.system("git push origin master")
                 print('Uploaded map')
                 os.system("rm {}/index.html".format(map_group_path))
+                os.system("rm {}/favicon.ico".format(map_group_path))
             os.system("rm {}/map.html".format(map_group_path))
             os.system("rm -fr {}/__pycache__".format(map_group_path))
             if is_new_group:
@@ -117,7 +120,10 @@ for page_number in range(1, number_of_pages+1):
            pass
 
 updateGroup('the-map-group')
+os.system("cp {0}/favicon.ico {0}/map/".format(repo_path))
 os.system("git add {}/map/index.html".format(repo_path))
+os.system("git add {}/map/favicon.ico".format(repo_path))
 os.system("git commit -m 'Updated group map'")
 os.system("git push origin master")
 os.system("rm {}/map/index.html".format(repo_path))
+os.system("rm {}/map/favicon.ico".format(repo_path))

@@ -45,10 +45,10 @@ number_of_pages  = int(members['members']['pages'])
 members_per_page = int(members['members']['perpage'])
 
 # iterate over each members page
-for page_number in range(1, number_of_pages+1):
+for page_number in range(number_of_pages, 0, -1):
     members = flickr.groups.members.getList(api_key=api_key, group_id=group_id, page=page_number, per_page=members_per_page)['members']['member']
     # iterate over each member in page
-    for member_number in range(len(members)):
+    for member_number in range(len(members)-1, -1, -1):
         try:
             member_name = members[member_number]['username']
             member_id = members[member_number]['nsid']
@@ -85,12 +85,15 @@ for page_number in range(1, number_of_pages+1):
             index_file.close()
 
             # upload map
+            os.system("cp {0}/favicon.ico {1}".format(repo_path, member_path))
             os.system("git add -f {}/index.html".format(member_path))
+            os.system("git add -f {}/favicon.ico".format(member_path))
             os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
             os.system("git push origin master")
             print('Uploaded map')
-            os.system("rm {}/map.html".format(member_path))
             os.system("rm {}/index.html".format(member_path))
+            os.system("rm {}/favicon.ico".format(member_path))
+            os.system("rm {}/map.html".format(member_path))
             os.system("rm -fr {}/__pycache__".format(member_path))
             if is_new_member:
                 topic_subject = "[MAP] {}".format(member_name)
