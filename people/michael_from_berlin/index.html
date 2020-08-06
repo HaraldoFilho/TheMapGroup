@@ -34,11 +34,10 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 <script>
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyYWxkby1maWxobyIsImEiOiJja2Q0aGpzbm0wMWFuMnduMDFiZHhrdnNtIn0.UAiJqFUU6E02Kk7iwvO4Qw';
+    
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 30],
-        zoom: 1.5
+        style: 'mapbox://styles/mapbox/streets-v11'
     });
 
     map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
@@ -58,7 +57,18 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     var locations = getLocations();
 
+    var west = 180;
+    var south = 90;
+    var east = -180;
+    var north = -90;
+
     locations.forEach(addMarker);
+
+    map.fitBounds([
+        [west, south],
+        [east, north]],
+        {padding: 150}
+    );
 
     function addMarker(value) {
 
@@ -76,11 +86,31 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
                 .addTo(map);
         }
 
+        if (value[0][0] < west) {
+            west = value[0][0];
+        }
+
+        if (value[0][0] > east) {
+            east = value[0][0];
+        }
+
+        if (value[0][1] < south) {
+            south = value[0][1];
+        }
+
+        if (value[0][1] > north) {
+            north = value[0][1];
+        }
+
     }
 
     function getLocations() {
 
         var locations = [
+            [[14.017486, 52.481116], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/michael_from_berlin/50196473782\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50196473782_69515bffc8_s.jpg\"/></a> </div>", 1],
+            [[14.022802, 52.477361], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/michael_from_berlin/50195665658\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50195665658_5413ef31a2_s.jpg\"/></a> </div>", 1],
+            [[14.023461, 52.476761], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/michael_from_berlin/50195929382\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50195929382_997dfcc3b1_s.jpg\"/></a> </div>", 1],
+            [[14.023605, 52.476841], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/michael_from_berlin/50195926832\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50195926832_1366e7b21d_s.jpg\"/></a> </div>", 1],
             [[14.012025, 52.473644], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/michael_from_berlin/50194659946\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50194659946_fc46f04f71_s.jpg\"/></a> </div>", 1],
             [[14.004766, 52.472991], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/michael_from_berlin/50188404538\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50188404538_c88227aceb_s.jpg\"/></a> </div>", 1],
             [[14.004763, 52.472958], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/michael_from_berlin/50188858347\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50188858347_cdda49ea24_s.jpg\"/></a> </div>", 1],
