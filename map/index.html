@@ -34,11 +34,10 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 <script>
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyYWxkby1maWxobyIsImEiOiJja2Q0aGpzbm0wMWFuMnduMDFiZHhrdnNtIn0.UAiJqFUU6E02Kk7iwvO4Qw';
+    
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 30],
-        zoom: 1.5
+        style: 'mapbox://styles/mapbox/streets-v11'
     });
 
     map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
@@ -58,7 +57,18 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     var locations = getLocations();
 
+    var west = 180;
+    var south = 90;
+    var east = -180;
+    var north = -90;
+
     locations.forEach(addMarker);
+
+    map.fitBounds([
+        [west, south],
+        [east, north]],
+        {padding: 150}
+    );
 
     function addMarker(value) {
 
@@ -76,11 +86,33 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
                 .addTo(map);
         }
 
+        if (value[0][0] < west) {
+            west = value[0][0];
+        }
+
+        if (value[0][0] > east) {
+            east = value[0][0];
+        }
+
+        if (value[0][1] < south) {
+            south = value[0][1];
+        }
+
+        if (value[0][1] > north) {
+            north = value[0][1];
+        }
+
     }
 
     function getLocations() {
 
         var locations = [
+            [[-6.196976, 57.345282], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/25404639@N08/50196561021/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50196561021_cdbce0d4e1_s.jpg\"/></a> </div>", 1],
+            [[-9.096078, 38.768071], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/117671697@N03/50180941188/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50180941188_1e3bc936cb_s.jpg\"/></a> </div>", 1],
+            [[-56.208361, -34.900538], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/31155442@N03/50195628651/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50195628651_89bd1e69ee_s.jpg\"/></a> </div>", 1],
+            [[2.335002, 48.861213], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/77693257@N06/50188641672/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50188641672_e4c6838ea7_s.jpg\"/></a> </div>", 1],
+            [[-5.598735, 56.446933], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/187546845@N02/50192513893/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192513893_a97495b1cc_s.jpg\"/></a> </div>", 1],
+            [[-80.155456, 37.091671], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/8121206@N07/50195630187/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50195630187_1e763be292_s.jpg\"/></a> </div>", 1],
             [[55.500850, -21.224111], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50192042271/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192042271_ccdd24c167_s.jpg\"/></a> </div>", 1],
             [[-47.061696, -22.623359], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/30622510@N02/4332863041/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/4332863041_1f4d3d6f5b_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/30622510@N02/4332858623/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/4332858623_40665e3426_s.jpg\"/></a> </div>", 2],
             [[11.333309, 49.376638], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/104471304@N02/50180904077/in/pool-the-map-group/\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50180904077_6bbe3b1c22_s.jpg\"/></a> </div>", 1],
