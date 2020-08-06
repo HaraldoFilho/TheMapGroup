@@ -34,11 +34,10 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 <script>
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyYWxkby1maWxobyIsImEiOiJja2Q0aGpzbm0wMWFuMnduMDFiZHhrdnNtIn0.UAiJqFUU6E02Kk7iwvO4Qw';
+    
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 30],
-        zoom: 1.5
+        style: 'mapbox://styles/mapbox/streets-v11'
     });
 
     map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
@@ -58,7 +57,18 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     var locations = getLocations();
 
+    var west = 180;
+    var south = 90;
+    var east = -180;
+    var north = -90;
+
     locations.forEach(addMarker);
+
+    map.fitBounds([
+        [west, south],
+        [east, north]],
+        {padding: 150}
+    );
 
     function addMarker(value) {
 
@@ -76,11 +86,28 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
                 .addTo(map);
         }
 
+        if (value[0][0] < west) {
+            west = value[0][0];
+        }
+
+        if (value[0][0] > east) {
+            east = value[0][0];
+        }
+
+        if (value[0][1] < south) {
+            south = value[0][1];
+        }
+
+        if (value[0][1] > north) {
+            north = value[0][1];
+        }
+
     }
 
     function getLocations() {
 
         var locations = [
+            [[-6.196976, 57.345282], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/barbaraelaw/50196561021\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50196561021_cdbce0d4e1_s.jpg\"/></a> </div>", 1],
             [[-6.374731, 57.593229], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/barbaraelaw/50192527903\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192527903_2fccd5f8bc_s.jpg\"/></a> </div>", 1],
             [[-6.344175, 57.691029], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/barbaraelaw/50189885802\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50189885802_8e08a5a355_s.jpg\"/></a> </div>", 1],
             [[-6.345034, 57.690433], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/barbaraelaw/50185991041\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50185991041_9900e5a55d_s.jpg\"/></a> </div>", 1],
