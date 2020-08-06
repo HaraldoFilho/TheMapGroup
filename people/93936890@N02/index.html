@@ -34,11 +34,10 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 <script>
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyYWxkby1maWxobyIsImEiOiJja2Q0aGpzbm0wMWFuMnduMDFiZHhrdnNtIn0.UAiJqFUU6E02Kk7iwvO4Qw';
+    
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 30],
-        zoom: 1.5
+        style: 'mapbox://styles/mapbox/streets-v11'
     });
 
     map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
@@ -58,7 +57,18 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     var locations = getLocations();
 
+    var west = 180;
+    var south = 90;
+    var east = -180;
+    var north = -90;
+
     locations.forEach(addMarker);
+
+    map.fitBounds([
+        [west, south],
+        [east, north]],
+        {padding: 150}
+    );
 
     function addMarker(value) {
 
@@ -76,11 +86,28 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
                 .addTo(map);
         }
 
+        if (value[0][0] < west) {
+            west = value[0][0];
+        }
+
+        if (value[0][0] > east) {
+            east = value[0][0];
+        }
+
+        if (value[0][1] < south) {
+            south = value[0][1];
+        }
+
+        if (value[0][1] > north) {
+            north = value[0][1];
+        }
+
     }
 
     function getLocations() {
 
         var locations = [
+            [[7.016830, 43.550103], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/93936890@N02/50188482603\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50188482603_0b4bb6b644_s.jpg\"/></a> </div>", 1],
             [[-123.274755, 48.451051], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/93936890@N02/50174985478\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50174985478_9243970903_s.jpg\"/></a> </div>", 1],
             [[-0.892038, 51.044928], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/93936890@N02/50172509672\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50172509672_1cbae518d7_s.jpg\"/></a> </div>", 1],
             [[-1.628390, 54.624027], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/93936890@N02/50154619768\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50154619768_69faf4e922_s.jpg\"/></a> </div>", 1],
