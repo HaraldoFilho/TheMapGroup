@@ -105,10 +105,10 @@ number_of_pages  = int(topics['topics']['pages'])
 topics_per_page = int(topics['topics']['per_page'])
 
 # iterate over each members page
-for page_number in range(1, number_of_pages+1):
+for page_number in range(number_of_pages, 0 , -1):
     topics = flickr.groups.discuss.topics.getList(api_key=api_key, group_id=group_id, page=page_number, per_page=topics_per_page)['topics']
     # iterate over each member in page
-    for topic_number in range(len(topics['topic'])):
+    for topic_number in range(len(topics['topic'])-1, -1, -1):
         try:
             topic_item = topics['topic'][topic_number]
             topic_subject = topic_item['subject']
@@ -120,10 +120,11 @@ for page_number in range(1, number_of_pages+1):
            pass
 
 updateGroup('the-map-group')
-os.system("cp {0}/favicon.ico {0}/map/".format(repo_path))
-os.system("git add {}/map/index.html".format(repo_path))
-os.system("git add {}/map/favicon.ico".format(repo_path))
-os.system("git commit -m 'Updated group map'")
-os.system("git push origin master")
-os.system("rm {}/map/index.html".format(repo_path))
-os.system("rm {}/map/favicon.ico".format(repo_path))
+if os.path.exists("{}/map/index.html".format(repo_path)):
+    os.system("cp {0}/favicon.ico {0}/map/".format(repo_path))
+    os.system("git add {}/map/index.html".format(repo_path))
+    os.system("git add {}/map/favicon.ico".format(repo_path))
+    os.system("git commit -m 'Updated group map'")
+    os.system("git push origin master")
+    os.system("rm {}/map/index.html".format(repo_path))
+    os.system("rm {}/map/favicon.ico".format(repo_path))
