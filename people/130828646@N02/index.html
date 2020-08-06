@@ -34,11 +34,10 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 <script>
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyYWxkby1maWxobyIsImEiOiJja2Q0aGpzbm0wMWFuMnduMDFiZHhrdnNtIn0.UAiJqFUU6E02Kk7iwvO4Qw';
+    
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 30],
-        zoom: 1.5
+        style: 'mapbox://styles/mapbox/streets-v11'
     });
 
     map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
@@ -58,7 +57,18 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     var locations = getLocations();
 
+    var west = 180;
+    var south = 90;
+    var east = -180;
+    var north = -90;
+
     locations.forEach(addMarker);
+
+    map.fitBounds([
+        [west, south],
+        [east, north]],
+        {padding: 150}
+    );
 
     function addMarker(value) {
 
@@ -76,11 +86,28 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
                 .addTo(map);
         }
 
+        if (value[0][0] < west) {
+            west = value[0][0];
+        }
+
+        if (value[0][0] > east) {
+            east = value[0][0];
+        }
+
+        if (value[0][1] < south) {
+            south = value[0][1];
+        }
+
+        if (value[0][1] > north) {
+            north = value[0][1];
+        }
+
     }
 
     function getLocations() {
 
         var locations = [
+            [[-1.591836, 48.842699], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50195741562\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50195741562_f5529f1271_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/130828646@N02/50195695587\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50195695587_2d0b117af5_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/130828646@N02/50192275107\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192275107_dce44609dd_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/130828646@N02/50191981806\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50191981806_ebb22d8c8f_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/130828646@N02/50191947601\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50191947601_b6b5a9c934_s.jpg\"/></a> </div>", 5],
             [[55.485038, -21.239163], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50194886821\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50194886821_503305ee37_s.jpg\"/></a> </div>", 1],
             [[55.517458, -21.202587], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50194339363\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50194339363_ec1b53fa97_s.jpg\"/></a> </div>", 1],
             [[55.517695, -21.201707], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50194340313\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50194340313_5950db75d2_s.jpg\"/></a> </div>", 1],
@@ -90,7 +117,6 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
             [[55.500850, -21.224111], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50192042271\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192042271_ccdd24c167_s.jpg\"/></a> </div>", 1],
             [[55.499348, -21.224211], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50191495638\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50191495638_c19b9d89a8_s.jpg\"/></a> </div>", 1],
             [[55.498640, -21.225672], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50192045236\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192045236_671d8cbb32_s.jpg\"/></a> </div>", 1],
-            [[-1.591836, 48.842699], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50192275107\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192275107_dce44609dd_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/130828646@N02/50191981806\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50191981806_ebb22d8c8f_s.jpg\"/></a> <a href=\"https://www.flickr.com/photos/130828646@N02/50191947601\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50191947601_b6b5a9c934_s.jpg\"/></a> </div>", 3],
             [[55.497570, -21.229082], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50190496906\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50190496906_dd71087d42_s.jpg\"/></a> </div>", 1],
             [[55.487577, -21.235847], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50189951883\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50189951883_f052d10b9d_s.jpg\"/></a> </div>", 1],
             [[55.491390, -21.235883], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/130828646@N02/50190754762\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50190754762_6cf775a4fd_s.jpg\"/></a> </div>", 1],
