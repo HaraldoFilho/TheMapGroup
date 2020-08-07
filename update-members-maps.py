@@ -90,7 +90,6 @@ for page_number in range(number_of_pages, 0, -1):
                     index_file.write("<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n")
             index_file.close()
 
-            ignore_file = open("{}/.gitignore".format(repo_path), 'a')
 
             os.system("cp {0}/favicon.ico {1}".format(repo_path, member_path))
 
@@ -98,8 +97,6 @@ for page_number in range(number_of_pages, 0, -1):
             if is_new_member:
                 os.system("git add -f {}/index.html".format(member_path))
                 os.system("git add -f {}/favicon.ico".format(member_path))
-                ignore_file.write("people/{}/index.html\n".format(member_alias))
-                ignore_file.write("people/{}/favicon.ico\n".format(member_alias))
             os.system("git add -f {}/locations.js".format(member_path))
             os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
             os.system("git push origin master")
