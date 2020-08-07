@@ -13,7 +13,7 @@ cd $REPO_DIR/people/$1
 ln -s ../../api_credentials.py .
 ln -s ../../mapbox_token .
 ln -s ../../statcounter .
-ln -s ../../header.html .
+ln -s $GEN_MAP_DIR/map.html .
 ln -P $GEN_MAP_DIR/generate-map.py
 echo "user = '$1'" > config.py
 echo "photoset_id = ''" >> config.py
