@@ -1,4 +1,5 @@
 var locations = [
+    [[28.230238, 60.512927], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/ellebedeva/50198977343\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50198977343_5c1e70e69a_s.jpg\"/></a> </div>", 1],
     [[28.228350, 60.515673], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/ellebedeva/50192928117\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50192928117_6981320c06_s.jpg\"/></a> </div>", 1],
     [[-9.091825, 38.784180], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/ellebedeva/50180137433\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50180137433_25156bc387_s.jpg\"/></a> </div>", 1],
     [[-9.083781, 39.606721], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/ellebedeva/50173786486\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50173786486_8526252fbe_s.jpg\"/></a> </div>", 1],
