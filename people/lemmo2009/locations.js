@@ -1,4 +1,6 @@
 var locations = [
+    [[0.115522, 52.201347], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/lemmo2009/50200273557\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50200273557_2fc90db6ff_s.jpg\"/></a> </div>", 1],
+    [[0.115616, 52.201344], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/lemmo2009/50200005606\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50200005606_e5e9d46d52_s.jpg\"/></a> </div>", 1],
     [[-3.627934, 51.219077], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/lemmo2009/50196227211\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50196227211_be4078da86_s.jpg\"/></a> </div>", 1],
     [[-3.628009, 51.220051], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/lemmo2009/50196225436\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50196225436_9376ea1129_s.jpg\"/></a> </div>", 1],
     [[-58.372170, -34.608764], "<div style=\"max-height:410px;overflow:auto;\"><a href=\"https://www.flickr.com/photos/lemmo2009/50188773988\" target=\"_blank\"><img src=\"https://live.staticflickr.com/65535/50188773988_00c41444c2_s.jpg\"/></a> </div>", 1],
