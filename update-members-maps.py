@@ -61,7 +61,21 @@ for page_number in range(number_of_pages, 0, -1):
                 command = "{0}/setup-member.sh {1}".format(people_path, member_alias)
                 os.system(command)
                 is_new_member = True
+
+            if is_new_member:
+                print('\n##### Generating map for member: {}...'.format(member_name[0:20]))
+            else:
+                print('\n##### Updating map for member: {}...'.format(member_name[0:20]))
+                # get 'locations.js' from github
+                #print('Getting locations from remote...')
+                #try:
+                #    command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/locations.js".format(member_path, member_alias)
+                #    os.system(command)
+                #except:
+                #    pass
+
             # generate/update member's map
+            print('Starting \'Flickr Map\' script...')
             command = "{}/generate-map.py".format(member_path)
             os.system(command)
             if os.path.exists("{}/index.html".format(member_path)) and os.path.exists("{}/statcounter".format(member_path)):
@@ -73,7 +87,9 @@ for page_number in range(number_of_pages, 0, -1):
                 stats_file.close()
                 index_file = open("{}/index.html".format(member_path), 'w')
             else:
-                sys.exit()
+                if os.path.exists("{}/locations.js".format(member_path)):
+                    os.system("rm {}/locations.js".format(member_path))
+                continue
 
             for map_line in map:
                 if map_line == "<script>\n":
@@ -90,17 +106,17 @@ for page_number in range(number_of_pages, 0, -1):
                     index_file.write("<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n")
             index_file.close()
 
-
             os.system("cp {0}/favicon.ico {1}".format(repo_path, member_path))
 
             # upload map
+            print('Uploading map...')
             if is_new_member:
                 os.system("git add -f {}/index.html".format(member_path))
                 os.system("git add -f {}/favicon.ico".format(member_path))
             os.system("git add -f {}/locations.js".format(member_path))
             os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
-            os.system("git push origin master")
-            print('Uploaded map')
+            os.system("git push -q origin master")
+            print('Done!')
             os.system("rm {}/index.html".format(member_path))
             os.system("rm {}/favicon.ico".format(member_path))
             os.system("rm {}/locations.js".format(member_path))
@@ -112,7 +128,6 @@ for page_number in range(number_of_pages, 0, -1):
                 flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
                 print('Created discussion topic for new member')
 
-            ignore_file.close()
         except:
             pass
 
