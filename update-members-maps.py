@@ -63,16 +63,16 @@ for page_number in range(number_of_pages, 0, -1):
                 is_new_member = True
 
             if is_new_member:
-                print('\n##### Generating map for member: {}...'.format(member_name[0:20]))
+                print('\n##### Generating map for new member: {}...'.format(member_name[0:16]))
             else:
                 print('\n##### Updating map for member: {}...'.format(member_name[0:20]))
                 # get 'locations.js' from github
-                #print('Getting locations from remote...')
-                #try:
-                #    command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/locations.js".format(member_path, member_alias)
-                #    os.system(command)
-                #except:
-                #    pass
+                print('Getting locations from remote...')
+                try:
+                    command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/locations.js".format(member_path, member_alias)
+                    os.system(command)
+                except:
+                    pass
 
             # generate/update member's map
             print('Starting \'Flickr Map\' script...')

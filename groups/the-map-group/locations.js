@@ -1,0 +1,1 @@
+/home/pi/github/the-map-group.github.io/map/locations.js

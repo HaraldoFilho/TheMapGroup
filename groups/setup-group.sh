@@ -13,7 +13,7 @@ cd $REPO_DIR/groups/$1
 ln -s ../../api_credentials.py .
 ln -s ../../mapbox_token .
 ln -s ../../statcounter .
-ln -s ../../header.html .
+ln -s $GEN_MAP_DIR/groups/map.html .
 ln -P $GEN_MAP_DIR/groups/generate-map.py
 echo "# group alias or id" > config.py
 echo "group = '$1'" >> config.py
