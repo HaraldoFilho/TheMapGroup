@@ -2344,5 +2344,6 @@ var locations = [
     [[-6.196976, 57.345282], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/barbaraelaw/50196561021" target="_blank"><img src="https://live.staticflickr.com/65535/50196561021_cdbce0d4e1_s.jpg"/></a> </div>', 1],
     [[-6.067843, 57.268254], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/barbaraelaw/50199616968" target="_blank"><img src="https://live.staticflickr.com/65535/50199616968_205e22cf9d_s.jpg"/></a> </div>', 1],
     [[-5.179371, 57.163428], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/barbaraelaw/50204149127" target="_blank"><img src="https://live.staticflickr.com/65535/50204149127_899af5b0ac_s.jpg"/></a> </div>', 1],
-    [[-3.413319, 56.007213], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/barbaraelaw/50212120527" target="_blank"><img src="https://live.staticflickr.com/65535/50212120527_3d6db13620_s.jpg"/></a> </div>', 1]
+    [[-3.413319, 56.007213], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/barbaraelaw/50212120527" target="_blank"><img src="https://live.staticflickr.com/65535/50212120527_3d6db13620_s.jpg"/></a> </div>', 1],
+    [[-3.315296, 55.896226], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/barbaraelaw/50216124786" target="_blank"><img src="https://live.staticflickr.com/65535/50216124786_1d0f866f2a_s.jpg"/></a> </div>', 1]
 ]
