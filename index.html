@@ -35,7 +35,7 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
   &#9776;
 </div>
 
-<div id="overlay" class="overlay" onclick="closeOverlay()">
+<div id="overlay" class="overlay">
   <div class="overlay-content">
 
    <div id="main-container" class="main-container">
@@ -141,8 +141,10 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     }
 
+    var current_region;
+
     function toggleOverlay() {
-      if (document.getElementById("overlay").style.width == "0%") {
+      if (document.getElementById("overlay").style.width == "0px") {
         openOverlay();
       } else {
         closeOverlay();
@@ -153,13 +155,15 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
       document.getElementById("overlay").style.width = "400px";
       document.getElementById("menu").style.display = "none";
       document.getElementById("nav-button").style.margin = "60px 0 0 400px";
+      fitRegion(current_region);
     }
 
     function closeOverlay() {
-      document.getElementById("overlay").style.width = "0%";
+      document.getElementById("overlay").style.width = "0px";
       document.getElementById("menu").style.display = "block";
       document.getElementById("nav-button").style.display = "block";
       document.getElementById("nav-button").style.margin = "60px 0 0 0";
+      fitRegion(current_region);
     }
 
     window.onkeyup = function (event) {
@@ -248,6 +252,8 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     function fitRegion(region) {
 
+      current_region = region;
+
       var bboxes = countries_bbox[region][1];
 
       var west = bboxes[0];
@@ -255,10 +261,19 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
       var east = bboxes[2];
       var north = bboxes[3];
 
+      var overlay_status = document.getElementById("overlay").style.width;
+      var padding_left = 50;
+
+      if (overlay_status == '400px') {
+          padding_left = 450;
+      } else {
+          padding_left = 50;
+      }
+
       map.fitBounds([
           [west, south],
           [east, north]],
-          {padding: 50}
+          {padding: {top:50, bottom:50, left:padding_left, right:50}}
       );
 
     };
