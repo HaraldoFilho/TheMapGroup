@@ -1,6 +1,6 @@
 var countries = [
-  ['TZ', 62, 335],
-  ['GB', 1664, 2080],
-  ['IM', 585, 670],
-  ['IE', 35, 53]
+  ['TZ', 'Tanzania', 62, 335],
+  ['GB', 'United Kingdom', 1665, 2081],
+  ['IM', 'Isle of Man', 585, 670],
+  ['IE', 'Ireland', 35, 53]
 ]

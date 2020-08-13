@@ -1,10 +1,10 @@
 var countries = [
-  ['US', 446, 617],
-  ['AU', 11, 11],
-  ['GB', 26, 28],
-  ['NZ', 9, 9],
-  ['PA', 1, 2],
-  ['RU', 1, 1],
-  ['CH', 4, 7],
-  ['CA', 90, 158]
+  ['US', 'United States of America', 446, 617],
+  ['AU', 'Australia', 11, 11],
+  ['GB', 'United Kingdom', 26, 28],
+  ['NZ', 'New Zealand', 9, 9],
+  ['PA', 'Panama', 1, 2],
+  ['RU', 'Russia', 1, 1],
+  ['CH', 'Switzerland', 4, 7],
+  ['CA', 'Canada', 90, 158]
 ]

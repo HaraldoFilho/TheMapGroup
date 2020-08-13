@@ -1,0 +1,8 @@
+var user_info = {
+  "id": "57727182@N08",
+  "name": "bobbyblack51",
+  "avatar": "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg",
+  "url": "https://www.flickr.com/photos/57727182@N08/",
+  "markers": 387,
+  "photos": 7242,
+}

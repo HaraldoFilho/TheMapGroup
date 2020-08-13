@@ -1,4 +1,4 @@
 var countries = [
-  ['GR', 182, 603],
-  ['TR', 7, 13]
+  ['GR', 'Greece', 182, 603],
+  ['TR', 'Turkey', 7, 13]
 ]

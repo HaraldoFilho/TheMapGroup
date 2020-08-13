@@ -1,9 +1,9 @@
 var countries = [
-  ['ES', 994, 1641],
-  ['DE', 25, 26],
-  ['IS', 439, 639],
-  ['CH', 7, 7],
-  ['FI', 25, 25],
-  ['NL', 21, 22],
-  ['GB', 686, 809]
+  ['ES', 'Spain', 994, 1641],
+  ['DE', 'Germany', 25, 26],
+  ['IS', 'Iceland', 446, 646],
+  ['CH', 'Switzerland', 7, 7],
+  ['FI', 'Finland', 25, 25],
+  ['NL', 'The Netherlands', 21, 22],
+  ['GB', 'United Kingdom', 685, 806]
 ]

@@ -1,12 +1,12 @@
 var countries = [
-  ['ES', 109, 258],
-  ['DE', 50, 90],
-  ['SE', 16, 18],
-  ['FR', 15, 18],
-  ['PT', 2, 2],
-  ['GB', 8, 8],
-  ['GR', 6, 7],
-  ['HR', 1, 1],
-  ['IT', 3, 4],
-  ['AT', 1, 1]
+  ['ES', 'Spain', 109, 258],
+  ['DE', 'Germany', 52, 92],
+  ['SE', 'Sweden', 16, 18],
+  ['FR', 'France', 15, 18],
+  ['PT', 'Portugal', 2, 2],
+  ['GB', 'United Kingdom', 8, 8],
+  ['GR', 'Greece', 6, 7],
+  ['HR', 'Croatia', 1, 1],
+  ['IT', 'Italy', 3, 4],
+  ['AT', 'Austria', 1, 1]
 ]

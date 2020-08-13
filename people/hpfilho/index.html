@@ -8,7 +8,7 @@
 <script src="locations.js"></script>
 <script src="countries.js"></script>
 <script src="../../countries_bbox.js"></script>
-<link href="../../style.css" rel="stylesheet" />
+<link href="../style.css" rel="stylesheet" />
 <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 <style>
@@ -35,7 +35,7 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
   &#9776;
 </div>
 
-<div id="overlay" class="overlay">
+<div id="overlay" class="overlay" onscroll="changeUserBackgoundColor()">
   <div class="overlay-content">
 
    <div id="main-container" class="main-container">
@@ -100,6 +100,10 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
         current_bbox = [];
     });
 
+    map.on('wheel', function() {
+        current_bbox = [];
+    });
+
     var west = 180;
     var south = 90;
     var east = -180;
@@ -112,7 +116,7 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
         [current_bbox[2], current_bbox[3]]],
         {padding: 150}
     );
-
+	
     function addMarker(value) {
 
         if (value[2] <= 35) {
@@ -205,18 +209,36 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
     document.getElementById("n-photos").innerText = user_info["photos"];
 
     for (var i = 0; i < countries.length; i++) {
-
+		
         var country_code = countries[i][0];
-        var country_name = countries_bbox[country_code][0];
-        if (country_name.length > 18) {
-            country_name = country_name.substring(0, 14).concat("...");
-        }
+		
+        var bbox_defined = true;
 
+		if (typeof countries_bbox[country_code] === 'undefined') {
+		   bbox_defined = false;
+		}
+		
+        var country_name = '';
+
+		if (bbox_defined) {
+		    country_name = countries_bbox[country_code][0];
+		} else {
+		    country_name = countries[i][1];
+		}
+		
         var i_flags = document.createElement("IMG");
-        var icon_src = getIconSrc(countries_bbox[country_code][0]);
+        var icon_src = getIconSrc(country_name);
         i_flags.setAttribute("class", "tiny_icon");
         i_flags.setAttribute("src", icon_src);
         document.getElementById("flags").appendChild(i_flags);
+
+		if (!bbox_defined) {
+		    country_name = "! ".concat(country_name);
+		}
+		
+        if (country_name.length > 18) {
+            country_name = country_name.substring(0, 14).concat("...");
+        }
 
         var i_countries = document.createElement("P");
         i_countries.setAttribute("class", "country");
@@ -255,8 +277,19 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
 
     function addListener(country) {
       var country_code = country[0];
-      var country_bbox = countries_bbox[country_code][1];
+	  var country_bbox = [];
+	  var bbox_defined = true;
+	  
+      if (typeof countries_bbox[country_code] === 'undefined') {
+		   bbox_defined = false;
+	  }
+	  
+	  if (bbox_defined) {
+          country_bbox = countries_bbox[country_code][1];
+	  }
+
       document.getElementById(country_code).addEventListener('click', function() { fitBoundingBox(country_bbox) });
+	  
     }
 
     function fitBoundingBox(bbox) {
@@ -278,6 +311,16 @@ font-family: 'Open Sans', sans-serif; cursor: default; }
       );
 
     };
+	
+    function changeUserBackgoundColor() {
+		if (document.getElementById("overlay").scrollTop > 25) {
+            document.getElementById("user-container").className = "user-container-black";
+            document.getElementById("nav-button").className = "nav-button-black";
+		} else {
+		    document.getElementById("user-container").className = "user-container";
+		    document.getElementById("nav-button").className = "nav-button";
+	    }
+    }
 
 </script>
 

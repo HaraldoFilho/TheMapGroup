@@ -1,3 +1,3 @@
 var countries = [
-  ['US', 1907, 17336]
+  ['US', 'United States of America', 1907, 17336]
 ]
