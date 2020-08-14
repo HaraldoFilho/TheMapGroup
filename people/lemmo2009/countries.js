@@ -48,5 +48,5 @@ var countries = [
   ['IE', 'Ireland', 103, 108],
   ['PE', 'Peru', 91, 104],
   ['CL', 'Chile', 79, 87],
-  ['AR', 'Argentina', 73, 74]
+  ['AR', 'Argentina', 76, 77]
 ]
