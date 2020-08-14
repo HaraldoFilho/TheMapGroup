@@ -205,7 +205,7 @@ a:hover {
   padding: 25px 50px 25px 50px;
   cursor: default;
   position: sticky;
-  width: 400px;
+  width: 300px;
 }
 
 .user-container-black {
@@ -220,7 +220,7 @@ a:hover {
   padding: 25px 50px 25px 50px;
   cursor: default;
   position: sticky;
-  width: 400px;
+  width: 300px;
   background-color: black;
 }
 
@@ -232,6 +232,7 @@ a:hover {
   justify-content: left;
   grid-column-gap: 6px;
   padding: 25px 50px 25px 50px;
+  width: 300px;
 }
 
 .main-container {
