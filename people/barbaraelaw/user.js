@@ -3,6 +3,6 @@ var user_info = {
   "name": "ManxieB- prefer comments!",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg",
   "url": "https://www.flickr.com/photos/barbaraelaw/",
-  "markers": 2348,
-  "photos": 3140,
+  "markers": 2349,
+  "photos": 3141,
 }
