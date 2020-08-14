@@ -3,6 +3,6 @@ var user_info = {
   "name": "Raquel Rampasio",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg",
   "url": "https://www.flickr.com/photos/quelrr/",
-  "markers": 25,
-  "photos": 38,
+  "markers": 35,
+  "photos": 48,
 }
