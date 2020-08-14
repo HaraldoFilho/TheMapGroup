@@ -15,7 +15,7 @@ var countries = [
   ['LT', 'Lithuania', 3, 3],
   ['PL', 'Poland', 22, 26],
   ['AM', 'Armenia', 17, 19],
-  ['FR', 'France', 156, 157],
+  ['FR', 'France', 157, 158],
   ['UA', 'Ukraine', 84, 84],
   ['RU', 'Russia', 6, 6],
   ['LC', 'Saint Lucia', 3, 3],
