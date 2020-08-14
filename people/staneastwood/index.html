@@ -84,11 +84,6 @@
     var layerList = document.getElementById('menu');
     var inputs = layerList.getElementsByTagName('input');
 
-    function switchLayer(layer) {
-      var layerId = layer.target.id;
-      map.setStyle('mapbox://styles/mapbox/' + layerId);
-    }
-
     for (var i = 0; i < inputs.length; i++) {
       inputs[i].onclick = switchLayer;
     }
@@ -116,64 +111,7 @@
       {padding: 150}
     );
 
-    function addMarker(value) {
-
-      if (value[2] <= 35) {
-        new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
-        .setLngLat(value[0])
-        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(value[1]))
-        .addTo(map);
-      } else {
-        new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
-        .setLngLat(value[0])
-        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(value[1]))
-        .addTo(map);
-      }
-
-      if (value[0][0] < west) {
-        west = value[0][0];
-      }
-
-      if (value[0][0] > east) {
-        east = value[0][0];
-      }
-
-      if (value[0][1] < south) {
-        south = value[0][1];
-      }
-
-      if (value[0][1] > north) {
-        north = value[0][1];
-      }
-
-      current_bbox = [west, south, east, north];
-
-    }
-
     document.getElementById("overlay").style.width = "0%";
-
-    function toggleOverlay() {
-      if (document.getElementById("overlay").style.width == "0%") {
-        openOverlay();
-      } else {
-        closeOverlay();
-      }
-    }
-
-    function openOverlay() {
-      document.getElementById("overlay").style.width = "400px";
-      document.getElementById("menu").style.display = "none";
-      document.getElementById("nav-button").style.margin = "60px 0 0 400px";
-      fitBoundingBox(current_bbox);
-    }
-
-    function closeOverlay() {
-      document.getElementById("overlay").style.width = "0%";
-      document.getElementById("menu").style.display = "block";
-      document.getElementById("nav-button").style.display = "block";
-      document.getElementById("nav-button").style.margin = "60px 0 0 0";
-      fitBoundingBox(current_bbox);
-    }
 
     window.onkeyup = function (event) {
       if (event.keyCode == 27) {
@@ -273,11 +211,76 @@
       document.getElementById("photo-icon").appendChild(i_photos_icon);
     }
 
+    countries.forEach(addListener);
+
+
+    // Functions
+
+    function switchLayer(layer) {
+      var layerId = layer.target.id;
+      map.setStyle('mapbox://styles/mapbox/' + layerId);
+    }
+
+    function addMarker(value) {
+
+      if (value[2] <= 35) {
+        new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
+        .setLngLat(value[0])
+        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(value[1]))
+        .addTo(map);
+      } else {
+        new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
+        .setLngLat(value[0])
+        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(value[1]))
+        .addTo(map);
+      }
+
+      if (value[0][0] < west) {
+        west = value[0][0];
+      }
+
+      if (value[0][0] > east) {
+        east = value[0][0];
+      }
+
+      if (value[0][1] < south) {
+        south = value[0][1];
+      }
+
+      if (value[0][1] > north) {
+        north = value[0][1];
+      }
+
+      current_bbox = [west, south, east, north];
+
+    }
+
+    function toggleOverlay() {
+      if (document.getElementById("overlay").style.width == "0%") {
+        openOverlay();
+      } else {
+        closeOverlay();
+      }
+    }
+
+    function openOverlay() {
+      document.getElementById("overlay").style.width = "400px";
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("nav-button").style.margin = "60px 0 0 400px";
+      fitBoundingBox(current_bbox);
+    }
+
+    function closeOverlay() {
+      document.getElementById("overlay").style.width = "0%";
+      document.getElementById("menu").style.display = "block";
+      document.getElementById("nav-button").style.display = "block";
+      document.getElementById("nav-button").style.margin = "60px 0 0 0";
+      fitBoundingBox(current_bbox);
+    }
+
     function getIconSrc(name) {
       return "../../icons/".concat(name.replace(/\s/g, "-").toLowerCase()).concat(".svg");
     }
-
-    countries.forEach(addListener);
 
     function addListener(country) {
       var country_code = country[0];
