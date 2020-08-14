@@ -2,7 +2,7 @@ var countries = [
   ['GB', 'United Kingdom', 3864, 23944],
   ['GL', 'Greenland', 5, 53],
   ['IS', 'Iceland', 2, 18],
-  ['IE', 'Ireland', 17, 108],
+  ['IE', 'Ireland', 19, 129],
   ['NO', 'Norway', 10, 34],
   ['DK', 'Denmark', 1, 59],
   ['ES', 'Spain', 65, 656],
