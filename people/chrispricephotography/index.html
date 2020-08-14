@@ -238,9 +238,9 @@
       i_countries.setAttribute("class", "country");
       i_countries.setAttribute("id", country_code);
 
-      if (country_name.length > 18) {
+      if (country_name.length > 15) {
         i_countries.setAttribute("title", country_name);
-        country_name = country_name.substring(0, 14).concat("...");
+        country_name = country_name.substring(0, 13).concat("...");
       }
 
       if (!bbox_defined) {
