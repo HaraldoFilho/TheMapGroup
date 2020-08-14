@@ -13,6 +13,21 @@
   transition: 0.5s;
 }
 
+.nav-button-black {
+  top: 0;
+  margin-top: 60px;
+  padding: 0 10px 2px 7px;
+  position: fixed;
+  color: lightgrey;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 1);
+  border-radius: 0 15px 15px 0;
+  font-size:30px;
+  cursor:pointer;
+  z-index: 1;
+  transition: 0.5s;
+}
+
 .footer {
   bottom: 0;
   font-family: arial;
@@ -108,7 +123,7 @@
 .countries {
   display: grid;
   grid-area: countries;
-  width: 135px;
+  width: 130px;
 }
 
 .places {
@@ -180,14 +195,33 @@ a:hover {
 
 .user-container {
   display: grid;
+  top: 0;
   grid-area: user-container;
   grid-template-areas:
   'avatar user-name user-name user-name user-name'
   'avatar n-countries n-countries n-countries n-countries'
   'avatar place-icon n-markers photo-icon n-photos';
   justify-content: left;
-  padding-bottom: 40px;
+  padding: 25px 50px 25px 50px;
   cursor: default;
+  position: sticky;
+  width: 400px;
+}
+
+.user-container-black {
+  display: grid;
+  top: 0;
+  grid-area: user-container;
+  grid-template-areas:
+  'avatar user-name user-name user-name user-name'
+  'avatar n-countries n-countries n-countries n-countries'
+  'avatar place-icon n-markers photo-icon n-photos';
+  justify-content: left;
+  padding: 25px 50px 25px 50px;
+  cursor: default;
+  position: sticky;
+  width: 400px;
+  background-color: black;
 }
 
 .countries-container {
@@ -197,6 +231,7 @@ a:hover {
   'flags countries places place-icon photos photo-icon';
   justify-content: left;
   grid-column-gap: 6px;
+  padding: 25px 50px 25px 50px;
 }
 
 .main-container {
@@ -205,5 +240,5 @@ a:hover {
   'user-container'
   'countries-container';
   width: 100%;
-  margin: 50px;
+  padding: 25px 0 25px 0;
 }
