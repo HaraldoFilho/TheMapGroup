@@ -66,9 +66,11 @@ for page_number in range(number_of_pages, 0, -1):
                 print('\n##### Generating map for new member: {}...'.format(member_name[0:16]))
             else:
                 print('\n##### Updating map for member: {}...'.format(member_name[0:20]))
-                # get 'locations.js', 'countries.js' and 'user.js' from github
+                # get 'index.html', 'locations.js', 'countries.js' and 'user.js' from github
                 print('Getting locations and countries from remote...')
                 try:
+                    command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/index.html".format(member_path, member_alias)
+                    os.system(command)
                     command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/locations.js".format(member_path, member_alias)
                     os.system(command)
                     command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/countries.js".format(member_path, member_alias)
@@ -84,15 +86,21 @@ for page_number in range(number_of_pages, 0, -1):
             os.system(command)
 
             # upload map
+            os.system("git diff {0}/*.js > {0}/diffs".format(member_path))
+            diffs = os.stat("{}/diffs".format(member_path)).st_size
+            if diffs > 0:
             print('Uploading map data...')
-            os.system("git add -f {}/index.html".format(member_path))
-            os.system("git add -f {}/*.js".format(member_path))
-            os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
-            os.system("git push -q origin master")
-            print('Done!')
+                os.system("git add -f {}/index.html".format(member_path))
+                os.system("git add -f {}/*.js".format(member_path))
+                os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
+                os.system("git push -q origin master")
+                print('Done!')
+            else:
+                print("Everything is up-to-date. Nothing to upload!")
             os.system("rm {}/index.html".format(member_path))
             os.system("rm {}/*.js".format(member_path))
             os.system("rm -fr {}/__pycache__".format(member_path))
+            os.system("rm {}/diffs".format(member_path))
             if is_new_member:
                 topic_subject = "[MAP] {}".format(member_name)
                 member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
