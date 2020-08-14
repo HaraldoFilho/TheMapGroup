@@ -3,6 +3,6 @@ var user_info = {
   "name": "michael_jeddah",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/15029120@N00_r.jpg",
   "url": "https://www.flickr.com/photos/michael_from_berlin/",
-  "markers": 3073,
-  "photos": 3146,
+  "markers": 3074,
+  "photos": 3147,
 }
