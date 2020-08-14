@@ -1,6 +1,6 @@
 var countries = [
   ['GB', 'United Kingdom', 659, 742],
-  ['CA', 'Canada', 1347, 1890],
+  ['CA', 'Canada', 1349, 1892],
   ['GG', 'Guernsey', 3, 8],
   ['US', 'United States of America', 1065, 1290],
   ['BS', 'Bahamas', 19, 19],
