@@ -89,7 +89,7 @@ for page_number in range(number_of_pages, 0, -1):
             os.system("git diff {0}/*.js > {0}/diffs".format(member_path))
             diffs = os.stat("{}/diffs".format(member_path)).st_size
             if diffs > 0:
-            print('Uploading map data...')
+                print('Uploading map data...')
                 os.system("git add -f {}/index.html".format(member_path))
                 os.system("git add -f {}/*.js".format(member_path))
                 os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
