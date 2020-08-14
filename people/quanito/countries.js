@@ -16,7 +16,7 @@ var countries = [
   ['IN', 'India', 13, 104],
   ['HR', 'Croatia', 6, 30],
   ['CN', 'China', 19, 1520],
-  ['VN', 'Vietnam', 15, 206],
+  ['VN', 'Vietnam', 19, 217],
   ['MM', 'Myanmar', 4, 111],
   ['JP', 'Japan', 9, 374],
   ['ID', 'Indonesia', 3, 21],
