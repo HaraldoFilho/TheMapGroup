@@ -3,6 +3,6 @@ var user_info = {
   "name": "Chris Price",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg",
   "url": "https://www.flickr.com/photos/chrispricephotography/",
-  "markers": 588,
-  "photos": 833,
+  "markers": 589,
+  "photos": 834,
 }
