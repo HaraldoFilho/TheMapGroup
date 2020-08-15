@@ -3,6 +3,6 @@ var user_info = {
   "name": "Fernando Vega",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg",
   "url": "https://www.flickr.com/photos/fvega/",
-  "markers": 2207,
-  "photos": 3179,
+  "markers": 2208,
+  "photos": 3180,
 }
