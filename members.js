@@ -12,7 +12,7 @@ members = [
   ['27109078@N05', '27109078@N05', 'Norma Fincher', "https://live.staticflickr.com/5674/buddyicons/27109078@N05_r.jpg", 4, 4],
   ['110839836@N07', 'andygocher', 'Andy Gocher', "https://live.staticflickr.com/5674/buddyicons/110839836@N07_r.jpg", 1, 1],
   ['32557441@N02', 'santelia', 'Alfonso Santelia', "https://live.staticflickr.com/5674/buddyicons/32557441@N02_r.jpg", 1, 1],
-  ['46721940@N00', 'nothingpersonal', 'Dmitry Djouce', people/photographer.svg, 4, 4],
+  ['46721940@N00', 'nothingpersonal', 'Dmitry Djouce', "people/photographer.svg", 4, 4],
   ['88196436@N04', 'saw_that', 'I saw_that', "https://live.staticflickr.com/5674/buddyicons/88196436@N04_r.jpg", 6, 6],
   ['31155442@N03', '31155442@N03', 'Joseph Hollick', "https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg", 5, 5],
   ['32770136@N05', 'chris_macdonald1983', 'CJphoto83', "https://live.staticflickr.com/5674/buddyicons/32770136@N05_r.jpg", 1, 1],
