@@ -1,5 +1,5 @@
 var countries = [
-  ['NL', 'The Netherlands', 105, 176],
+  ['NL', 'The Netherlands', 106, 177],
   ['JP', 'Japan', 6, 20],
   ['BE', 'Belgium', 52, 76],
   ['FR', 'France', 86, 141],
