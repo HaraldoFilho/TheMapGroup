@@ -33,6 +33,10 @@ people_path = repo_path + "/people"
 
 #===== MAIN CODE ==============================================================#
 
+# created members info file
+members_file = open("{}/members.js".format(repo_path), 'w')
+members_file.write("members = [\n")
+
 # get group id and name from group url
 group_id = flickr.urls.lookupGroup(api_key=api_key, url=group_url)['group']['id']
 group_name = flickr.groups.getInfo(group_id=group_id)['group']['name']['_content']
@@ -63,9 +67,9 @@ for page_number in range(number_of_pages, 0, -1):
                 is_new_member = True
 
             if is_new_member:
-                print('\n##### Generating map for new member: {}...'.format(member_name[0:16]))
+                print('##### Generating map for new member: {}...'.format(member_name[0:16]))
             else:
-                print('\n##### Updating map for member: {}...'.format(member_name[0:20]))
+                print('##### Updating map for member: {}...'.format(member_name[0:20]))
                 # get 'locations.js', 'countries.js' and 'user.js' from github
                 print('Getting locations and countries from remote...')
                 try:
@@ -86,7 +90,7 @@ for page_number in range(number_of_pages, 0, -1):
             # upload map
             os.system("git diff {0}/*.js > {0}/diffs".format(member_path))
             diffs = os.stat("{}/diffs".format(member_path)).st_size
-            if diffs > 0:
+            if diffs > 0 or is_new_member:
                 print('Uploading map data...')
                 os.system("git add -f {}/index.html".format(member_path))
                 os.system("git add -f {}/*.js".format(member_path))
@@ -108,3 +112,56 @@ for page_number in range(number_of_pages, 0, -1):
         except:
             pass
 
+        # get member information
+        print("Getting member information...")
+        # get the username
+        member_name = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['username']['_content']
+        try:
+            real_name = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['realname']['_content']
+            if len(real_name) > 0:
+                member_name = real_name
+        except:
+            pass
+
+        if len(member_name) > 30:
+            member_name = member_name[:30]
+
+        # user vatar url
+        member_avatar = "https://live.staticflickr.com/5674/buddyicons/{}_r.jpg".format(member_id)
+        os.system("wget -q {}".format(member_avatar))
+        if os.path.exists("{}_r.jpg".format(member_id)):
+            os.system("rm {}_r.jpg".format(member_id))
+        else:
+            member_avatar = "photographer.svg"
+
+        # get user's photos base url
+        photos_base_url = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['photosurl']['_content']
+
+        try:
+            member_photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id)['photos']
+            member_n_photos = member_photos['total']
+        except:
+            member_n_photos = 0
+        member_n_places = 0
+        member_coords = []
+        pages = member_photos['pages']
+        for page in range(pages):
+            photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id, extras='geo', per_page='500')['photos']
+            for ph in range(len(photos['photo'])):
+                coord = [ photos['photo'][ph]['latitude'], photos['photo'][ph]['longitude'] ]
+                if coord not in member_coords:
+                    member_n_places += 1
+                    member_coords.append(coord)
+        members_file.write("  [{0}, {1}, {2}, {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
+        if member_number < len(members)-2:
+            members_file.write("],\n")
+        else:
+            members_file.write("]\n")
+        print("Finished!\n")
+
+members_file.write("]\n")
+members_file.close()
+
+# update group map
+command = "{}/generate-map-data.py".format(repo_path)
+os.system(command)
