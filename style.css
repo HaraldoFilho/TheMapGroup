@@ -1,13 +1,13 @@
 .nav-button {
   top: 0;
-  margin-top: 60px;
+  margin: 60px 0 0 400px;
   padding: 0 10px 2px 7px;
   position: fixed;
   color: lightgrey;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.9);
   border-radius: 0 15px 15px 0;
-  font-size:30px;
+  font-size: 30px;
   cursor:pointer;
   z-index: 1;
   transition: 0.5s;
@@ -15,26 +15,17 @@
 
 .nav-button-black {
   top: 0;
-  margin-top: 60px;
+  margin: 60px 0 0 400px;
   padding: 0 10px 2px 7px;
   position: fixed;
   color: lightgrey;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 1);
   border-radius: 0 15px 15px 0;
-  font-size:30px;
+  font-size: 30px;
   cursor:pointer;
   z-index: 1;
   transition: 0.5s;
-}
-
-.footer {
-  bottom: 0;
-  font-family: arial;
-  font-size: 10px;
-  position: fixed;
-  margin-left: 150px;
-  margin-bottom: 10px;
 }
 
 .overlay {
@@ -61,17 +52,17 @@
   display: none;
 }
 
-.avatar {
+.group-avatar {
   display: grid;
-  grid-area: avatar;
+  grid-area: group-avatar;
   width: 80px;
   height: 80px;
   padding-right: 20px;
 }
 
-.user-name {
+.group-name {
   display: grid;
-  grid-area: user-name;
+  grid-area: group-name;
   width: 200px;
   font-family: arial;
   font-weight: bold;
@@ -80,9 +71,9 @@
   padding-left: 3px;
 }
 
-.n-countries {
+.n-members {
   display: grid;
-  grid-area: n-countries;
+  grid-area: n-members;
   width: 200px;
   font-family: arial;
   font-size: 16px;
@@ -113,16 +104,16 @@
   padding-top: 7px;
 }
 
-.flags {
+.members-avatar {
   display: grid;
-  grid-area: flags;
+  grid-area: members-avatar;
   width: 20px;
   text-align: left;
 }
 
-.countries {
+.members {
   display: grid;
-  grid-area: countries;
+  grid-area: members;
   width: 130px;
 }
 
@@ -154,7 +145,7 @@
   text-align: right;
 }
 
-p.country {
+p.member {
   font-family: arial;
   font-size: 16px;
   line-height: 0;
@@ -174,7 +165,7 @@ p.item {
 img.tiny-icon {
   width: 16px;
   height: 16px;
-  padding-top: 7px;
+  margin-top: 7px;
 }
 
 a:link {
@@ -193,14 +184,14 @@ a:hover {
   cursor: pointer;
 }
 
-.user-container {
+.group-container {
   display: grid;
   top: 0;
-  grid-area: user-container;
+  grid-area: group-container;
   grid-template-areas:
-  'avatar user-name user-name user-name user-name'
-  'avatar n-countries n-countries n-countries n-countries'
-  'avatar place-icon n-markers photo-icon n-photos';
+  'group-avatar group-name group-name group-name group-name'
+  'group-avatar n-members n-members n-members n-members'
+  'group-avatar place-icon n-markers photo-icon n-photos';
   justify-content: left;
   padding: 25px 50px 25px 50px;
   cursor: default;
@@ -208,14 +199,14 @@ a:hover {
   width: 300px;
 }
 
-.user-container-black {
+.group-container-black {
   display: grid;
   top: 0;
-  grid-area: user-container;
+  grid-area: group-container;
   grid-template-areas:
-  'avatar user-name user-name user-name user-name'
-  'avatar n-countries n-countries n-countries n-countries'
-  'avatar place-icon n-markers photo-icon n-photos';
+  'group-avatar group-name group-name group-name group-name'
+  'group-avatar n-members n-members n-members n-members'
+  'group-avatar place-icon n-markers photo-icon n-photos';
   justify-content: left;
   padding: 25px 50px 25px 50px;
   cursor: default;
@@ -224,11 +215,11 @@ a:hover {
   background-color: black;
 }
 
-.countries-container {
+.members-container {
   display: grid;
-  grid-area: countries-container;
+  grid-area: members-container;
   grid-template-areas:
-  'flags countries places place-icon photos photo-icon';
+  'members-avatar members places place-icon photos photo-icon';
   justify-content: left;
   grid-column-gap: 6px;
   padding: 25px 50px 25px 50px;
@@ -238,8 +229,8 @@ a:hover {
 .main-container {
   display: grid;
   grid-template-areas:
-  'user-container'
-  'countries-container';
+  'group-container'
+  'members-container';
   width: 100%;
   padding: 25px 0 25px 0;
 }

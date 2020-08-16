@@ -7,7 +7,7 @@
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.9);
   border-radius: 0 15px 15px 0;
-  font-size:30px;
+  font-size: 30px;
   cursor:pointer;
   z-index: 1;
   transition: 0.5s;
@@ -22,7 +22,7 @@
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 1);
   border-radius: 0 15px 15px 0;
-  font-size:30px;
+  font-size: 30px;
   cursor:pointer;
   z-index: 1;
   transition: 0.5s;
@@ -174,7 +174,7 @@ p.item {
 img.tiny-icon {
   width: 16px;
   height: 16px;
-  padding-top: 7px;
+  margin-top: 7px;
 }
 
 a:link {

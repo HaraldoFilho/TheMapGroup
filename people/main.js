@@ -207,7 +207,7 @@ function createOverlay() {
   var div_overlay = document.createElement("DIV");
   div_overlay.setAttribute("id", "overlay");
   div_overlay.setAttribute("class", "overlay");
-  div_overlay.setAttribute("onscroll", "changeUserBackgoundColor()");
+  div_overlay.setAttribute("onscroll", "changeUserBackgroundColor()");
   div_overlay.appendChild(div_overlay_content);
   div_overlay.style.width = "0%";
 
@@ -279,7 +279,7 @@ function fitBoundingBox(bbox) {
 
 };
 
-function changeUserBackgoundColor() {
+function changeUserBackgroundColor() {
   if (document.getElementById("overlay").scrollTop > 25) {
     document.getElementById("user-container").className = "user-container-black";
     document.getElementById("nav-button").className = "nav-button-black";
