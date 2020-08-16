@@ -10,7 +10,7 @@ var countries = [
   ['CZ', 'Czech Republic', 53, 55],
   ['DE', 'Germany', 102, 105],
   ['TR', 'Turkey', 62, 68],
-  ['GB', 'United Kingdom', 1679, 1771],
+  ['GB', 'United Kingdom', 1681, 1773],
   ['ES', 'Spain', 116, 120],
   ['CY', 'Cyprus', 10, 10],
   ['CN', 'China', 117, 126],

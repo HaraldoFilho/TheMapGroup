@@ -4557,5 +4557,7 @@ var locations = [
     [[-58.372198, -34.613584], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/lemmo2009/50226782807" target="_blank"><img src="https://live.staticflickr.com/65535/50226782807_4ba1bf9e67_s.jpg"/></a> </div>', 1],
     [[-58.37112, -34.613023], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/lemmo2009/50225917348" target="_blank"><img src="https://live.staticflickr.com/65535/50225917348_42cde15fec_s.jpg"/></a> </div>', 1],
     [[-4.213495, 51.176388], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/lemmo2009/50229897836" target="_blank"><img src="https://live.staticflickr.com/65535/50229897836_0f9a0685f2_s.jpg"/></a> </div>', 1],
-    [[-4.213773, 51.176413], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/lemmo2009/50229900271" target="_blank"><img src="https://live.staticflickr.com/65535/50229900271_877caf71e6_s.jpg"/></a> </div>', 1]
+    [[-4.213773, 51.176413], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/lemmo2009/50229900271" target="_blank"><img src="https://live.staticflickr.com/65535/50229900271_877caf71e6_s.jpg"/></a> </div>', 1],
+    [[0.120836, 52.212494], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/lemmo2009/50234128422" target="_blank"><img src="https://live.staticflickr.com/65535/50234128422_a8ce2b6522_s.jpg"/></a> </div>', 1],
+    [[0.126738, 52.199749], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/lemmo2009/50233261863" target="_blank"><img src="https://live.staticflickr.com/65535/50233261863_1894c091b4_s.jpg"/></a> </div>', 1]
 ]
