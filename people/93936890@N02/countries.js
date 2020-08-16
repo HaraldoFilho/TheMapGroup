@@ -6,7 +6,7 @@ var countries = [
   ['CN', 'China', 15, 18],
   ['MY', 'Malaysia', 5, 5],
   ['ID', 'Indonesia', 8, 9],
-  ['CA', 'Canada', 137, 159],
+  ['CA', 'Canada', 138, 160],
   ['US', 'United States of America', 62, 69],
   ['SG', 'Singapore', 5, 6],
   ['TH', 'Thailand', 4, 4],
