@@ -25,7 +25,7 @@ function custom() {
   var group_link = document.createElement("A");
   group_link.setAttribute("id", "group_link");
   group_link.setAttribute("href", group_url);
-  group_link.setAttribute("target", "_blank");
+  group_link.setAttribute("target", "_self");
   document.getElementById("group-name").appendChild(group_link);
   document.getElementById("group_link").innerText = group_name;
 
