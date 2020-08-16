@@ -127,12 +127,12 @@ for page_number in range(number_of_pages, 0, -1):
             member_name = member_name[:30]
 
         # user vatar url
-        member_avatar = "https://live.staticflickr.com/5674/buddyicons/{}_r.jpg".format(member_id)
+        member_avatar = "\"https://live.staticflickr.com/5674/buddyicons/{}_r.jpg\"".format(member_id)
         os.system("wget -q {}".format(member_avatar))
         if os.path.exists("{}_r.jpg".format(member_id)):
             os.system("rm {}_r.jpg".format(member_id))
         else:
-            member_avatar = "photographer.svg"
+            member_avatar = "people/photographer.svg"
 
         # get user's photos base url
         photos_base_url = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['photosurl']['_content']
@@ -152,7 +152,7 @@ for page_number in range(number_of_pages, 0, -1):
                 if coord not in member_coords:
                     member_n_places += 1
                     member_coords.append(coord)
-        members_file.write("  [{0}, {1}, {2}, {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
+        members_file.write("  [\'{0}\', \'{1}\', \'{2}\', \'{3}\', {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
         if member_number < len(members)-2:
             members_file.write("],\n")
         else:
