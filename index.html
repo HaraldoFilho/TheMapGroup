@@ -37,10 +37,10 @@
   </div>
 
   <div id="selector" class="selector">
-    <input id="checkbox-members" type="checkbox" checked="true">
+    <input id="checkbox-members" type="checkbox" checked="checked">
     <img id="members-icon" src="icons/member.svg" height="20px" style="margin-bottom:-3px"/>
     members
-    <input id="checkbox-non-members" type="checkbox" checked="true">
+    <input id="checkbox-non-members" type="checkbox">
     <img id="members-icon" src="icons/non-member.svg" height="20px" style="margin-bottom:-3px"/>
     non-members
   </div>
@@ -127,7 +127,7 @@
     htmlText = htmlText.concat("</div>");
 
     var member = false;
-    var markerColor = '#CCCCCC';
+    var markerColor = '#999999';
 
     for (var i = 0; i < members.length; i++) {
       if (value[1] == members[i][0]) {

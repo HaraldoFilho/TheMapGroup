@@ -1,4 +1,4 @@
-function main() {
+function custom() {
 
   document.title = user_info["name"].concat(" | Photos Map");
 
@@ -239,7 +239,7 @@ function closeOverlay() {
 }
 
 function getIconSrc(name) {
-  return "../../icons/".concat(name.replace(/\s/g, "-").toLowerCase()).concat(".svg");
+  return "../../icons/flags/".concat(name.replace(/\s/g, "-").toLowerCase()).concat(".svg");
 }
 
 function addListener(country) {
