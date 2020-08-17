@@ -16,7 +16,6 @@
   body { margin: 0; padding: 0; }
   #map { position: absolute; top: 0; bottom: 0; width: 100%; }
   #menu { position: absolute; background: #fff; padding: 10px 15px 10px 10px; font-family: 'Open Sans', sans-serif; cursor: default; }
-  #selector { position: absolute; margin-top: 10px; margin-left: 500px; background: #fff; padding: 5px 15px 5px 10px; border-radius: 15px 15px 15px 15px; font-family: 'Open Sans', sans-serif; cursor: default; }
   </style>
 
   <!-- Begin of customization includes -->
@@ -37,11 +36,11 @@
     <label for="satellite-v9">satellite</label>
   </div>
 
-  <div id="selector">
-    <input id="members-markers" type="checkbox" checked="true">
+  <div id="selector" class="selector">
+    <input id="checkbox-members" type="checkbox" checked="true">
     <img id="members-icon" src="icons/member.svg" height="20px" style="margin-bottom:-3px"/>
     members
-    <input id="non-members-markers" type="checkbox" checked="true">
+    <input id="checkbox-non-members" type="checkbox" checked="true">
     <img id="members-icon" src="icons/non-member.svg" height="20px" style="margin-bottom:-3px"/>
     non-members
   </div>
@@ -50,9 +49,11 @@
 
   mapboxgl.accessToken = mapbox_token;
 
+  var current_map_style = 'mapbox://styles/mapbox/streets-v11';
+
   var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
+    style: current_map_style
   });
 
   map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
@@ -88,14 +89,30 @@
     current_bbox = [];
   });
 
+  document.getElementById("checkbox-members").addEventListener('click', function() { refreshMap() });
+  document.getElementById("checkbox-non-members").addEventListener('click', function() { refreshMap() });
+
   custom();
 
 
   // Functions
 
+  function refreshMap(){
+    map.remove();
+    map = new mapboxgl.Map({
+      container: 'map',
+      style: current_map_style
+    });
+    map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
+    map.addControl(new mapboxgl.NavigationControl());
+    locations.forEach(addMarker)
+    fitBoundingBox(current_bbox);
+  }
+
   function switchLayer(layer) {
     var layerId = layer.target.id;
-    map.setStyle('mapbox://styles/mapbox/' + layerId);
+    current_map_style = 'mapbox://styles/mapbox/' + layerId;
+    map.setStyle(current_map_style);
   }
 
   function addMarker(value) {
@@ -109,24 +126,34 @@
     }
     htmlText = htmlText.concat("</div>");
 
+    var member = false;
     var markerColor = '#CCCCCC';
+
     for (var i = 0; i < members.length; i++) {
       if (value[1] == members[i][0]) {
         markerColor = '#C2185B';
+        member = true;
         break;
       }
     }
 
+    var marker;
+
     if (value[3] <= 35) {
-      new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
+      marker = new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
       .setLngLat(value[0])
-      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(htmlText))
-      .addTo(map);
+      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(htmlText));
     } else {
-      new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
+      marker = new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
       .setLngLat(value[0])
-      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(htmlText))
-      .addTo(map);
+      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(htmlText));
+    }
+
+    var members_checked = document.getElementById("checkbox-members").checked;
+    var non_members_checked = document.getElementById("checkbox-non-members").checked;
+
+    if ((member && members_checked) || (!member && non_members_checked)) {
+      marker.addTo(map);
     }
 
     current_bbox = [west, south, east, north];

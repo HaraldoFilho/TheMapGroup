@@ -197,21 +197,26 @@ function createOverlay() {
 
   document.body.append(div_overlay);
 
+  setSelectorPosition(true);
+
 }
 
 function toggleOverlay() {
+  var selector_position
+  var pixels;
   if (document.getElementById("overlay").style.width == "0%") {
     openOverlay();
   } else {
     closeOverlay();
   }
+  fitBoundingBox(current_bbox);
 }
 
 function openOverlay() {
   document.getElementById("overlay").style.width = "400px";
   document.getElementById("menu").style.display = "none";
   document.getElementById("nav-button").style.margin = "60px 0 0 400px";
-  fitBoundingBox(current_bbox);
+  setSelectorPosition(true);
 }
 
 function closeOverlay() {
@@ -219,7 +224,18 @@ function closeOverlay() {
   document.getElementById("menu").style.display = "block";
   document.getElementById("nav-button").style.display = "block";
   document.getElementById("nav-button").style.margin = "60px 0 0 0";
-  fitBoundingBox(current_bbox);
+  setSelectorPosition(false);
+}
+
+function setSelectorPosition(overlay_opened) {
+  var pixels;
+  if (overlay_opened) {
+    pixels = (window.innerWidth+400)/2;
+  } else {
+    pixels = window.innerWidth/2;
+  }
+  var selector_position = pixels.toString() + "px";
+  document.getElementById("selector").style.left = selector_position;
 }
 
 function addListener(member) {
