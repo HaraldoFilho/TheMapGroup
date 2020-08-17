@@ -3,6 +3,6 @@ var user_info = {
   "name": "Beatrix",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg",
   "url": "https://www.flickr.com/photos/beatrixmvarga/",
-  "markers": 167,
-  "photos": 167,
+  "markers": 168,
+  "photos": 168,
 }

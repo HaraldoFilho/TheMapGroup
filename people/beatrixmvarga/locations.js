@@ -165,5 +165,6 @@ var locations = [
     [[15.618889, 48.367269], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/beatrixmvarga/50219600671" target="_blank"><img src="https://live.staticflickr.com/65535/50219600671_410b862c45_s.jpg"/></a> </div>', 1],
     [[-119.645919, 39.310942], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/beatrixmvarga/50220818312" target="_blank"><img src="https://live.staticflickr.com/65535/50220818312_3736891bcf_s.jpg"/></a> </div>', 1],
     [[-121.082478, 38.629259], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/beatrixmvarga/50227046847" target="_blank"><img src="https://live.staticflickr.com/65535/50227046847_40f92aca3c_s.jpg"/></a> </div>', 1],
-    [[-121.634305, 37.165275], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/beatrixmvarga/50231759527" target="_blank"><img src="https://live.staticflickr.com/65535/50231759527_f6aef15f98_s.jpg"/></a> </div>', 1]
+    [[-121.634305, 37.165275], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/beatrixmvarga/50231759527" target="_blank"><img src="https://live.staticflickr.com/65535/50231759527_f6aef15f98_s.jpg"/></a> </div>', 1],
+    [[-122.017829, 36.959082], '<div style="max-height:410px;overflow:auto;"><a href="https://www.flickr.com/photos/beatrixmvarga/50234466173" target="_blank"><img src="https://live.staticflickr.com/65535/50234466173_d6ec82d7cd_s.jpg"/></a> </div>', 1]
 ]
