@@ -197,7 +197,7 @@ function createOverlay() {
 
   document.body.append(div_overlay);
 
-  setSelectorPosition(true);
+  setSelectorPosition();
 
 }
 
@@ -216,7 +216,7 @@ function openOverlay() {
   document.getElementById("overlay").style.width = "400px";
   document.getElementById("menu").style.display = "none";
   document.getElementById("nav-button").style.margin = "60px 0 0 400px";
-  setSelectorPosition(true);
+  setSelectorPosition();
 }
 
 function closeOverlay() {
@@ -224,15 +224,15 @@ function closeOverlay() {
   document.getElementById("menu").style.display = "block";
   document.getElementById("nav-button").style.display = "block";
   document.getElementById("nav-button").style.margin = "60px 0 0 0";
-  setSelectorPosition(false);
+  setSelectorPosition();
 }
 
-function setSelectorPosition(overlay_opened) {
+function setSelectorPosition() {
   var pixels;
-  if (overlay_opened) {
-    pixels = (window.innerWidth+400)/2;
-  } else {
+  if (document.getElementById("overlay").style.width == "0%") {
     pixels = window.innerWidth/2;
+  } else {
+    pixels = (window.innerWidth+400)/2;
   }
   var selector_position = pixels.toString() + "px";
   document.getElementById("selector").style.left = selector_position;
