@@ -136,18 +136,15 @@ for page_number in range(number_of_pages, 0, -1):
 
         # get user's photos base url
         photos_base_url = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['photosurl']['_content']
-
-        try:
-            member_photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id)['photos']
-            member_n_photos = member_photos['total']
-        except:
-            member_n_photos = 0
+        member_photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id, per_page='500')['photos']
+        member_n_photos = 0
         member_n_places = 0
         member_coords = []
         pages = member_photos['pages']
         for page in range(pages):
             photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id, extras='geo', per_page='500')['photos']
             for ph in range(len(photos['photo'])):
+                member_n_photos += 1
                 coord = [ photos['photo'][ph]['latitude'], photos['photo'][ph]['longitude'] ]
                 if coord not in member_coords:
                     member_n_places += 1
