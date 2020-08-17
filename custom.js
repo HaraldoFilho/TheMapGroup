@@ -34,7 +34,7 @@ function custom() {
   document.getElementById("n-markers").innerText = locations.length.toString();
   var n_photos = 0;
   for (var i = 0; i < locations.length; i++) {
-    n_photos = n_photos + locations[i][2];
+    n_photos = n_photos + locations[i][3];
   }
   document.getElementById("n-photos").innerText = n_photos;
 

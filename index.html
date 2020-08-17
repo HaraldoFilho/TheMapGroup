@@ -89,16 +89,33 @@
     }
 
     function addMarker(value) {
+	
+	  var htmlText = "<div style=\"max-height:410px;overflow:auto;\">";
 
-      if (value[2] <= 35) {
-        new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
+      for (var i = 0; i < value[2].length; i++) {
+          htmlText = htmlText.concat("<a href=\"https://flickr.com/photos/")
+		    .concat(value[1]).concat("/").concat(value[2][i][0]).concat("/in/pool-the-map-group/\" target=\"_blank\"><img src=\"")
+			.concat(value[2][i][1]).concat("\"/></a> ");
+      }	  
+      htmlText = htmlText.concat("</div>");
+	  
+	  var markerColor = '#DDDDDD';
+	  for (var i = 0; i < members.length; i++) {
+	      if (value[1] == members[i][0]) {
+		      markerColor = '#C2185B';
+			  break;
+		  }
+	  }
+
+      if (value[3] <= 35) {
+        new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
         .setLngLat(value[0])
-        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(value[1]))
+        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(htmlText))
         .addTo(map);
       } else {
-        new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
+        new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
         .setLngLat(value[0])
-        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(value[1]))
+        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(htmlText))
         .addTo(map);
       }
 
