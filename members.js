@@ -1,6 +1,6 @@
 members = [
   ['30622510@N02', 'hpfilho', 'Haraldo Albergaria', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 126, 147]
-  ['14320768@N07', 'nebraskasc', 'Dale  Kaminski', "https://live.staticflickr.com/5674/buddyicons/14320768@N07_r.jpg", 1, 1]
+  ['14320768@N07', 'nebraskasc', 'Dale  Kaminski', "https://live.staticflickr.com/5674/buddyicons/14320768@N07_r.jpg", 1, 1],
   ['8121206@N07', 'chrispricephotography', 'Chris Price', "https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg", 6, 8],
   ['79292646@N05', 'ellebedeva', 'Elena Lebedeva (IG: ellebedeva', "https://live.staticflickr.com/5674/buddyicons/79292646@N05_r.jpg", 9, 9],
   ['15029120@N00', 'michael_from_berlin', 'michael_jeddah', "https://live.staticflickr.com/5674/buddyicons/15029120@N00_r.jpg", 42, 42],
@@ -28,7 +28,7 @@ members = [
   ['132838898@N03', 'quelrr', 'Raquel Rampasio', "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg", 0, 0],
   ['13445173@N06', 'bvi4092', 'bvi4092', "https://live.staticflickr.com/5674/buddyicons/13445173@N06_r.jpg", 1, 2],
   ['66031636@N00', 'jnoval', 'Javier Noval', "https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg", 1, 1],
-  ['57727182@N08', '57727182@N08', 'GEORGE', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 5, 5],
+  ['57727182@N08', '57727182@N08', 'GEORGE', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 6, 6],
   ['76199006@N05', 'jasonfrels', 'Jason', "https://live.staticflickr.com/5674/buddyicons/76199006@N05_r.jpg", 5, 5],
   ['63713558@N00', 'staneastwood', 'Stanley Eastwood', "https://live.staticflickr.com/5674/buddyicons/63713558@N00_r.jpg", 1, 1],
   ['135298455@N04', 'quanito', 'Pascal VU', "https://live.staticflickr.com/5674/buddyicons/135298455@N04_r.jpg", 8, 12],
