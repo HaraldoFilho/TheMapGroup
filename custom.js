@@ -3,6 +3,7 @@ function custom() {
   document.title = "The Map Group | Photos Map";
 
   addFavicon();
+  addFooter();
   createOverlay();
   createNavButton();
   fitBoundingBox(current_bbox);
@@ -254,4 +255,11 @@ function changeGroupBackgroundColor() {
     document.getElementById("group-container").className = "group-container";
     document.getElementById("nav-button").className = "nav-button";
   }
+}
+
+function addFooter() {
+  var footer = document.createElement("DIV");
+  footer.setAttribute("class", "footer");
+  footer.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API. <i>Map icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></i>";
+  document.body.append(footer);
 }

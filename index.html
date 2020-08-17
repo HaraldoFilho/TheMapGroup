@@ -15,7 +15,8 @@
   <style>
   body { margin: 0; padding: 0; }
   #map { position: absolute; top: 0; bottom: 0; width: 100%; }
-  #menu { position: absolute; background: #fff; padding: 10px; font-family: 'Open Sans', sans-serif; cursor: default; }
+  #menu { position: absolute; background: #fff; padding: 10px 15px 10px 10px; font-family: 'Open Sans', sans-serif; cursor: default; }
+  #selector { position: absolute; margin-top: 10px; margin-left: 500px; background: #fff; padding: 5px 15px 5px 10px; border-radius: 15px 15px 15px 15px; font-family: 'Open Sans', sans-serif; cursor: default; }
   </style>
 
   <!-- Begin of customization includes -->
@@ -34,6 +35,15 @@
     <label for="outdoors-v11">outdoors</label>
     <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" />
     <label for="satellite-v9">satellite</label>
+  </div>
+
+  <div id="selector">
+    <input id="members-markers" type="checkbox" checked="true">
+    <img id="members-icon" src="icons/member.svg" height="20px" style="margin-bottom:-3px"/>
+    members
+    <input id="non-members-markers" type="checkbox" checked="true">
+    <img id="members-icon" src="icons/non-member.svg" height="20px" style="margin-bottom:-3px"/>
+    non-members
   </div>
 
   <script>
@@ -99,7 +109,7 @@
     }
     htmlText = htmlText.concat("</div>");
 
-    var markerColor = '#DDDDDD';
+    var markerColor = '#CCCCCC';
     for (var i = 0; i < members.length; i++) {
       if (value[1] == members[i][0]) {
         markerColor = '#C2185B';
