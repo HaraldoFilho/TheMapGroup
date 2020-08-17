@@ -126,13 +126,13 @@ for page_number in range(number_of_pages, 0, -1):
         if len(member_name) > 30:
             member_name = member_name[:30]
 
-        # user vatar url
+        # user avatar url
         member_avatar = "\"https://live.staticflickr.com/5674/buddyicons/{}_r.jpg\"".format(member_id)
         os.system("wget -q {}".format(member_avatar))
         if os.path.exists("{}_r.jpg".format(member_id)):
             os.system("rm {}_r.jpg".format(member_id))
         else:
-            member_avatar = "people/photographer.svg"
+            member_avatar = "\"people/photographer.svg\""
 
         # get user's photos base url
         photos_base_url = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['photosurl']['_content']
@@ -152,8 +152,8 @@ for page_number in range(number_of_pages, 0, -1):
                 if coord not in member_coords:
                     member_n_places += 1
                     member_coords.append(coord)
-        members_file.write("  [\'{0}\', \'{1}\', \'{2}\', \'{3}\', {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
-        if member_number < len(members)-2:
+        members_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
+        if member_number > 0:
             members_file.write("],\n")
         else:
             members_file.write("]\n")
@@ -162,6 +162,21 @@ for page_number in range(number_of_pages, 0, -1):
 members_file.write("]\n")
 members_file.close()
 
+print('##### Updating group map...')
+# get 'locations.js' and 'members.js' from github
+print('Getting locations and members from remote...')
+try:
+    command = "wget -q -P {} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/locations.js".format(repo_path)
+    os.system(command)
+except:
+    pass
 # update group map
 command = "{}/generate-map-data.py".format(repo_path)
 os.system(command)
+print('Uploading map data...')
+os.system("git add -f {}/*.js".format(repo_path))
+os.system("git commit -m \"Updated group map\"")
+os.system("git push -q origin master")
+print('Done!')
+os.system("rm {}/locations.js".format(repo_path))
+os.system("rm -fr {}/__pycache__".format(repo_path))
