@@ -1,5 +1,5 @@
 members = [
-  ['30622510@N02', 'hpfilho', 'Haraldo Albergaria', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 127, 148],
+  ['30622510@N02', 'hpfilho', 'Haraldo Albergaria', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 127, 100],
   ['14320768@N07', 'nebraskasc', 'Dale  Kaminski', "https://live.staticflickr.com/5674/buddyicons/14320768@N07_r.jpg", 1, 1],
   ['8121206@N07', 'chrispricephotography', 'Chris Price', "https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg", 6, 8],
   ['79292646@N05', 'ellebedeva', 'Elena Lebedeva (IG: ellebedeva', "https://live.staticflickr.com/5674/buddyicons/79292646@N05_r.jpg", 9, 9],
