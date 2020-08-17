@@ -7,7 +7,7 @@ var countries = [
   ['AR', 'Argentina', 46, 50],
   ['US', 'United States of America', 218, 318],
   ['CA', 'Canada', 56, 78],
-  ['GB', 'United Kingdom', 186, 288],
+  ['GB', 'United Kingdom', 187, 289],
   ['FO', 'Faroe Islands', 6, 16],
   ['IS', 'Iceland', 104, 220],
   ['GL', 'Greenland', 102, 180],
