@@ -1,7 +1,7 @@
 var countries = [
   ['DM', 'Dominica', 4, 4],
   ['NL', 'The Netherlands', 22, 22],
-  ['NO', 'Norway', 173, 206],
+  ['NO', 'Norway', 172, 204],
   ['NZ', 'New Zealand', 210, 243],
   ['FK', 'Falkland Islands', 26, 40],
   ['AR', 'Argentina', 46, 50],
@@ -18,7 +18,7 @@ var countries = [
   ['MY', 'Malaysia', 6, 6],
   ['AE', 'United Arab Emirates', 24, 27],
   ['QA', 'Qatar', 13, 16],
-  ['CL', 'Chile', 19, 22],
+  ['CL', 'Chile', 18, 21],
   ['ID', 'Indonesia', 1, 1],
   ['BR', 'Brazil', 61, 92],
   ['ZA', 'South Africa', 199, 337],
