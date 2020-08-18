@@ -29,7 +29,7 @@ var countries = [
   ['IR', 'Iran', 10, 10],
   ['SY', 'Syria', 3, 3],
   ['AT', 'Austria', 2, 2],
-  ['DE', 'Germany', 1691, 1718],
+  ['DE', 'Germany', 1692, 1719],
   ['ET', 'Ethiopia', 34, 34],
   ['EG', 'Egypt', 5, 5],
   ['AE', 'United Arab Emirates', 59, 61],
