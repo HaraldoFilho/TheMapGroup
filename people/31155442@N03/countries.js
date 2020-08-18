@@ -1,10 +1,10 @@
 var countries = [
-  ['US', 'United States of America', 1058, 1276],
+  ['US', 'United States of America', 1057, 1275],
   ['BS', 'Bahamas', 19, 19],
   ['TC', 'Turks and Caicos Islands', 34, 41],
   ['DO', 'Dominican Republic', 25, 42],
   ['NL', 'The Netherlands', 271, 316],
-  ['CA', 'Canada', 1370, 1918],
+  ['CA', 'Canada', 1349, 1896],
   ['GB', 'United Kingdom', 644, 726],
   ['IE', 'Ireland', 36, 40],
   ['NO', 'Norway', 78, 79],
