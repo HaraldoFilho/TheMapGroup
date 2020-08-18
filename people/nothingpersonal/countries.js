@@ -6,7 +6,7 @@ var countries = [
   ['FR', 'France', 402, 444],
   ['NL', 'The Netherlands', 76, 79],
   ['ES', 'Spain', 180, 196],
-  ['BE', 'Belgium', 57, 60],
+  ['BE', 'Belgium', 46, 48],
   ['IT', 'Italy', 189, 210],
   ['VA', 'Vatican City', 2, 3],
   ['CZ', 'Czech Republic', 59, 59],
