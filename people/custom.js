@@ -266,15 +266,15 @@ function fitBoundingBox(bbox) {
   var overlay_status = document.getElementById("overlay").style.width;
 
   if (overlay_status == '400px') {
-    padding_left = 550;
+    padding_left = 450;
   } else {
-    padding_left = 150;
+    padding_left = 50;
   }
 
   map.fitBounds([
     [bbox[0], bbox[1]],
     [bbox[2], bbox[3]]],
-    {padding: {top:150, bottom:150, left:padding_left, right:150}}
+    {padding: {top:50, bottom:50, left:padding_left, right:50}}
   );
 
 };
