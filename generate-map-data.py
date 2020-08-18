@@ -284,9 +284,8 @@ for loc in range(n_locations):
             coordinates.pop(coord)
 
     # update the number of photos on marker
-    n_photos += new_photos
     locations[loc][2] = photos_info
-    locations[loc][3] = n_photos
+    locations[loc][3] = len(photos_info)
     locations_js_file.write("    {}".format(locations[loc]))
 
     if len(coordinates) > 0:
@@ -331,9 +330,6 @@ for marker_info in coordinates:
     # write it to locations file
     locations_js_file.write("    [[{0}, {1}], \'{2}\', [".format(longitude, latitude, photo_owner))
 
-    # counts number of photos on marker
-    n_photos = 0
-
     # iterate over each photo
     for i in range(len(marker_info[2])):
 
@@ -343,9 +339,9 @@ for marker_info in coordinates:
         locations_js_file.write("[\'{0}\', \'{1}\']".format(photo_id, thumb_url))
         if i < len(marker_info[2])-1:
             locations_js_file.write(", ")
-        n_photos += 1
 
     # finish marker writing to location file
+    n_photos = len(marker_info[2])
     locations_js_file.write("], {}]".format(n_photos))
     if new_markers < n_markers:
         locations_js_file.write(",\n")
