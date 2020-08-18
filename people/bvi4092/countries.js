@@ -1,5 +1,5 @@
 var countries = [
-  ['GB', 'United Kingdom', 221, 419],
+  ['GB', 'United Kingdom', 223, 421],
   ['AE', 'United Arab Emirates', 9, 9],
   ['VG', 'British Virgin Islands', 24, 52],
   ['IE', 'Ireland', 4, 7],
