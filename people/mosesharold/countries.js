@@ -3,7 +3,7 @@ var countries = [
   ['NL', 'The Netherlands', 22, 22],
   ['NO', 'Norway', 173, 206],
   ['NZ', 'New Zealand', 210, 243],
-  ['FK', 'Falkland Islands', 30, 44],
+  ['FK', 'Falkland Islands', 26, 40],
   ['AR', 'Argentina', 46, 50],
   ['US', 'United States of America', 218, 318],
   ['CA', 'Canada', 56, 78],
