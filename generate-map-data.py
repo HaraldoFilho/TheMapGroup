@@ -275,7 +275,7 @@ for loc in range(n_locations):
                 thumb_url = photo[1]
 
                 # if the photo is not already on marker, add the photo to it
-                if photo_id not in photos_info:
+                if [photo_id, thumb_url] not in photos_info:
                     photos_info.append([photo_id, thumb_url])
                     new_photos += 1
 
@@ -285,7 +285,7 @@ for loc in range(n_locations):
 
     # update the number of photos on marker
     n_photos += new_photos
-    locations[loc][1] = photos_info
+    locations[loc][2] = photos_info
     locations[loc][3] = n_photos
     locations_js_file.write("    {}".format(locations[loc]))
 
@@ -326,7 +326,7 @@ for marker_info in coordinates:
     # get coordinates of the new marker
     longitude = float(marker_info[0][0])
     latitude = float(marker_info[0][1])
-    photo_owner =  marker_info[1]
+    photo_owner = marker_info[1]
 
     # write it to locations file
     locations_js_file.write("    [[{0}, {1}], \'{2}\', [".format(longitude, latitude, photo_owner))
@@ -340,7 +340,7 @@ for marker_info in coordinates:
         # add photo to marker, writing it to locations file
         photo_id = marker_info[2][i][0]
         thumb_url =  marker_info[2][i][1]
-        locations_js_file.write("[\'{0}\', \"{1}\"]".format(photo_id, thumb_url))
+        locations_js_file.write("[\'{0}\', \'{1}\']".format(photo_id, thumb_url))
         if i < len(marker_info[2])-1:
             locations_js_file.write(", ")
         n_photos += 1
