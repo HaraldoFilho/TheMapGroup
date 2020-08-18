@@ -2,7 +2,7 @@ var countries = [
   ['VA', 'Vatican City', 2, 235],
   ['US', 'United States of America', 11, 2787],
   ['HU', 'Hungary', 2, 2],
-  ['NL', 'The Netherlands', 2, 308],
+  ['NL', 'The Netherlands', 2, 307],
   ['AT', 'Austria', 1, 1],
   ['FR', 'France', 1, 1],
   ['CN', 'China', 2, 592],
