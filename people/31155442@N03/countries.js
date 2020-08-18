@@ -1,12 +1,11 @@
 var countries = [
-  ['GB', 'United Kingdom', 659, 742],
-  ['CA', 'Canada', 1369, 1914],
-  ['GG', 'Guernsey', 3, 8],
-  ['US', 'United States of America', 1065, 1290],
+  ['US', 'United States of America', 1058, 1276],
   ['BS', 'Bahamas', 19, 19],
   ['TC', 'Turks and Caicos Islands', 34, 41],
-  ['DO', 'Dominican Republic', 25, 43],
+  ['DO', 'Dominican Republic', 25, 42],
   ['NL', 'The Netherlands', 271, 316],
+  ['CA', 'Canada', 1370, 1918],
+  ['GB', 'United Kingdom', 644, 726],
   ['IE', 'Ireland', 36, 40],
   ['NO', 'Norway', 78, 79],
   ['IT', 'Italy', 177, 211],
@@ -36,5 +35,6 @@ var countries = [
   ['FI', 'Finland', 34, 44],
   ['SE', 'Sweden', 62, 77],
   ['RU', 'Russia', 88, 136],
-  ['UY', 'Uruguay', 43, 67]
+  ['UY', 'Uruguay', 43, 67],
+  ['AR', 'Argentina', 2, 2]
 ]
