@@ -10,7 +10,7 @@ var countries = [
   ['IT', 'Italy', 8, 1030],
   ['GB', 'United Kingdom', 31, 4258],
   ['IE', 'Ireland', 1, 369],
-  ['TH', 'Thailand', 4, 2000],
+  ['TH', 'Thailand', 4, 2001],
   ['DE', 'Germany', 1, 137],
   ['PL', 'Poland', 8, 3743],
   ['IS', 'Iceland', 6, 841],
@@ -20,7 +20,7 @@ var countries = [
   ['LC', 'Saint Lucia', 1, 314],
   ['BB', 'Barbados', 1, 121],
   ['JP', 'Japan', 10, 4616],
-  ['IN', 'India', 4, 2967],
+  ['IN', 'India', 4, 2961],
   ['CR', 'Costa Rica', 6, 3134],
   ['VN', 'Vietnam', 2, 2],
   ['RU', 'Russia', 31, 4792]
