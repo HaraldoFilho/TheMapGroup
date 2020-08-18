@@ -56,7 +56,7 @@ var countries = [
   ['IN', 'India', 2, 2],
   ['FI', 'Finland', 5, 5],
   ['GA', 'Gabon', 60, 60],
-  ['CU', 'Cuba', 2, 2],
+  ['CU', 'Cuba', 3, 3],
   ['NP', 'Nepal', 52, 52],
   ['BR', 'Brazil', 12, 12],
   ['EC', 'Ecuador', 4, 4],
