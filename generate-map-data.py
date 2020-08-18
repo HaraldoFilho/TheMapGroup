@@ -255,8 +255,8 @@ new_photos = 0
 for loc in range(n_locations):
 
     # get info for photos on marker
-    photos_info = locations[loc][1]
-    n_photos = int(locations[loc][2])
+    photos_info = locations[loc][2]
+    n_photos = int(locations[loc][3])
 
     # get number of photos (coordinates) to be added to map
     n_coords = len(coordinates)
@@ -267,15 +267,16 @@ for loc in range(n_locations):
         # if there is already a marker on the same coordinate
         if coordinates[coord][0] == locations[loc][0]:
 
+            photo_owner = locations[loc][1]
+
             # read each photo already on the marker
-            for photo in coordinates[coord][1]:
+            for photo in coordinates[coord][2]:
                 photo_id = photo[0]
                 thumb_url = photo[1]
-                photo_owner = photo[2]
 
                 # if the photo is not already on marker, add the photo to it
                 if photo_id not in photos_info:
-                    photos_info.append([photo_id, thumb_url, photo_owner])
+                    photos_info.append([photo_id, thumb_url])
                     new_photos += 1
 
             # remove photo info from
@@ -285,7 +286,7 @@ for loc in range(n_locations):
     # update the number of photos on marker
     n_photos += new_photos
     locations[loc][1] = photos_info
-    locations[loc][2] = n_photos
+    locations[loc][3] = n_photos
     locations_js_file.write("    {}".format(locations[loc]))
 
     if len(coordinates) > 0:
