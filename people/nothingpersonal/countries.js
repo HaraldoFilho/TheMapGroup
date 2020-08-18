@@ -1,7 +1,7 @@
 var countries = [
-  ['RU', 'Russia', 479, 611],
+  ['RU', 'Russia', 478, 610],
   ['DK', 'Denmark', 8, 12],
-  ['GB', 'United Kingdom', 679, 778],
+  ['GB', 'United Kingdom', 679, 777],
   ['UA', 'Ukraine', 41, 46],
   ['FR', 'France', 402, 444],
   ['NL', 'The Netherlands', 76, 79],

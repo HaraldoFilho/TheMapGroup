@@ -3,6 +3,6 @@ var user_info = {
   "name": "Dmitry Djouce",
   "avatar": "../photographer.svg",
   "url": "https://www.flickr.com/photos/nothingpersonal/",
-  "markers": 2350,
-  "photos": 2686,
+  "markers": 2349,
+  "photos": 2684,
 }
