@@ -42,6 +42,8 @@ function custom() {
   document.getElementById("n-markers").innerText = user_info["markers"];
   document.getElementById("n-photos").innerText = user_info["photos"];
 
+  countries.sort(function(a,b){ return (b[2]-a[2]) });
+
   for (var i = 0; i < countries.length; i++) {
 
     var country_code = countries[i][0];
