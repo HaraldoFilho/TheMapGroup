@@ -42,7 +42,13 @@ function custom() {
   document.getElementById("n-markers").innerText = user_info["markers"];
   document.getElementById("n-photos").innerText = user_info["photos"];
 
-  countries.sort(function(a,b){ return (b[2]-a[2]) });
+  countries.sort(function(a,b) {
+    var delta = (b[2]-a[2]);
+    if (delta == 0) {
+      return (b[3]-a[3]);
+    }
+    return delta;
+   });
 
   for (var i = 0; i < countries.length; i++) {
 
