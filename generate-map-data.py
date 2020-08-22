@@ -57,7 +57,6 @@ try:
     group_id = group_info['id']
     group_name = group_info['groupname']['_content']
 except:
-    geolocator = None
     sys.exit()
 
 # stores the coordinates fo the markers
@@ -71,7 +70,6 @@ try:
     print('Generating map for \'{}\''.format(group_name))
     print('{} photos in the pool'.format(total))
 except:
-    geolocator = None
     sys.exit()
 
 # current number of photos on photostream
@@ -86,7 +84,6 @@ if os.path.exists("{}/last_total.py".format(run_path)):
     delta_total = int(current_total) - int(last_total.number)
     if delta_total == 0:
         print('No changes on number of photos since last run.\nAborted.')
-        geolocator = None
         sys.exit()
 
 # if difference > 0, makes total = delta_total
@@ -125,7 +122,6 @@ for pg in range(1, npages+1):
     try:
         page = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, privacy_filter='1', extras='geo,tags,url_sq', page=pg, per_page=photos_per_page)['photos']['photo']
     except:
-        geolocator = None
         sys.exit()
 
     photos_in_page = len(page)

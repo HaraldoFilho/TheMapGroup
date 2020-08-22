@@ -82,53 +82,56 @@ for page_number in range(number_of_pages, 0, -1):
             else:
                 print('##### Updating map for member: {}...'.format(member_name[0:20]))
                 # get 'locations.py', 'countries.py' and 'user.js' from github
-                #print('Getting locations and countries from remote...')
-                #try:
-                #    command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/locations.py".format(member_path, member_alias)
-                #    os.system(command)
-                #    command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/countries.py".format(member_path, member_alias)
-                #    os.system(command)
-                #    command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/user.js".format(member_path, member_alias)
-                #    os.system(command)
-                #except:
-                #pass
+                print('Getting locations and countries from remote...')
+                try:
+                    if not os.path.exists("{}/locations.py".format(member_path)):
+                        command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/locations.py".format(member_path, member_alias)
+                        os.system(command)
+                    if not os.path.exists("{}/countries.py".format(member_path)):
+                        command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/countries.py".format(member_path, member_alias)
+                        os.system(command)
+                    if not os.path.exists("{}/user.js".format(member_path)):
+                        command = "wget -q -P {0} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/people/{1}/user.js".format(member_path, member_alias)
+                        os.system(command)
+                except:
+                    pass
 
             # generate/update member's map
             print('Starting \'Flickr Map\' script...')
             command = "{}/generate-map-data.py".format(member_path)
             os.system(command)
             # upload map
-            #os.system("git diff {0}/*.js > {0}/diffs".format(member_path))
-            #diffs = os.stat("{}/diffs".format(member_path)).st_size
-            #locations_exists = os.path.exists("{}/locations.py".format(member_path))
-            #countries_exists = os.path.exists("{}/countries.py".format(member_path))
-            #user_exists = os.path.exists("{}/user.js".format(member_path))
-            #if (diffs > 0 or is_new_member) and locations_exists and countries_exists and user_exists:
-            #    print('Uploading map data...')
-            #    os.system("git pull -q origin master")
-            #    os.system("git add -f {}/index.html".format(member_path))
-            #    os.system("git add -f {}/locations.py".format(member_path))
-            #    os.system("git add -f {}/countries.py".format(member_path))
-            #    os.system("git add -f {}/user.js".format(member_path))
-            #    os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
-            #    os.system("git push -q origin master")
-            #    print('Done!')
-            #else:
-            #    print("Everything is up-to-date. Nothing to upload!")
-            #if os.path.exists("{}/locations.py".format(member_path)):
-            #    os.system("rm {}/locations.py".format(member_path))
-            #if os.path.exists("{}/countries.py".format(member_path)):
-            #    os.system("rm {}/countries.py".format(member_path))
-            #if os.path.exists("{}/user.js".format(member_path)):
-            #    os.system("rm {}/user.js".format(member_path))
-            #os.system("rm -fr {}/__pycache__".format(member_path))
-            #os.system("rm {}/diffs".format(member_path))
-            #if is_new_member:
-            #    topic_subject = "[MAP] {}".format(member_name)
-            #    member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
-            #    topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, member_map)
-            #    flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
-            #    print('Created discussion topic for new member')
+            os.system("git diff {0}/locations.py > {0}/diffs".format(member_path))
+            diffs = os.stat("{}/diffs".format(member_path)).st_size
+            locations_exists = os.path.exists("{}/locations.py".format(member_path))
+            countries_exists = os.path.exists("{}/countries.py".format(member_path))
+            user_exists = os.path.exists("{}/user.js".format(member_path))
+            if (diffs > 0 or is_new_member) and locations_exists and countries_exists and user_exists:
+                print('Uploading map data...')
+                os.system("git pull -q origin master")
+                os.system("git add -f {}/index.html".format(member_path))
+                os.system("git add -f {}/locations.py".format(member_path))
+                os.system("git add -f {}/countries.py".format(member_path))
+                os.system("git add -f {}/user.js".format(member_path))
+                os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
+                os.system("git push -q origin master")
+                print('Done!')
+            else:
+                print("Everything is up-to-date. Nothing to upload!")
+            if os.path.exists("{}/locations.py".format(member_path)):
+                os.system("rm {}/locations.py".format(member_path))
+            if os.path.exists("{}/countries.py".format(member_path)):
+                os.system("rm {}/countries.py".format(member_path))
+            if os.path.exists("{}/user.js".format(member_path)):
+                os.system("rm {}/user.js".format(member_path))
+            os.system("rm -fr {}/__pycache__".format(member_path))
+            os.system("rm {}/diffs".format(member_path))
+            if is_new_member:
+                topic_subject = "[MAP] {}".format(member_name)
+                member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
+                topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, member_map)
+                flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
+                print('Created discussion topic for new member')
         except:
             continue
 
@@ -175,20 +178,21 @@ members_file.write("]\n")
 members_file.close()
 
 print('##### Updating group map...')
-# get 'locations.js' and 'members.js' from github
-#print('Getting locations and members from remote...')
-#try:
-#    command = "wget -q -P {} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/locations.js".format(repo_path)
-#    os.system(command)
-#except:
-#    pass
+# get 'locations.py' and 'members.js' from github
+print('Getting locations and members from remote...')
+if not os.path.exists("{}/locations.py".format(repo_path)):
+    try:
+        command = "wget -q -P {} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/locations.py".format(repo_path)
+        os.system(command)
+    except:
+        pass
 # update group map
 command = "{}/generate-map-data.py".format(repo_path)
 os.system(command)
-#print('Uploading map data...')
-#os.system("git add -f {}/*.js".format(repo_path))
-#os.system("git commit -m \"Updated group map\"")
-#os.system("git push -q origin master")
-#print('Done!')
-#os.system("rm {}/locations.js".format(repo_path))
-#os.system("rm -fr {}/__pycache__".format(repo_path))
+print('Uploading map data...')
+os.system("git add -f {}/*.js".format(repo_path))
+os.system("git commit -m \"Updated group map\"")
+os.system("git push -q origin master")
+print('Done!')
+os.system("rm {}/locations.py".format(repo_path))
+os.system("rm -fr {}/__pycache__".format(repo_path))
