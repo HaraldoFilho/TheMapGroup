@@ -116,6 +116,7 @@
   color: lightgrey;
   text-align: left;
   padding-top: 7px;
+  cursor: pointer;
 }
 
 .n-photos {
@@ -178,6 +179,9 @@ p.member {
   cursor: pointer;
 }
 
+p.member:hover {
+  color: white;
+}
 
 p.item {
   font-family: arial;
@@ -204,7 +208,23 @@ a:visited {
 }
 
 a:hover {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.group:link {
   color: inherit;
+  text-decoration: none;
+}
+
+a.group:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.group:hover {
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }

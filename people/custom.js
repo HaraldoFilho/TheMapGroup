@@ -37,6 +37,7 @@ function custom() {
 
   var member_link = document.createElement("A");
   member_link.setAttribute("id", "member_link");
+  member_link.setAttribute("class", "member");
   member_link.setAttribute("href", user_info["url"]);
   member_link.setAttribute("target", "_blank");
   document.getElementById("user-name").appendChild(member_link);
@@ -48,6 +49,7 @@ function custom() {
     document.getElementById("n-countries").innerText = countries.length.toString().concat(" country");
   }
 
+  document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
   document.getElementById("n-markers").innerText = user_info["markers"];
   document.getElementById("n-photos").innerText = user_info["photos"];
 
@@ -99,7 +101,7 @@ function custom() {
     document.getElementById("countries").appendChild(i_countries);
 
     var i_places = document.createElement("P");
-    i_places.setAttribute("class", "item");
+    i_places.setAttribute("class", "place");
     i_places.setAttribute("id", country_code);
     if (bbox_defined) {
       i_places.setAttribute("style", "cursor:pointer");
@@ -116,7 +118,7 @@ function custom() {
     document.getElementById("place-icon").appendChild(i_places_icon);
 
     var i_photos = document.createElement("P");
-    i_photos.setAttribute("class", "item");
+    i_photos.setAttribute("class", "photo");
     i_photos.innerText = countries[i][3];
     document.getElementById("photos").appendChild(i_photos);
 
@@ -302,6 +304,26 @@ function fitBoundingBox(bbox) {
     [bbox[2], bbox[3]]],
     {padding: {top:50, bottom:50, left:padding_left, right:50}}
   );
+
+};
+
+function fitInitialBoundingBox(initial_bbox) {
+
+  var overlay_status = document.getElementById("overlay").style.width;
+
+  if (overlay_status == '400px') {
+    padding_left = 550;
+  } else {
+    padding_left = 150;
+  }
+
+  map.fitBounds([
+    [initial_bbox[0], initial_bbox[1]],
+    [initial_bbox[2], initial_bbox[3]]],
+    {padding: {top:50, bottom:50, left:padding_left, right:50}}
+  );
+
+  current_bbox = initial_bbox;
 
 };
 

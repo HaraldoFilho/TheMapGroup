@@ -25,6 +25,7 @@ function custom() {
 
   var group_link = document.createElement("A");
   group_link.setAttribute("id", "group_link");
+  group_link.setAttribute("class", "group");
   group_link.setAttribute("href", group_url);
   group_link.setAttribute("target", "_self");
   document.getElementById("group-name").appendChild(group_link);
@@ -32,6 +33,7 @@ function custom() {
 
   document.getElementById("n-members").innerText = members.length.toString().concat(" members");
 
+  document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
   document.getElementById("n-markers").innerText = locations.length.toString();
   var n_photos = 0;
   for (var i = 0; i < locations.length; i++) {
@@ -264,6 +266,26 @@ function fitBoundingBox(bbox) {
     [bbox[2], bbox[3]]],
     {padding: {top:50, bottom:50, left:padding_left, right:50}}
   );
+
+};
+
+function fitInitialBoundingBox(initial_bbox) {
+
+  var overlay_status = document.getElementById("overlay").style.width;
+
+  if (overlay_status == '400px') {
+    padding_left = 550;
+  } else {
+    padding_left = 150;
+  }
+
+  map.fitBounds([
+    [initial_bbox[0], initial_bbox[1]],
+    [initial_bbox[2], initial_bbox[3]]],
+    {padding: {top:50, bottom:50, left:padding_left, right:50}}
+  );
+
+  current_bbox = initial_bbox;
 
 };
 

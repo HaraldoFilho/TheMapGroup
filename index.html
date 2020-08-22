@@ -66,6 +66,7 @@
     inputs[i].onclick = switchLayer;
   }
 
+  var initial_bbox = [];
   var current_bbox = [];
 
   var west = -160;
@@ -74,6 +75,8 @@
   var north = 60;
 
   locations.forEach(addMarker);
+
+  initial_bbox = current_bbox;
 
   map.fitBounds([
     [current_bbox[0], current_bbox[1]],
