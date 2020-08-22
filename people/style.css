@@ -158,7 +158,7 @@ p.country {
   font-size: 16px;
   line-height: 0;
   color: lightgrey;
-  cursor: pointer;
+  cursor: default;
 }
 
 
