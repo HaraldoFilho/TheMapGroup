@@ -105,11 +105,15 @@ function addFavicon() {
 }
 
 function createNavButton() {
+  var icon = document.createElement("IMG");
+  icon.setAttribute("src", "icons/people.svg");
+  icon.setAttribute("height", "24px");
+  icon.setAttribute("width", "24px");
   var div_nav_button = document.createElement("DIV");
   div_nav_button.setAttribute("id", "nav-button");
   div_nav_button.setAttribute("class", "nav-button");
   div_nav_button.setAttribute("onclick", "toggleOverlay()");
-  div_nav_button.innerHTML = "&#9776";
+  div_nav_button.appendChild(icon);
   document.body.append(div_nav_button);
 }
 
@@ -193,7 +197,7 @@ function createOverlay() {
   div_overlay.setAttribute("class", "overlay");
   div_overlay.setAttribute("onscroll", "changeGroupBackgroundColor()");
   div_overlay.appendChild(div_overlay_content);
-  div_overlay.style.width = "400px";
+  div_overlay.style.width = "0%";
 
   document.body.append(div_overlay);
 

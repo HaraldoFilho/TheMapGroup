@@ -14,7 +14,8 @@ import sys
 import time
 import math
 
-from geopy.geocoders import Nominatim
+#from geopy.geocoders import Nominatim
+from countries_info import getCountryInfo
 
 
 # ================= CONFIGURATION VARIABLES =====================
@@ -25,9 +26,6 @@ max_number_of_pages = 200
 max_number_of_photos = max_number_of_pages * int(photos_per_page)
 max_number_of_markers = 5000
 
-#geocoder
-geo_accuracy = 0.001
-geo_zoom = 18
 
 # ===============================================================
 
@@ -49,51 +47,25 @@ api_secret = api_credentials.api_secret
 # Flickr api access
 flickr = flickrapi.FlickrAPI(api_key, api_secret, format='parsed-json')
 
-# get geolocator
-try:
-    geolocator = Nominatim(user_agent="flickr_map")
-except:
-    print("ERROR: FATAL: Unable to get geolocator")
-    sys.exit()
-
-
-#===== FUNCTIONS ==============================================================#
-
-# Function to get photo's geo privacy
-def getGeoPrivacy(photo):
-    if photo['geo_is_public'] == 1:
-        return 1
-    if photo['geo_is_contact'] == 1:
-        return 2
-    if photo['geo_is_friend'] == 1 and photo['geo_is_family'] == 0:
-        return 3
-    if photo['geo_is_friend'] == 0 and photo['geo_is_family'] == 1:
-        return 4
-    if photo['geo_is_friend'] == 1 and photo['geo_is_family'] == 1:
-        return 5
-    if photo['geo_is_friend'] == 0 and photo['geo_is_family'] == 0:
-        return 6
-
-# Function to verify if there is geo tag info
-def isGeoTagged(photo):
-    if photo['longitude'] != 0 and photo['latitude'] != 0:
-        return True
-    return False
 
 
 #===== MAIN CODE ==============================================================#
 
 # get group id from group url on config file
-group_info = flickr.urls.lookupGroup(api_key=api_key, url='flickr.com/groups/the-map-group/')['group']
-group_id = group_info['id']
-group_name = group_info['groupname']['_content']
+try:
+    group_info = flickr.urls.lookupGroup(api_key=api_key, url='flickr.com/groups/the-map-group/')['group']
+    group_id = group_info['id']
+    group_name = group_info['groupname']['_content']
+except:
+    geolocator = None
+    sys.exit()
 
 # stores the coordinates fo the markers
 coordinates = []
 
-# set script mode (photoset or photostream) and get the total number of photos
+# get the total number of photos
 try:
-    photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, privacy_filter='1', per_page=photos_per_page)
+    photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, per_page=photos_per_page)
     npages = int(photos['photos']['pages'])
     total = int(photos['photos']['total'])
     print('Generating map for \'{}\''.format(group_name))
@@ -127,7 +99,9 @@ if delta_total > 0:
         print('{} new photo(s)'.format(total))
 else:
     n_deleted = abs(delta_total)
-    print('{} photo(s) deleted from photostream.\nThe corresponding markers will also be deleted'.format(n_deleted))
+    if os.path.exists("{}/locations.py".format(run_path)):
+        os.system("rm {}/locations.py".format(run_path))
+    print('{} photo(s) deleted from photos pool.\nThe corresponding markers will also be deleted'.format(n_deleted))
 
 
 print('Extracting photo coordinates and ids...')
@@ -148,7 +122,11 @@ if npages > max_number_of_pages:
 # process each page
 for pg in range(1, npages+1):
 
-    page = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, privacy_filter='1', extras='geo,tags,url_sq', page=pg, per_page=photos_per_page)['photos']['photo']
+    try:
+        page = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, privacy_filter='1', extras='geo,tags,url_sq', page=pg, per_page=photos_per_page)['photos']['photo']
+    except:
+        geolocator = None
+        sys.exit()
 
     photos_in_page = len(page)
 
@@ -161,32 +139,29 @@ for pg in range(1, npages+1):
         # on the same photo's coordinates
         marker_exists = False
 
-        # check if photo can be included on the map (according to privacy settings)
-        if True:
+        n_photos += 1
 
-            n_photos += 1
+        # get coordinates from photo
+        longitude = float(photo['longitude'])
+        latitude = float(photo['latitude'])
+        photo_owner = photo['owner']
 
-            # get coordinates from photo
-            longitude = float(photo['longitude'])
-            latitude = float(photo['latitude'])
-            photo_owner = photo['owner']
+        # read each markers coordinates and append photo is case
+        # there is already a marker on the same coordinate
+        for coord in coordinates:
+            if longitude == coord[0][0] and latitude == coord[0][1]:
+                coord[2].append([photo['id'], photo['url_sq']])
+                marker_exists = True
+                break
 
-            # read each markers coordinates and append photo is case
-            # there is already a marker on the same coordinate
-            for coord in coordinates:
-                if longitude == coord[0][0] and latitude == coord[0][1] and photo_owner == coord[1]:
-                    coord[2].append([photo['id'], photo['url_sq']])
-                    marker_exists = True
-                    break
-
-            # create a new marker to be added to the map
-            if not marker_exists:
-                coordinates.append([[longitude, latitude], photo_owner, [[photo['id'], photo['url_sq']]]])
-                n_markers += 1
+        # create a new marker to be added to the map
+        if not marker_exists:
+            coordinates.append([[longitude, latitude], photo_owner, [[photo['id'], photo['url_sq']]]])
+            n_markers += 1
 
         # stop processing photos if any limit was reached
         if n_photos >= total or n_photos >= max_number_of_photos or n_markers >= max_number_of_markers:
-           break
+            break
 
     print('Batch {0}/{1} | {2} photo(s) in {3} marker(s)'.format(pg, npages, n_photos, n_markers), end='\r')
 
@@ -200,48 +175,18 @@ for pg in range(1, npages+1):
         print("\nMaximum number of markers on map reached!", end='')
         break
 
-# stop and exit script if there is no photo to be added to the map
-if n_photos == 0:
-    if mode == 'photoset':
-        print('\nNo geo tagged photo on the user photoset\nMap not generated')
-    else:
-        print('\nNo geo tagged photo on the user photostream\nMap not generated')
-    geolocator = None
-    sys.exit()
-
 print('\nAdding marker(s) to map...')
 
-# check if there is javascript file with the markers on map already
-# and readt it otherwise created a new one
-if os.path.exists("{}/locations.js".format(run_path)):
-    locations_js_file = open("{}/locations.js".format(run_path))
+# check if there is a file with the markers on map already
+# and import it otherwise created a new variable
+if os.path.exists("{}/locations.py".format(run_path)):
+    from locations import locations
 else:
-    locations_js_file = open("{}/locations.js".format(run_path), 'w')
-    locations_js_file.write("var locations = [\n")
-    locations_js_file.write("]\n")
-    locations_js_file.close()
-    locations_js_file = open("{}/locations.js".format(run_path))
+    locations = []
 
-# read the file and store it
-locations_js_lines = locations_js_file.readlines()
-locations_js_file.close()
-
-# create a python file with the existing markers,
-# import it and delete it
-locations_py_file = open("{}/locations.py".format(run_path), 'w')
-locations_py_file.write("locations = [\n")
-for i in range(1, len(locations_js_lines)):
-    locations_py_file.write(locations_js_lines[i])
-locations_py_file.close()
-
-time.sleep(1)
-
-from locations import locations
-os.system("rm {}/locations.py".format(run_path))
-
-# create a new javascript file to store new markers
-locations_js_file = open("{}/locations.js".format(run_path), 'w')
-locations_js_file.write("var locations = [\n")
+# create a new location file or overwrite existing one
+locations_file = open("{}/locations.py".format(run_path), 'w')
+locations_file.write("locations = [\n")
 
 # get the number of markers (locations) already on map
 n_locations = len(locations)
@@ -286,12 +231,13 @@ for loc in range(n_locations):
     # update the number of photos on marker
     locations[loc][2] = photos_info
     locations[loc][3] = len(photos_info)
-    locations_js_file.write("    {}".format(locations[loc]))
+    locations_file.write("    {}".format(locations[loc]))
 
     if len(coordinates) > 0:
-        locations_js_file.write(",\n")
+        locations_file.write(",\n")
     else:
-        locations_js_file.write("\n")
+        locations_file.write("\n")
+
 
 if new_photos > 0:
     print('Added {} new photo(s) to existing markers'.format(new_photos))
@@ -328,25 +274,27 @@ for marker_info in coordinates:
     photo_owner = marker_info[1]
 
     # write it to locations file
-    locations_js_file.write("    [[{0}, {1}], \'{2}\', [".format(longitude, latitude, photo_owner))
+    locations_file.write("    [[{0}, {1}], \'{2}\', [".format(longitude, latitude, photo_owner))
+
+    # counts the number of photos
+    n_photos = 0
 
     # iterate over each photo
-    for i in range(len(marker_info[2])):
+    for photo in marker_info[2]:
 
         # add photo to marker, writing it to locations file
-        photo_id = marker_info[2][i][0]
-        thumb_url =  marker_info[2][i][1]
-        locations_js_file.write("[\'{0}\', \'{1}\']".format(photo_id, thumb_url))
-        if i < len(marker_info[2])-1:
-            locations_js_file.write(", ")
+        locations_file.write("[\'{0}\', \'{1}\']".format(photo[0], photo[1]))
+        n_photos += 1
+
+        if n_photos < len(marker_info[1]):
+            locations_file.write(", ")
 
     # finish marker writing to location file
-    n_photos = len(marker_info[2])
-    locations_js_file.write("], {}]".format(n_photos))
+    locations_file.write("], {}]".format(n_photos))
     if new_markers < n_markers:
-        locations_js_file.write(",\n")
+        locations_file.write(",\n")
     else:
-        locations_js_file.write("\n")
+        locations_file.write("\n")
 
     print('Added marker {0}/{1}'.format(new_markers, n_markers), end='\r')
 
@@ -358,9 +306,9 @@ else:
 
 print('Finished!')
 
-locations_js_file.write("]\n")
-locations_js_file.close()
+locations_file.write("]\n")
+locations_file.close()
 
 # update last_total file with the new value
-if os.path.exists("{}/locations.js".format(run_path)):
+if os.path.exists("{}/locations.py".format(run_path)):
     os.system("echo \"number = {0}\" > {1}/last_total.py".format(current_total, run_path))

@@ -4,5 +4,5 @@ var user_info = {
   "avatar": "../photographer.svg",
   "url": "https://www.flickr.com/photos/nothingpersonal/",
   "markers": 2349,
-  "photos": 2684,
+  "photos": 2684
 }

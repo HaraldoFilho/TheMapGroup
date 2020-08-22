@@ -3,6 +3,6 @@ var user_info = {
   "name": "Barbara Lawrence",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg",
   "url": "https://www.flickr.com/photos/barbaraelaw/",
-  "markers": 2352,
-  "photos": 3146,
+  "markers": 2355,
+  "photos": 3149
 }

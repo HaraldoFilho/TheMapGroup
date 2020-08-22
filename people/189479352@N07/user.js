@@ -3,6 +3,6 @@ var user_info = {
   "name": "Jeffrey Lovelace",
   "avatar": "https://live.staticflickr.com/5674/buddyicons/189479352@N07_r.jpg",
   "url": "https://www.flickr.com/photos/189479352@N07/",
-  "markers": 12,
-  "photos": 12,
+  "markers": 13,
+  "photos": 13
 }

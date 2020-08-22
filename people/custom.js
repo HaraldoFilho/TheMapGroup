@@ -2,6 +2,15 @@ function custom() {
 
   document.title = user_info["name"].concat(" | Photos Map");
 
+  countries = []
+
+  for (var country_code in countries_dict) {
+    countries.push([country_code,
+      countries_dict[country_code][0],
+      countries_dict[country_code][1],
+      countries_dict[country_code][2]])
+  }
+
   addFavicon();
   addFooter();
   createNavButton();
@@ -76,7 +85,6 @@ function custom() {
 
     var i_countries = document.createElement("P");
     i_countries.setAttribute("class", "country");
-    i_countries.setAttribute("id", country_code);
 
     if (country_name.length > 15) {
       i_countries.setAttribute("title", country_name);
@@ -92,6 +100,12 @@ function custom() {
 
     var i_places = document.createElement("P");
     i_places.setAttribute("class", "item");
+    i_places.setAttribute("id", country_code);
+    if (bbox_defined) {
+      i_places.setAttribute("style", "cursor:pointer");
+    } else {
+      i_places.setAttribute("style", "cursor:not-allowed");
+    }
     i_places.innerText = countries[i][2];
     document.getElementById("places").appendChild(i_places);
 
@@ -129,11 +143,15 @@ function addFavicon() {
 }
 
 function createNavButton() {
+  var icon = document.createElement("IMG");
+  icon.setAttribute("src", "../../icons/person.svg");
+  icon.setAttribute("height", "24px");
+  icon.setAttribute("width", "24px");
   var div_nav_button = document.createElement("DIV");
   div_nav_button.setAttribute("id", "nav-button");
   div_nav_button.setAttribute("class", "nav-button");
   div_nav_button.setAttribute("onclick", "toggleOverlay()");
-  div_nav_button.innerHTML = "&#9776";
+  div_nav_button.appendChild(icon);
   document.body.append(div_nav_button);
 }
 

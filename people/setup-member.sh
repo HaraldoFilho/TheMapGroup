@@ -11,6 +11,7 @@ fi
 mkdir $REPO_DIR/people/$1
 cd $REPO_DIR/people/$1
 ln -s ../../api_credentials.py .
+ln -s ../../countries_info.py .
 ln -P $GEN_MAP_DIR/generate-map-data.py .
 ln -P ../index.html .
 echo "user = '$1'" > config.py
