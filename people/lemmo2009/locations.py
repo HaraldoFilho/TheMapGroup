@@ -4559,5 +4559,5 @@ locations = [
     [[0.728638, 51.732745], 'GB', [['50245857042', 'https://live.staticflickr.com/65535/50245857042_a90050b767_s.jpg'], ['50105563037', 'https://live.staticflickr.com/65535/50105563037_eb8c3e6ff2_s.jpg']], 2],
     [[1.275186, 51.930449], 'GB', [['50245012818', 'https://live.staticflickr.com/65535/50245012818_5e640923a5_s.jpg']], 1],
     [[-4.214073, 51.176661], 'GB', [['50249239657', 'https://live.staticflickr.com/65535/50249239657_5d59fdd45d_s.jpg']], 1],
-    [[-4.214109, 51.176413], 'GB', [['50249041106', 'https://live.staticflickr.com/65535/50249041106_183a6a5f00_s.jpg']], 1]
+    [[-4.214109, 51.176413], 'GB', [['50249041106', 'https://live.staticflickr.com/65535/50249041106_183a6a5f00_s.jpg']], 1],
 ]
