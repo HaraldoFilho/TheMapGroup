@@ -1,5 +1,5 @@
 members = [
-  ['30622510@N02', 'hpfilho', 'H. P. Filho', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 131, 152],
+  ['30622510@N02', 'hpfilho', 'H. P. Filho', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 132, 153],
   ['14320768@N07', 'nebraskasc', 'NebraskaSC Severe Weather Phot', "https://live.staticflickr.com/5674/buddyicons/14320768@N07_r.jpg", 1, 1],
   ['8121206@N07', 'chrispricephotography', 'Christopher Wallace', "https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg", 8, 11],
   ['79292646@N05', 'ellebedeva', 'Elena Lebedeva (IG: ellebedeva', "https://live.staticflickr.com/5674/buddyicons/79292646@N05_r.jpg", 9, 9],
@@ -7,7 +7,7 @@ members = [
   ['51207582@N08', '51207582@N08', 'GaryC4', "https://live.staticflickr.com/5674/buddyicons/51207582@N08_r.jpg", 1, 1],
   ['57729348@N02', 'mosesharold', 'haroldmoses', "https://live.staticflickr.com/5674/buddyicons/57729348@N02_r.jpg", 6, 8],
   ['30717887@N05', '30717887@N05', 'Tor Einar Andersen', "https://live.staticflickr.com/5674/buddyicons/30717887@N05_r.jpg", 2, 2],
-  ['40749798@N07', 'lemmo2009', 'Lemmo2009', "https://live.staticflickr.com/5674/buddyicons/40749798@N07_r.jpg", 12, 12],
+  ['40749798@N07', 'lemmo2009', 'Lemmo2009', "https://live.staticflickr.com/5674/buddyicons/40749798@N07_r.jpg", 13, 13],
   ['22572253@N08', '22572253@N08', 'Northern Tony', "https://live.staticflickr.com/5674/buddyicons/22572253@N08_r.jpg", 2, 2],
   ['27109078@N05', '27109078@N05', 'normafincher', "https://live.staticflickr.com/5674/buddyicons/27109078@N05_r.jpg", 5, 5],
   ['110839836@N07', 'andygocher', 'Andy.Gocher', "https://live.staticflickr.com/5674/buddyicons/110839836@N07_r.jpg", 1, 1],
@@ -18,7 +18,7 @@ members = [
   ['32770136@N05', 'chris_macdonald1983', 'CJphoto83', "https://live.staticflickr.com/5674/buddyicons/32770136@N05_r.jpg", 1, 1],
   ['25404639@N08', 'barbaraelaw', 'ManxieB- prefer comments!', "https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg", 16, 16],
   ['145400672@N02', '145400672@N02', 'Pit Spielmann', "https://live.staticflickr.com/5674/buddyicons/145400672@N02_r.jpg", 15, 15],
-  ['130828646@N02', '130828646@N02', 'philippeguillot21', "https://live.staticflickr.com/5674/buddyicons/130828646@N02_r.jpg", 9, 9],
+  ['130828646@N02', '130828646@N02', 'philippeguillot21', "https://live.staticflickr.com/5674/buddyicons/130828646@N02_r.jpg", 14, 15],
   ['93936890@N02', '93936890@N02', 'Brit 70013 fan', "https://live.staticflickr.com/5674/buddyicons/93936890@N02_r.jpg", 1, 1],
   ['7182681@N07', 'grundi1', 'grundi1', "https://live.staticflickr.com/5674/buddyicons/7182681@N07_r.jpg", 12, 29],
   ['158292715@N07', 'fvega', 'Fernando Sa Rapita', "https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg", 2, 2],
@@ -28,10 +28,11 @@ members = [
   ['132838898@N03', 'quelrr', 'Quel.R.R', "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg", 0, 0],
   ['13445173@N06', 'bvi4092', 'bvi4092', "https://live.staticflickr.com/5674/buddyicons/13445173@N06_r.jpg", 1, 2],
   ['66031636@N00', 'jnoval', 'javiernoval', "https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg", 1, 1],
-  ['57727182@N08', '57727182@N08', 'bobbyblack51', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 7, 8],
+  ['57727182@N08', '57727182@N08', 'bobbyblack51', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 8, 9],
   ['76199006@N05', 'jasonfrels', 'Jason Frels', "https://live.staticflickr.com/5674/buddyicons/76199006@N05_r.jpg", 5, 5],
   ['63713558@N00', 'staneastwood', '4.1 mil views - Thank you all.', "https://live.staticflickr.com/5674/buddyicons/63713558@N00_r.jpg", 1, 1],
   ['135298455@N04', 'quanito', 'pascalvu1', "https://live.staticflickr.com/5674/buddyicons/135298455@N04_r.jpg", 8, 12],
   ['189479352@N07', '189479352@N07', 'jklovelacephotography', "https://live.staticflickr.com/5674/buddyicons/189479352@N07_r.jpg", 1, 1],
-  ['33989856@N04', 'beatrixmvarga', 'Beatrix MK', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 3, 3]
+  ['33989856@N04', 'beatrixmvarga', 'Beatrix MK', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 3, 3],
+  ['97974874@N00', 'blackdiamondimages', 'Black Diamond Images', "https://live.staticflickr.com/5674/buddyicons/97974874@N00_r.jpg", 5, 5]
 ]
