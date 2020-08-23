@@ -22,9 +22,8 @@ members = [
   ['93936890@N02', '93936890@N02', 'Brit 70013 fan', "https://live.staticflickr.com/5674/buddyicons/93936890@N02_r.jpg", 1, 1],
   ['7182681@N07', 'grundi1', 'grundi1', "https://live.staticflickr.com/5674/buddyicons/7182681@N07_r.jpg", 12, 29],
   ['158292715@N07', 'fvega', 'Fernando Sa Rapita', "https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg", 2, 2],
-  ['7812564@N02', 'zoi05', 'kbulut58', "https://live.staticflickr.com/5674/buddyicons/7812564@N02_r.jpg", 2, 2],
   ['21593175@N00', 'susannemichelle', 'Susie_D52', "https://live.staticflickr.com/5674/buddyicons/21593175@N00_r.jpg", 3, 3],
-  ['169904704@N04', 'eugeniocosta', 'Eugenio GV Costa', "https://live.staticflickr.com/5674/buddyicons/169904704@N04_r.jpg", 5, 5],
+  ['169904704@N04', 'eugeniocosta', 'Eugenio GV Costa', "https://live.staticflickr.com/5674/buddyicons/169904704@N04_r.jpg", 6, 6],
   ['132838898@N03', 'quelrr', 'Quel.R.R', "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg", 0, 0],
   ['13445173@N06', 'bvi4092', 'bvi4092', "https://live.staticflickr.com/5674/buddyicons/13445173@N06_r.jpg", 1, 2],
   ['66031636@N00', 'jnoval', 'javiernoval', "https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg", 1, 1],
@@ -34,5 +33,6 @@ members = [
   ['135298455@N04', 'quanito', 'pascalvu1', "https://live.staticflickr.com/5674/buddyicons/135298455@N04_r.jpg", 8, 12],
   ['189479352@N07', '189479352@N07', 'jklovelacephotography', "https://live.staticflickr.com/5674/buddyicons/189479352@N07_r.jpg", 1, 1],
   ['33989856@N04', 'beatrixmvarga', 'Beatrix MK', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 3, 3],
-  ['97974874@N00', 'blackdiamondimages', 'Black Diamond Images', "https://live.staticflickr.com/5674/buddyicons/97974874@N00_r.jpg", 5, 5]
+  ['97974874@N00', 'blackdiamondimages', 'Black Diamond Images', "https://live.staticflickr.com/5674/buddyicons/97974874@N00_r.jpg", 5, 5],
+  ['120861725@N07', '120861725@N07', 'GSB Photography', "https://live.staticflickr.com/5674/buddyicons/120861725@N07_r.jpg", 7, 7],
 ]
