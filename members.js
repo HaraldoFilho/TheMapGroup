@@ -14,7 +14,7 @@ members = [
   ['32557441@N02', 'santelia', 'alfsan', "https://live.staticflickr.com/5674/buddyicons/32557441@N02_r.jpg", 1, 1],
   ['46721940@N00', 'nothingpersonal', 'Dmitry Djouce', "people/photographer.svg", 6, 6],
   ['88196436@N04', 'saw_that', 'I saw_that', "https://live.staticflickr.com/5674/buddyicons/88196436@N04_r.jpg", 6, 6],
-  ['31155442@N03', '31155442@N03', 'Joseph Hollick', "https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg", 17, 17],
+  ['31155442@N03', '31155442@N03', 'Joseph Hollick', "https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg", 20, 20],
   ['32770136@N05', 'chris_macdonald1983', 'CJphoto83', "https://live.staticflickr.com/5674/buddyicons/32770136@N05_r.jpg", 1, 1],
   ['25404639@N08', 'barbaraelaw', 'ManxieB- prefer comments!', "https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg", 16, 16],
   ['145400672@N02', '145400672@N02', 'Pit Spielmann', "https://live.staticflickr.com/5674/buddyicons/145400672@N02_r.jpg", 15, 15],
@@ -22,6 +22,7 @@ members = [
   ['93936890@N02', '93936890@N02', 'Brit 70013 fan', "https://live.staticflickr.com/5674/buddyicons/93936890@N02_r.jpg", 1, 1],
   ['7182681@N07', 'grundi1', 'grundi1', "https://live.staticflickr.com/5674/buddyicons/7182681@N07_r.jpg", 12, 29],
   ['158292715@N07', 'fvega', 'Fernando Sa Rapita', "https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg", 2, 2],
+  ['7812564@N02', 'zoi05', 'kbulut58', "https://live.staticflickr.com/5674/buddyicons/7812564@N02_r.jpg", 2, 2],
   ['21593175@N00', 'susannemichelle', 'Susie_D52', "https://live.staticflickr.com/5674/buddyicons/21593175@N00_r.jpg", 3, 3],
   ['169904704@N04', 'eugeniocosta', 'Eugenio GV Costa', "https://live.staticflickr.com/5674/buddyicons/169904704@N04_r.jpg", 6, 6],
   ['132838898@N03', 'quelrr', 'Quel.R.R', "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg", 0, 0],
@@ -35,4 +36,5 @@ members = [
   ['33989856@N04', 'beatrixmvarga', 'Beatrix MK', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 3, 3],
   ['97974874@N00', 'blackdiamondimages', 'Black Diamond Images', "https://live.staticflickr.com/5674/buddyicons/97974874@N00_r.jpg", 5, 5],
   ['120861725@N07', '120861725@N07', 'GSB Photography', "https://live.staticflickr.com/5674/buddyicons/120861725@N07_r.jpg", 7, 7],
+  ['147135779@N02', '147135779@N02', 'giovannicampus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 8, 8]
 ]
