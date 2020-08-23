@@ -12,8 +12,10 @@ mkdir $REPO_DIR/people/$1
 cd $REPO_DIR/people/$1
 ln -s ../../api_credentials.py .
 ln -s ../../countries_info.py .
+ln -s ../../countries/members.py countries_members.py
 ln -P $GEN_MAP_DIR/generate-map-data.py .
 ln -P ../index.html .
+ln -P ../update-countries-map-data.py .
 echo "user = '$1'" > config.py
 echo "photoset_id = ''" >> config.py
 echo "photo_privacy = 1" >> config.py
