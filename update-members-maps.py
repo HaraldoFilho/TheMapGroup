@@ -104,7 +104,7 @@ for page_number in range(number_of_pages, 0, -1):
             command = "{}/generate-map-data.py".format(member_path)
             os.system(command)
 
-            os.system("git diff {0}/locations.py > {0}/diffs".format(member_path))
+            os.system("git diff {0}/* > {0}/diffs".format(member_path))
             diffs = os.stat("{}/diffs".format(member_path)).st_size
             locations_exists = os.path.exists("{}/locations.py".format(member_path))
             countries_exists = os.path.exists("{}/countries.py".format(member_path))

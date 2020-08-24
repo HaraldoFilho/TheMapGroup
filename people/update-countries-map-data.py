@@ -25,9 +25,9 @@ from user import user_info
 
 for country_code in countries_dict:
     if country_code in members_dict:
-        members_dict[country_code].append([user_info['id'], user_info['name'], user_info['avatar'], user_info['url'], countries_dict[country_code][1], countries_dict[country_code][2]])
+        members_dict[country_code].append([user_info['id'], user_info['alias'], user_info['name'], user_info['avatar'], countries_dict[country_code][1], countries_dict[country_code][2]])
     else:
-        members_dict[country_code] = [[user_info['id'], user_info['name'], user_info['avatar'], user_info['url'], countries_dict[country_code][1], countries_dict[country_code][2]]]
+        members_dict[country_code] = [[user_info['id'], user_info['alias'], user_info['name'], user_info['avatar'], countries_dict[country_code][1], countries_dict[country_code][2]]]
 
 i = 0
 for country_code in members_dict:

@@ -14,7 +14,6 @@ import sys
 import time
 import math
 
-#from geopy.geocoders import Nominatim
 from countries_info import getCountryInfo
 
 
@@ -28,7 +27,6 @@ max_number_of_markers = 5000
 
 
 # ===============================================================
-
 
 # get full script's path
 run_path = os.path.dirname(os.path.realpath(__file__))
