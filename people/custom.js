@@ -86,23 +86,21 @@ function custom() {
     document.getElementById("flags").appendChild(i_flags);
 
     var i_countries = document.createElement("P");
+    i_countries.setAttribute("id", country_code);
     i_countries.setAttribute("class", "country");
+    i_countries.setAttribute("style", "cursor:pointer");
 
     if (country_name.length > 15) {
       i_countries.setAttribute("title", country_name);
       country_name = country_name.substring(0, 13).concat("...");
     }
 
-    if (!bbox_defined) {
-      i_countries.setAttribute("style", "cursor:not-allowed");
-    }
-
     i_countries.innerText = country_name;
     document.getElementById("countries").appendChild(i_countries);
 
     var i_places = document.createElement("P");
+    i_places.setAttribute("id", country_code.concat("_markers"));
     i_places.setAttribute("class", "place");
-    i_places.setAttribute("id", country_code);
     if (bbox_defined) {
       i_places.setAttribute("style", "cursor:pointer");
     } else {
@@ -283,7 +281,9 @@ function addListener(country) {
     country_bbox = countries_bbox[country_code][1];
   }
 
-  document.getElementById(country_code).addEventListener('click', function() { fitBoundingBox(country_bbox) });
+  var country_url = "https://the-map-group.pictures/countries/".concat(country_code.toLowerCase());
+  document.getElementById(country_code).addEventListener('click', function() { window.location.href = country_url });
+  document.getElementById(country_code.concat("_markers")).addEventListener('click', function() { fitBoundingBox(country_bbox) });
 
 }
 
@@ -312,9 +312,9 @@ function fitInitialBoundingBox(initial_bbox) {
   var overlay_status = document.getElementById("overlay").style.width;
 
   if (overlay_status == '400px') {
-    padding_left = 550;
+    padding_left = 450;
   } else {
-    padding_left = 150;
+    padding_left = 50;
   }
 
   map.fitBounds([

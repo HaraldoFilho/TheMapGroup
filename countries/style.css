@@ -224,9 +224,9 @@ a.group:visited {
 }
 
 a.group:hover {
-  color: white;
+  color: inherit;
   text-decoration: none;
-  cursor: pointer;
+  cursor: default;
 }
 
 .group-container {

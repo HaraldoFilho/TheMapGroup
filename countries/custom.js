@@ -1,6 +1,8 @@
 function custom() {
 
-  document.title = "The Map Group | Photos Map";
+  var country_name = countries_bbox[country_code][0];
+
+  document.title = country_name.concat(" | Photos Map");
 
   addFavicon();
   addFooter();
@@ -15,33 +17,51 @@ function custom() {
   }
 
   var group_avatar = document.createElement("IMG");
-  group_avatar.setAttribute("src", "map.png");
+  group_avatar.setAttribute("src", getIconSrc(country_name));
   group_avatar.setAttribute("width", "80px");
   group_avatar.setAttribute("height", "80px");
   document.getElementById("group-avatar").appendChild(group_avatar);
 
-  var group_name = "The Map Group";
-  var group_url = "https://www.flickr.com/groups/the-map-group/";
+  var members = members_dict[country_code];
+
+  var members_list = [];
+
+  for (var i = 0; i < members.length; i++) {
+    members_list.push(members[i][0]);
+  }
 
   var group_link = document.createElement("A");
   group_link.setAttribute("id", "group_link");
   group_link.setAttribute("class", "group");
-  group_link.setAttribute("href", group_url);
-  group_link.setAttribute("target", "_self");
   document.getElementById("group-name").appendChild(group_link);
-  document.getElementById("group_link").innerText = group_name;
+  document.getElementById("group_link").innerText = country_name;
 
   document.getElementById("n-members").innerText = members.length.toString().concat(" members");
 
-  document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
-  document.getElementById("n-markers").innerText = locations.length.toString();
+  var n_markers = 0;
   var n_photos = 0;
+
   for (var i = 0; i < locations.length; i++) {
-    n_photos = n_photos + locations[i][3];
+    for (var j = 0; j < members_list.length; j++) {
+      if (locations[i][1] == members_list[j]) {
+        n_markers++;
+        n_photos = n_photos + locations[i][3];
+      }
+    }
   }
+
+  document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
+  document.getElementById("n-markers").innerText = n_markers;
   document.getElementById("n-photos").innerText = n_photos;
 
-  members.reverse();
+  members.sort(function(a,b) {
+    var delta = (b[4]-a[4]);
+    if (delta == 0) {
+      return (b[5]-a[5]);
+    }
+    return delta;
+   });
+
 
   for (var i = 0; i < members.length; i++) {
 
@@ -74,7 +94,7 @@ function custom() {
     document.getElementById("places").appendChild(i_places);
 
     var i_places_icon = document.createElement("IMG");
-    var icon_src = "icons/place.svg";
+    var icon_src = "../../icons/place.svg";
     i_places_icon.setAttribute("class", "tiny-icon");
     i_places_icon.setAttribute("src", icon_src);
     document.getElementById("place-icon").appendChild(i_places_icon);
@@ -85,7 +105,7 @@ function custom() {
     document.getElementById("photos").appendChild(i_photos);
 
     var i_photos_icon = document.createElement("IMG");
-    var icon_src = "icons/photo.svg";
+    var icon_src = "../../icons/photo.svg";
     i_photos_icon.setAttribute("class", "tiny-icon");
     i_photos_icon.setAttribute("src", icon_src);
     document.getElementById("photo-icon").appendChild(i_photos_icon);
@@ -108,7 +128,7 @@ function addFavicon() {
 
 function createNavButton() {
   var icon = document.createElement("IMG");
-  icon.setAttribute("src", "icons/people.svg");
+  icon.setAttribute("src", "../../icons/people.svg");
   icon.setAttribute("height", "24px");
   icon.setAttribute("width", "24px");
   var div_nav_button = document.createElement("DIV");
@@ -133,13 +153,13 @@ function createOverlay() {
   div_n_members.setAttribute("class", "n-members");
   var div_u_place_icon = document.createElement("IMG");
   div_u_place_icon.setAttribute("class", "tiny-icon");
-  div_u_place_icon.setAttribute("src", "icons/place.svg");
+  div_u_place_icon.setAttribute("src", "../../icons/place.svg");
   var div_n_markers = document.createElement("DIV");
   div_n_markers.setAttribute("id", "n-markers");
   div_n_markers.setAttribute("class", "n-markers");
   var div_u_photo_icon = document.createElement("IMG");
   div_u_photo_icon.setAttribute("class", "tiny-icon");
-  div_u_photo_icon.setAttribute("src", "icons/photo.svg");
+  div_u_photo_icon.setAttribute("src", "../../icons/photo.svg");
   var div_n_photos = document.createElement("DIV");
   div_n_photos.setAttribute("id", "n-photos");
   div_n_photos.setAttribute("class", "n-photos");
@@ -233,6 +253,10 @@ function closeOverlay() {
   setSelectorPosition();
 }
 
+function getIconSrc(name) {
+  return "../../icons/flags/".concat(name.replace(/\s/g, "-").toLowerCase()).concat(".svg");
+}
+
 function setSelectorPosition() {
   var pixels;
   if (document.getElementById("overlay").style.width == "0%") {
@@ -245,7 +269,7 @@ function setSelectorPosition() {
 }
 
 function addListener(member) {
-  var member_url = "https://the-map-group.pictures/people/".concat(member[1]);
+  var member_url = "https://the-map-group.pictures/people/".concat(member[1]).concat("/");
   document.getElementById(member[0]).addEventListener('click', function() { window.location.href = member_url });
 }
 
@@ -274,9 +298,9 @@ function fitInitialBoundingBox(initial_bbox) {
   var overlay_status = document.getElementById("overlay").style.width;
 
   if (overlay_status == '400px') {
-    padding_left = 550;
+    padding_left = 450;
   } else {
-    padding_left = 150;
+    padding_left = 50;
   }
 
   map.fitBounds([

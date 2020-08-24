@@ -274,9 +274,9 @@ function fitInitialBoundingBox(initial_bbox) {
   var overlay_status = document.getElementById("overlay").style.width;
 
   if (overlay_status == '400px') {
-    padding_left = 550;
+    padding_left = 450;
   } else {
-    padding_left = 150;
+    padding_left = 50;
   }
 
   map.fitBounds([
