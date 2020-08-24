@@ -34,8 +34,8 @@ people_path = repo_path + "/people"
 #===== MAIN CODE ==============================================================#
 
 # created members info file
-members_file = open("{}/members.js".format(repo_path), 'w')
-members_file.write("members = [\n")
+members_js_file = open("{}/members.js".format(repo_path), 'w')
+members_js_file.write("var members = [\n")
 
 # get group id and name from group url
 try:
@@ -52,6 +52,9 @@ try:
     members_per_page = int(members['members']['perpage'])
 except:
     sys.exit()
+
+if os.path.exists("{}/countries/members.py".format(repo_path)):
+    os.system("rm {}/countries/members.py".format(repo_path))
 
 # iterate over each members page
 for page_number in range(number_of_pages, 0, -1):
@@ -107,6 +110,7 @@ for page_number in range(number_of_pages, 0, -1):
             countries_exists = os.path.exists("{}/countries.py".format(member_path))
             user_exists = os.path.exists("{}/user.py".format(member_path))
 
+            # updates countries members file
             if locations_exists and countries_exists and user_exists:
                 command = "{}/update-countries-map-data.py".format(member_path)
                 os.system(command)
@@ -124,14 +128,16 @@ for page_number in range(number_of_pages, 0, -1):
                 print('Done!')
             else:
                 print("Everything is up-to-date. Nothing to upload!")
+
             if os.path.exists("{}/locations.py".format(member_path)):
                 os.system("rm {}/locations.py".format(member_path))
             if os.path.exists("{}/countries.py".format(member_path)):
                 os.system("rm {}/countries.py".format(member_path))
-            if os.path.exists("{}/user.js".format(member_path)):
-                os.system("rm {}/user.js".format(member_path))
+            if os.path.exists("{}/user.py".format(member_path)):
+                os.system("rm {}/user.py".format(member_path))
             os.system("rm -fr {}/__pycache__".format(member_path))
             os.system("rm {}/diffs".format(member_path))
+
             if is_new_member:
                 topic_subject = "[MAP] {}".format(member_name)
                 member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
@@ -139,7 +145,7 @@ for page_number in range(number_of_pages, 0, -1):
                 flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
                 print('Created discussion topic for new member')
         except:
-            continue
+            pass
 
         # get member information
         print("Getting member information...")
@@ -153,7 +159,7 @@ for page_number in range(number_of_pages, 0, -1):
         if os.path.exists("{}_r.jpg".format(member_id)):
             os.system("rm {}_r.jpg".format(member_id))
         else:
-            member_avatar = "\"people/photographer.svg\""
+            member_avatar = "\"icons/photographer.svg\""
 
         # get user's photos base url
         try:
@@ -171,40 +177,20 @@ for page_number in range(number_of_pages, 0, -1):
                     if coord not in member_coords:
                         member_n_places += 1
                         member_coords.append(coord)
-            members_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
+            members_js_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
             if member_number > 0:
-                members_file.write("],\n")
+                members_js_file.write("],\n")
             else:
-                members_file.write("]\n")
+                members_js_file.write("]\n")
             print("Finished!\n")
         except:
             continue
 
-members_file.write("]\n")
-members_file.close()
+members_js_file.write("]\n")
+members_js_file.close()
 
-print('##### Updating group map...')
-# get 'locations.py' and 'members.js' from github
-print('Getting locations and members from remote...')
-try:
-    if not os.path.exists("{}/locations.py".format(repo_path)):
-        command = "wget -q -P {} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/locations.py".format(repo_path)
-        os.system(command)
-    if not os.path.exists("{}/members.js".format(repo_path)):
-        command = "wget -q -P {} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/members.js".format(repo_path)
-        os.system(command)
-except:
-        pass
-
-# update group map
-os.system("rm {}/last_total.py".format(repo_path))
-command = "{}/generate-map-data.py".format(repo_path)
-os.system(command)
-print('Uploading map data...')
-os.system("git add -f {}/*.js".format(repo_path))
-os.system("git commit -m \"Updated group map\"")
-os.system("git push -q origin master")
-print('Done!')
-os.system("rm {}/locations.py".format(repo_path))
-os.system("rm {}/members.js".format(repo_path))
-os.system("rm -fr {}/__pycache__".format(repo_path))
+if os.path.exists("{}/countries/members.py".format(repo_path)):
+    os.system("git pull -q origin master")
+    os.system("git add -f {}/countries/members.py".format(repo_path))
+    os.system("git commit -m \"Updated countries members file\"")
+    os.system("git push -q origin master")
