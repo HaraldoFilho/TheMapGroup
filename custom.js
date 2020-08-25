@@ -37,13 +37,35 @@ function custom() {
     document.getElementById("n-members").innerText = members.length.toString().concat(" member");
   }
 
-  document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
-  document.getElementById("n-markers").innerText = locations.length.toString();
+  var n_markers = 0;
   var n_photos = 0;
-  for (var i = 0; i < locations.length; i++) {
-    n_photos = n_photos + locations[i][4];
+
+  for (var i = 0; i < members.length; i++) {
+    n_markers = n_markers + members[i][4];
+    n_photos = n_photos + members[i][5];
   }
+
+  document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
+  document.getElementById("n-markers").innerText = n_markers;
   document.getElementById("n-photos").innerText = n_photos;
+
+  document.getElementById("menu-members").addEventListener('click', function() { emptyList(countries.length); loadMembers() });
+  document.getElementById("menu-countries").addEventListener('click', function() { emptyList(members.length); loadCountries() });
+
+  loadMembers();
+
+}
+
+
+// Functions
+
+function loadMembers() {
+
+  if (members.length > 1) {
+    document.getElementById("n-members").innerText = members.length.toString().concat(" members");
+  } else {
+    document.getElementById("n-members").innerText = members.length.toString().concat(" member");
+  }
 
   members.sort(function(a,b) {
     var delta = (b[4]-a[4]);
@@ -51,7 +73,7 @@ function custom() {
       return (b[5]-a[5]);
     }
     return delta;
-   });
+  });
 
   for (var i = 0; i < members.length; i++) {
 
@@ -101,12 +123,113 @@ function custom() {
     document.getElementById("photo-icon").appendChild(i_photos_icon);
   }
 
-  members.forEach(addListener);
+  members.forEach(addListenerToPeople);
+
+  document.getElementById("menu-members").setAttribute("style", "color:lightgrey;cursor:default;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  document.getElementById("menu-countries").setAttribute("style", "color:grey;cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
 
 }
 
+function loadCountries() {
 
-// Functions
+  countries = [];
+
+  for (var code in members_dict) {
+    var n_markers = members_dict[code].length;
+    var n_photos = 0;
+    for (var k = 0; k < members_dict[code].length; k++) {
+      n_photos = n_photos + members_dict[code][k][4];
+    }
+    countries.push([code, members_dict[code], n_markers, n_photos]);
+  };
+
+  if (countries.length > 1) {
+    document.getElementById("n-members").innerText = countries.length.toString().concat(" countries");
+  } else {
+    document.getElementById("n-members").innerText = countries.length.toString().concat(" country");
+  }
+
+  countries.sort(function(a,b) {
+    var delta = (b[2]-a[2]);
+    if (delta == 0) {
+      return (b[3]-a[3]);
+    }
+    return delta;
+  });
+
+  for (var i = 0; i < countries.length; i++) {
+
+    var country_code = countries[i][0];
+    var country_name = countries_bbox[country_code][0];
+
+    var i_countries_avatar = document.createElement("IMG");
+    var icon_src = getIconSrc(country_name);
+    i_countries_avatar.setAttribute("width", "16px");
+    i_countries_avatar.setAttribute("height", "16px");
+    i_countries_avatar.setAttribute("style", "border-radius: 50%");
+    i_countries_avatar.setAttribute("class", "tiny-icon");
+    i_countries_avatar.setAttribute("src", icon_src);
+    document.getElementById("members-avatar").appendChild(i_countries_avatar);
+
+    var i_countries = document.createElement("P");
+    i_countries.setAttribute("class", "member");
+    i_countries.setAttribute("id", country_code);
+
+    if (country_name.length > 12) {
+      i_countries.setAttribute("title", country_name);
+      country_name = country_name.substring(0, 10).concat("...");
+    }
+
+    i_countries.innerText = country_name;
+    document.getElementById("members").appendChild(i_countries);
+
+    var i_places = document.createElement("P");
+    i_places.setAttribute("class", "item");
+    i_places.innerText = countries[i][2];
+    document.getElementById("places").appendChild(i_places);
+
+    var i_places_icon = document.createElement("IMG");
+    var icon_src = "icons/members.svg";
+    i_places_icon.setAttribute("class", "tiny-icon");
+    i_places_icon.setAttribute("src", icon_src);
+    document.getElementById("place-icon").appendChild(i_places_icon);
+
+    var i_photos = document.createElement("P");
+    i_photos.setAttribute("class", "item");
+    i_photos.innerText = countries[i][3];
+    document.getElementById("photos").appendChild(i_photos);
+
+    var i_photos_icon = document.createElement("IMG");
+    var icon_src = "icons/place.svg";
+    i_photos_icon.setAttribute("class", "tiny-icon");
+    i_photos_icon.setAttribute("src", icon_src);
+    document.getElementById("photo-icon").appendChild(i_photos_icon);
+
+  }
+
+  countries.forEach(addListenerToCountries);
+
+  document.getElementById("menu-countries").setAttribute("style", "color:lightgrey;cursor:default;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  document.getElementById("menu-members").setAttribute("style", "color:grey;cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+
+}
+
+function emptyList(list_size) {
+  for (var i = list_size-1; i >= 0; i--) {
+    var avatares_list = document.getElementById("members-avatar");
+    avatares_list.removeChild(avatares_list.childNodes[i]);
+    var members_list = document.getElementById("members");
+    members_list.removeChild(members_list.childNodes[i]);
+    var places_list = document.getElementById("places");
+    places_list.removeChild(places_list.childNodes[i]);
+    var place_icon_list = document.getElementById("place-icon");
+    place_icon_list.removeChild(place_icon_list.childNodes[i]);
+    var photos_list = document.getElementById("photos");
+    photos_list.removeChild(photos_list.childNodes[i]);
+    var photo_icon_list = document.getElementById("photo-icon");
+    photo_icon_list.removeChild(photo_icon_list.childNodes[i]);
+  }
+}
 
 function addFavicon() {
   var favicon = document.createElement("LINK");
@@ -164,6 +287,21 @@ function createOverlay() {
   div_group_container.appendChild(div_u_photo_icon);
   div_group_container.appendChild(div_n_photos);
 
+  // Menu Container
+  var div_menu_members = document.createElement("DIV");
+  div_menu_members.setAttribute("id", "menu-members");
+  div_menu_members.setAttribute("style", "cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  div_menu_members.innerText = "MEMBERS";
+  var div_menu_countries = document.createElement("DIV");
+  div_menu_countries.setAttribute("id", "menu-countries");
+  div_menu_countries.setAttribute("style", "cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  div_menu_countries.innerText = "COUNTRIES";
+  var div_menu_container = document.createElement("DIV");
+  div_menu_container.setAttribute("id", "menu-container");
+  div_menu_container.setAttribute("class", "menu-container");
+  div_menu_container.appendChild(div_menu_members);
+  div_menu_container.appendChild(div_menu_countries);
+
   // Members Container
   var div_members_avatar = document.createElement("DIV");
   div_members_avatar.setAttribute("id", "members-avatar");
@@ -198,6 +336,7 @@ function createOverlay() {
   div_main_container.setAttribute("id", "main-container");
   div_main_container.setAttribute("class", "main-container");
   div_main_container.appendChild(div_group_container);
+  div_main_container.appendChild(div_menu_container);
   div_main_container.appendChild(div_members_container);
 
   // Overlay
@@ -243,6 +382,10 @@ function closeOverlay() {
   setSelectorPosition();
 }
 
+function getIconSrc(name) {
+  return "icons/flags/".concat(name.replace(/\s/g, "-").toLowerCase()).concat(".svg");
+}
+
 function setSelectorPosition() {
   var pixels;
   if (document.getElementById("overlay").style.width == "0%") {
@@ -254,9 +397,14 @@ function setSelectorPosition() {
   document.getElementById("selector").style.left = selector_position;
 }
 
-function addListener(member) {
+function addListenerToPeople(member) {
   var member_url = "https://the-map-group.pictures/people/".concat(member[1]);
   document.getElementById(member[0]).addEventListener('click', function() { window.location.href = member_url });
+}
+
+function addListenerToCountries(country) {
+  var country_url = "https://the-map-group.pictures/countries/".concat(country[0].toLowerCase());
+  document.getElementById(country[0]).addEventListener('click', function() { window.location.href = country_url });
 }
 
 function fitBoundingBox(bbox) {

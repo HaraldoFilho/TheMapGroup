@@ -36,7 +36,7 @@ function custom() {
     country_link.setAttribute("title", country_name);
     country_name = country_name.substring(0, 14).concat("...");
   }
-  
+
   country_link.setAttribute("id", "country_link");
   country_link.setAttribute("class", "country");
   document.getElementById("country-name").appendChild(country_link);
@@ -51,11 +51,9 @@ function custom() {
   var n_markers = 0;
   var n_photos = 0;
 
-  for (var i = 0; i < locations.length; i++) {
-      if (locations[i][1] == country_code) {
-        n_markers++;
-        n_photos = n_photos + locations[i][4];
-      }
+  for (var i = 0; i < members.length; i++) {
+    n_markers = n_markers + members[i][4];
+    n_photos = n_photos + members[i][5];
   }
 
   document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });

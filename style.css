@@ -236,6 +236,22 @@ a.group:hover {
   cursor: pointer;
 }
 
+a.menu:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.menu:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.menu:hover {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .group-container {
   display: grid;
   top: 0;
@@ -267,6 +283,19 @@ a.group:hover {
   background-color: black;
 }
 
+.menu-container {
+  display: grid;
+  grid-area: menu-container;
+  grid-template-columns: 149px 149px;
+  grid-column-gap: 2px;
+  color: grey;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  width: 300px;
+  margin: 20px auto 0 auto;
+}
+
 .members-container {
   display: grid;
   grid-area: members-container;
@@ -282,6 +311,7 @@ a.group:hover {
   display: grid;
   grid-template-areas:
   'group-container'
+  'menu-container'
   'members-container';
   width: 100%;
   padding: 25px 0 25px 0;
