@@ -194,8 +194,8 @@ new_photos = 0
 for loc in range(n_locations):
 
     # get info for photos on marker
-    photos_info = locations[loc][2]
-    n_photos = int(locations[loc][3])
+    photos_info = locations[loc][3]
+    n_photos = int(locations[loc][4])
 
     # get number of photos (coordinates) to be added to map
     n_coords = len(coordinates)
@@ -223,8 +223,8 @@ for loc in range(n_locations):
             coordinates.pop(coord)
 
     # update the number of photos on marker
-    locations[loc][2] = photos_info
-    locations[loc][3] = len(photos_info)
+    locations[loc][3] = photos_info
+    locations[loc][4] = len(photos_info)
     locations_file.write("    {}".format(locations[loc]))
 
     if len(coordinates) > 0:
@@ -266,9 +266,15 @@ for marker_info in coordinates:
     longitude = float(marker_info[0][0])
     latitude = float(marker_info[0][1])
     photo_owner = marker_info[1]
+    try:
+        country_info = getCountryInfo(latitude, longitude)
+        country_code = country_info[0]
+        country_name = country_info[1]
+    except:
+        pass
 
     # write it to locations file
-    locations_file.write("    [[{0}, {1}], \'{2}\', [".format(longitude, latitude, photo_owner))
+    locations_file.write("    [[{0}, {1}], \'{2}\', \'{3}\', [".format(longitude, latitude, country_code, photo_owner))
 
     # counts the number of photos
     n_photos = 0
@@ -280,7 +286,7 @@ for marker_info in coordinates:
         locations_file.write("[\'{0}\', \'{1}\']".format(photo[0], photo[1]))
         n_photos += 1
 
-        if n_photos < len(marker_info[1]):
+        if n_photos < len(marker_info[2]):
             locations_file.write(", ")
 
     # finish marker writing to location file

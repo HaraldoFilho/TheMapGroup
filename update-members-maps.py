@@ -161,7 +161,16 @@ for page_number in range(number_of_pages, 0, -1):
         else:
             member_avatar = "\"icons/photographer.svg\""
 
-        # get user's photos base url
+        # try to get member's real name
+        try:
+            real_name = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['realname']['_content']
+            print(real_name)
+            if len(real_name) > 0:
+                member_name = real_name
+        except:
+            print("ERROR")
+            pass
+
         try:
             photos_base_url = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['photosurl']['_content']
             member_photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id, per_page='500')['photos']
@@ -191,6 +200,6 @@ members_js_file.close()
 
 if os.path.exists("{}/countries/members.py".format(repo_path)):
     os.system("git pull -q origin master")
-    os.system("git add -f {}/countries/members.py".format(repo_path))
+    os.system("git add -f {}/countries/*".format(repo_path))
     os.system("git commit -m \"Updated countries members file\"")
     os.system("git push -q origin master")
