@@ -7,6 +7,7 @@
 
 import flickrapi
 import api_credentials
+import importlib
 import json
 import time
 import os
@@ -129,15 +130,6 @@ for page_number in range(number_of_pages, 0, -1):
             else:
                 print("Everything is up-to-date. Nothing to upload!")
 
-            if os.path.exists("{}/locations.py".format(member_path)):
-                os.system("rm {}/locations.py".format(member_path))
-            if os.path.exists("{}/countries.py".format(member_path)):
-                os.system("rm {}/countries.py".format(member_path))
-            if os.path.exists("{}/user.py".format(member_path)):
-                os.system("rm {}/user.py".format(member_path))
-            os.system("rm -fr {}/__pycache__".format(member_path))
-            os.system("rm {}/diffs".format(member_path))
-
             if is_new_member:
                 topic_subject = "[MAP] {}".format(member_name)
                 member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
@@ -150,50 +142,36 @@ for page_number in range(number_of_pages, 0, -1):
         # get member information
         print("Getting member information...")
 
+        os.system("cp {0}/user.py {1}/".format(member_path, repo_path))
+        import user
+        importlib.reload(user)
+        from user import user_info
+        os.system("rm {}/user.py".format(repo_path))
+
+        member_name = user_info['name']
         if len(member_name) > 30:
             member_name = member_name[:30]
 
-        # user avatar url
-        member_avatar = "\"https://live.staticflickr.com/5674/buddyicons/{}_r.jpg\"".format(member_id)
-        os.system("wget -q {}".format(member_avatar))
-        if os.path.exists("{}_r.jpg".format(member_id)):
-            os.system("rm {}_r.jpg".format(member_id))
+        member_avatar = "\"{}\"".format(user_info['avatar'].replace('../../', ''))
+
+        member_n_places = user_info['markers']
+        member_n_photos = user_info['photos']
+
+        if os.path.exists("{}/locations.py".format(member_path)):
+            os.system("rm {}/locations.py".format(member_path))
+        if os.path.exists("{}/countries.py".format(member_path)):
+            os.system("rm {}/countries.py".format(member_path))
+        if os.path.exists("{}/user.py".format(member_path)):
+            os.system("rm {}/user.py".format(member_path))
+        os.system("rm -fr {}/__pycache__".format(member_path))
+        os.system("rm {}/diffs".format(member_path))
+
+        members_js_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
+        if member_number > 0:
+            members_js_file.write("],\n")
         else:
-            member_avatar = "\"icons/photographer.svg\""
-
-        # try to get member's real name
-        try:
-            real_name = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['realname']['_content']
-            print(real_name)
-            if len(real_name) > 0:
-                member_name = real_name
-        except:
-            print("ERROR")
-            pass
-
-        try:
-            photos_base_url = flickr.people.getInfo(api_key=api_key, user_id=member_id)['person']['photosurl']['_content']
-            member_photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id, per_page='500')['photos']
-            member_n_photos = 0
-            member_n_places = 0
-            member_coords = []
-            pages = member_photos['pages']
-            for page in range(pages):
-                photos = flickr.groups.pools.getPhotos(api_key=api_key, group_id=group_id, user_id=member_id, extras='geo', per_page='500')['photos']
-                for ph in range(len(photos['photo'])):
-                    member_n_photos += 1
-                    coord = [ photos['photo'][ph]['latitude'], photos['photo'][ph]['longitude'] ]
-                    if coord not in member_coords:
-                        member_n_places += 1
-                        member_coords.append(coord)
-            members_js_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
-            if member_number > 0:
-                members_js_file.write("],\n")
-            else:
-                members_js_file.write("]\n")
-            print("Finished!\n")
-        except:
-            continue
+            members_js_file.write("]\n")
+        print("Finished!\n")
 
 members_js_file.write("]\n")
 members_js_file.close()
