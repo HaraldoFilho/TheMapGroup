@@ -138,7 +138,7 @@
 .countries {
   display: grid;
   grid-area: countries;
-  width: 130px;
+  width: 120px;
 }
 
 .places {
@@ -151,7 +151,7 @@
 .photos {
   display: grid;
   grid-area: photos;
-  width: 40px;
+  width: 50px;
   text-align: right;
 }
 

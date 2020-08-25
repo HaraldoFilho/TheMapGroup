@@ -147,7 +147,7 @@
 .members {
   display: grid;
   grid-area: members;
-  width: 130px;
+  width: 120px;
 }
 
 .places {
@@ -160,7 +160,7 @@
 .photos {
   display: grid;
   grid-area: photos;
-  width: 40px;
+  width: 50px;
   text-align: right;
 }
 
@@ -176,6 +176,24 @@
   grid-area: photo-icon;
   width: 20px;
   text-align: right;
+}
+
+.menu-active {
+  color: lightgrey;
+  cursor: default;
+  font-size: 14px;
+  padding: 7px;
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255, 0.07);
+}
+
+.menu-inactive {
+  color: grey;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 7px;
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255, 0.03);
 }
 
 p.member {

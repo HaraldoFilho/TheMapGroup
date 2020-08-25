@@ -276,7 +276,7 @@ function setSelectorPosition() {
 
 function addListener(member) {
   var member_url = "https://the-map-group.pictures/people/".concat(member[1]).concat("/");
-  document.getElementById(member[0]).addEventListener('click', function() { window.location.href = member_url });
+  document.getElementById(member[0]).addEventListener('click', function() { window.location.replace(member_url) });
 }
 
 function fitBoundingBox(bbox) {

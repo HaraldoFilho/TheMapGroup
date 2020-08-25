@@ -47,9 +47,6 @@ function custom() {
   document.getElementById("n-markers").innerText = locations.length.toString();
   document.getElementById("n-photos").innerText = n_photos;
 
-  document.getElementById("menu-members").addEventListener('click', function() { emptyList(countries.length); loadMembers() });
-  document.getElementById("menu-countries").addEventListener('click', function() { emptyList(members.length); loadCountries() });
-
   loadMembers();
 
 }
@@ -123,8 +120,11 @@ function loadMembers() {
 
   members.forEach(addListenerToPeople);
 
-  document.getElementById("menu-members").setAttribute("style", "color:lightgrey;cursor:default;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
-  document.getElementById("menu-countries").setAttribute("style", "color:grey;cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  document.getElementById("menu-members").setAttribute("class", "menu-active");
+  document.getElementById("menu-countries").setAttribute("class", "menu-inactive");
+
+  document.getElementById("menu-members").removeEventListener('click', emptyLoadMembers);
+  document.getElementById("menu-countries").addEventListener('click', emptyLoadCountries);
 
 }
 
@@ -207,9 +207,22 @@ function loadCountries() {
 
   countries.forEach(addListenerToCountries);
 
-  document.getElementById("menu-countries").setAttribute("style", "color:lightgrey;cursor:default;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
-  document.getElementById("menu-members").setAttribute("style", "color:grey;cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  document.getElementById("menu-members").setAttribute("class", "menu-inactive");
+  document.getElementById("menu-countries").setAttribute("class", "menu-active");
 
+  document.getElementById("menu-members").addEventListener('click', emptyLoadMembers);
+  document.getElementById("menu-countries").removeEventListener('click', emptyLoadCountries);
+
+}
+
+function emptyLoadMembers() {
+  emptyList(countries.length);
+  loadMembers()
+}
+
+function emptyLoadCountries() {
+  emptyList(members.length);
+  loadCountries();
 }
 
 function emptyList(list_size) {
@@ -288,11 +301,11 @@ function createOverlay() {
   // Menu Container
   var div_menu_members = document.createElement("DIV");
   div_menu_members.setAttribute("id", "menu-members");
-  div_menu_members.setAttribute("style", "cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  div_menu_members.setAttribute("class", "menu-active");
   div_menu_members.innerText = "MEMBERS";
   var div_menu_countries = document.createElement("DIV");
   div_menu_countries.setAttribute("id", "menu-countries");
-  div_menu_countries.setAttribute("style", "cursor:pointer;padding:7px;background-color:rgb(255,255,255);background-color:rgba(255,255,255, 0.03);");
+  div_menu_countries.setAttribute("class", "menu-inactive");
   div_menu_countries.innerText = "COUNTRIES";
   var div_menu_container = document.createElement("DIV");
   div_menu_container.setAttribute("id", "menu-container");

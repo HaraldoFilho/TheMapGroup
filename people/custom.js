@@ -284,7 +284,7 @@ function addListener(country) {
   }
 
   var country_url = "https://the-map-group.pictures/countries/".concat(country_code.toLowerCase());
-  document.getElementById(country_code).addEventListener('click', function() { window.location.href = country_url });
+  document.getElementById(country_code).addEventListener('click', function() { window.location.replace(country_url) });
   document.getElementById(country_code.concat("_markers")).addEventListener('click', function() { fitBoundingBox(country_bbox) });
 
 }
