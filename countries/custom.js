@@ -51,9 +51,11 @@ function custom() {
   var n_markers = 0;
   var n_photos = 0;
 
-  for (var i = 0; i < members.length; i++) {
-    n_markers = n_markers + members[i][4];
-    n_photos = n_photos + members[i][5];
+  for (var i = 0; i < locations.length; i++) {
+    if (locations[i][1] == country_code) {
+      n_markers++;
+      n_photos = n_photos + locations[i][4];
+    }
   }
 
   document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
