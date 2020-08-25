@@ -37,16 +37,14 @@ function custom() {
     document.getElementById("n-members").innerText = members.length.toString().concat(" member");
   }
 
-  var n_markers = 0;
   var n_photos = 0;
 
-  for (var i = 0; i < members.length; i++) {
-    n_markers = n_markers + members[i][4];
-    n_photos = n_photos + members[i][5];
+  for (var i = 0; i < locations.length; i++) {
+    n_photos = n_photos + locations[i][4];
   }
 
   document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
-  document.getElementById("n-markers").innerText = n_markers;
+  document.getElementById("n-markers").innerText = locations.length.toString();
   document.getElementById("n-photos").innerText = n_photos;
 
   document.getElementById("menu-members").addEventListener('click', function() { emptyList(countries.length); loadMembers() });
