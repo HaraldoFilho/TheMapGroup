@@ -16,11 +16,11 @@ function custom() {
     }
   }
 
-  var group_avatar = document.createElement("IMG");
-  group_avatar.setAttribute("src", getIconSrc(country_name));
-  group_avatar.setAttribute("width", "80px");
-  group_avatar.setAttribute("height", "80px");
-  document.getElementById("group-avatar").appendChild(group_avatar);
+  var country_avatar = document.createElement("IMG");
+  country_avatar.setAttribute("src", getIconSrc(country_name));
+  country_avatar.setAttribute("width", "80px");
+  country_avatar.setAttribute("height", "80px");
+  document.getElementById("country-avatar").appendChild(country_avatar);
 
   var members = members_dict[country_code];
 
@@ -30,24 +30,26 @@ function custom() {
     members_list.push(members[i][0]);
   }
 
-  var group_link = document.createElement("A");
-  group_link.setAttribute("id", "group_link");
-  group_link.setAttribute("class", "group");
-  document.getElementById("group-name").appendChild(group_link);
-  document.getElementById("group_link").innerText = country_name;
+  var country_link = document.createElement("A");
+  country_link.setAttribute("id", "country_link");
+  country_link.setAttribute("class", "country");
+  document.getElementById("country-name").appendChild(country_link);
+  document.getElementById("country_link").innerText = country_name;
 
-  document.getElementById("n-members").innerText = members.length.toString().concat(" members");
+  if (members.length > 1) {
+    document.getElementById("n-members").innerText = members.length.toString().concat(" members");
+  } else {
+    document.getElementById("n-members").innerText = members.length.toString().concat(" member");
+  }
 
   var n_markers = 0;
   var n_photos = 0;
 
   for (var i = 0; i < locations.length; i++) {
-    for (var j = 0; j < members_list.length; j++) {
-      if (locations[i][1] == members_list[j]) {
+      if (locations[i][1] == country_code) {
         n_markers++;
-        n_photos = n_photos + locations[i][3];
+        n_photos = n_photos + locations[i][4];
       }
-    }
   }
 
   document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
@@ -122,7 +124,7 @@ function addFavicon() {
   var favicon = document.createElement("LINK");
   favicon.setAttribute("rel", "shortcut icon");
   favicon.setAttribute("type", "image/x-icon");
-  favicon.setAttribute("href", "favicon.ico");
+  favicon.setAttribute("href", "../../favicon.ico");
   document.head.append(favicon);
 }
 
@@ -141,13 +143,13 @@ function createNavButton() {
 
 function createOverlay() {
 
-  // Group Container
-  var div_group_avatar = document.createElement("DIV");
-  div_group_avatar.setAttribute("id", "group-avatar");
-  div_group_avatar.setAttribute("class", "group-avatar");
-  var div_group_name = document.createElement("DIV");
-  div_group_name.setAttribute("id", "group-name");
-  div_group_name.setAttribute("class", "group-name");
+  // country Container
+  var div_country_avatar = document.createElement("DIV");
+  div_country_avatar.setAttribute("id", "country-avatar");
+  div_country_avatar.setAttribute("class", "country-avatar");
+  var div_country_name = document.createElement("DIV");
+  div_country_name.setAttribute("id", "country-name");
+  div_country_name.setAttribute("class", "country-name");
   var div_n_members = document.createElement("DIV");
   div_n_members.setAttribute("id", "n-members");
   div_n_members.setAttribute("class", "n-members");
@@ -163,16 +165,16 @@ function createOverlay() {
   var div_n_photos = document.createElement("DIV");
   div_n_photos.setAttribute("id", "n-photos");
   div_n_photos.setAttribute("class", "n-photos");
-  var div_group_container = document.createElement("DIV");
-  div_group_container.setAttribute("id", "group-container");
-  div_group_container.setAttribute("class", "group-container");
-  div_group_container.appendChild(div_group_avatar);
-  div_group_container.appendChild(div_group_name);
-  div_group_container.appendChild(div_n_members);
-  div_group_container.appendChild(div_u_place_icon);
-  div_group_container.appendChild(div_n_markers);
-  div_group_container.appendChild(div_u_photo_icon);
-  div_group_container.appendChild(div_n_photos);
+  var div_country_container = document.createElement("DIV");
+  div_country_container.setAttribute("id", "country-container");
+  div_country_container.setAttribute("class", "country-container");
+  div_country_container.appendChild(div_country_avatar);
+  div_country_container.appendChild(div_country_name);
+  div_country_container.appendChild(div_n_members);
+  div_country_container.appendChild(div_u_place_icon);
+  div_country_container.appendChild(div_n_markers);
+  div_country_container.appendChild(div_u_photo_icon);
+  div_country_container.appendChild(div_n_photos);
 
   // Members Container
   var div_members_avatar = document.createElement("DIV");
@@ -207,7 +209,7 @@ function createOverlay() {
   var div_main_container = document.createElement("DIV");
   div_main_container.setAttribute("id", "main-container");
   div_main_container.setAttribute("class", "main-container");
-  div_main_container.appendChild(div_group_container);
+  div_main_container.appendChild(div_country_container);
   div_main_container.appendChild(div_members_container);
 
   // Overlay
@@ -217,7 +219,7 @@ function createOverlay() {
   var div_overlay = document.createElement("DIV");
   div_overlay.setAttribute("id", "overlay");
   div_overlay.setAttribute("class", "overlay");
-  div_overlay.setAttribute("onscroll", "changeGroupBackgroundColor()");
+  div_overlay.setAttribute("onscroll", "changecountryBackgroundColor()");
   div_overlay.appendChild(div_overlay_content);
   div_overlay.style.width = "0%";
 
@@ -313,12 +315,12 @@ function fitInitialBoundingBox(initial_bbox) {
 
 };
 
-function changeGroupBackgroundColor() {
+function changecountryBackgroundColor() {
   if (document.getElementById("overlay").scrollTop > 25) {
-    document.getElementById("group-container").className = "group-container-black";
+    document.getElementById("country-container").className = "country-container-black";
     document.getElementById("nav-button").className = "nav-button-black";
   } else {
-    document.getElementById("group-container").className = "group-container";
+    document.getElementById("country-container").className = "country-container";
     document.getElementById("nav-button").className = "nav-button";
   }
 }

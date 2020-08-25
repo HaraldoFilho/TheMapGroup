@@ -77,17 +77,17 @@
   display: none;
 }
 
-.group-avatar {
+.country-avatar {
   display: grid;
-  grid-area: group-avatar;
+  grid-area: country-avatar;
   width: 80px;
   height: 80px;
   padding-right: 20px;
 }
 
-.group-name {
+.country-name {
   display: grid;
-  grid-area: group-name;
+  grid-area: country-name;
   width: 200px;
   font-family: arial;
   font-weight: bold;
@@ -213,30 +213,30 @@ a:hover {
   cursor: pointer;
 }
 
-a.group:link {
+a.country:link {
   color: inherit;
   text-decoration: none;
 }
 
-a.group:visited {
+a.country:visited {
   color: inherit;
   text-decoration: none;
 }
 
-a.group:hover {
+a.country:hover {
   color: inherit;
   text-decoration: none;
   cursor: default;
 }
 
-.group-container {
+.country-container {
   display: grid;
   top: 0;
-  grid-area: group-container;
+  grid-area: country-container;
   grid-template-areas:
-  'group-avatar group-name group-name group-name group-name'
-  'group-avatar n-members n-members n-members n-members'
-  'group-avatar place-icon n-markers photo-icon n-photos';
+  'country-avatar country-name country-name country-name country-name'
+  'country-avatar n-members n-members n-members n-members'
+  'country-avatar place-icon n-markers photo-icon n-photos';
   justify-content: left;
   padding: 25px 50px 25px 50px;
   cursor: default;
@@ -244,14 +244,14 @@ a.group:hover {
   width: 300px;
 }
 
-.group-container-black {
+.country-container-black {
   display: grid;
   top: 0;
-  grid-area: group-container;
+  grid-area: country-container;
   grid-template-areas:
-  'group-avatar group-name group-name group-name group-name'
-  'group-avatar n-members n-members n-members n-members'
-  'group-avatar place-icon n-markers photo-icon n-photos';
+  'country-avatar country-name country-name country-name country-name'
+  'country-avatar n-members n-members n-members n-members'
+  'country-avatar place-icon n-markers photo-icon n-photos';
   justify-content: left;
   padding: 25px 50px 25px 50px;
   cursor: default;
@@ -274,7 +274,7 @@ a.group:hover {
 .main-container {
   display: grid;
   grid-template-areas:
-  'group-container'
+  'country-container'
   'members-container';
   width: 100%;
   padding: 25px 0 25px 0;

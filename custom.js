@@ -15,7 +15,7 @@ function custom() {
   }
 
   var group_avatar = document.createElement("IMG");
-  group_avatar.setAttribute("src", "map.png");
+  group_avatar.setAttribute("src", "icons/map.png");
   group_avatar.setAttribute("width", "80px");
   group_avatar.setAttribute("height", "80px");
   document.getElementById("group-avatar").appendChild(group_avatar);
@@ -31,13 +31,17 @@ function custom() {
   document.getElementById("group-name").appendChild(group_link);
   document.getElementById("group_link").innerText = group_name;
 
-  document.getElementById("n-members").innerText = members.length.toString().concat(" members");
+  if (members.length > 1) {
+    document.getElementById("n-members").innerText = members.length.toString().concat(" members");
+  } else {
+    document.getElementById("n-members").innerText = members.length.toString().concat(" member");
+  }
 
   document.getElementById("n-markers").addEventListener('click', function() { fitInitialBoundingBox(initial_bbox) });
   document.getElementById("n-markers").innerText = locations.length.toString();
   var n_photos = 0;
   for (var i = 0; i < locations.length; i++) {
-    n_photos = n_photos + locations[i][3];
+    n_photos = n_photos + locations[i][4];
   }
   document.getElementById("n-photos").innerText = n_photos;
 
