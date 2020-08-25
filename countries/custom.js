@@ -5,7 +5,7 @@ function custom() {
   document.title = country_name.concat(" | Photos Map");
 
   addFavicon();
-  addFooter();
+  addAttribution();
   createOverlay();
   createNavButton();
   fitBoundingBox(current_bbox);
@@ -31,6 +31,12 @@ function custom() {
   }
 
   var country_link = document.createElement("A");
+
+  if (country_name.length > 18) {
+    country_link.setAttribute("title", country_name);
+    country_name = country_name.substring(0, 14).concat("...");
+  }
+  
   country_link.setAttribute("id", "country_link");
   country_link.setAttribute("class", "country");
   document.getElementById("country-name").appendChild(country_link);
@@ -325,9 +331,9 @@ function changecountryBackgroundColor() {
   }
 }
 
-function addFooter() {
-  var footer = document.createElement("DIV");
-  footer.setAttribute("class", "footer");
-  footer.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API. <i>Map icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></i>";
-  document.body.append(footer);
+function addAttribution() {
+  var attrib = document.createElement("DIV");
+  attrib.setAttribute("class", "attribution");
+  attrib.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API.<br><i>Flag icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></i>";
+  document.body.append(attrib);
 }

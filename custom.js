@@ -45,7 +45,13 @@ function custom() {
   }
   document.getElementById("n-photos").innerText = n_photos;
 
-  members.reverse();
+  members.sort(function(a,b) {
+    var delta = (b[4]-a[4]);
+    if (delta == 0) {
+      return (b[5]-a[5]);
+    }
+    return delta;
+   });
 
   for (var i = 0; i < members.length; i++) {
 
@@ -240,9 +246,9 @@ function closeOverlay() {
 function setSelectorPosition() {
   var pixels;
   if (document.getElementById("overlay").style.width == "0%") {
-    pixels = window.innerWidth/2;
+    pixels = (window.innerWidth-150)/2;
   } else {
-    pixels = (window.innerWidth+400)/2;
+    pixels = (window.innerWidth+100)/2;
   }
   var selector_position = pixels.toString() + "px";
   document.getElementById("selector").style.left = selector_position;
@@ -306,6 +312,6 @@ function changeGroupBackgroundColor() {
 function addFooter() {
   var footer = document.createElement("DIV");
   footer.setAttribute("class", "footer");
-  footer.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API. <i>Map icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></i>";
+  footer.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API.<br><i>Map icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></i>";
   document.body.append(footer);
 }
