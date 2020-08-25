@@ -47,6 +47,8 @@ function custom() {
   document.getElementById("n-markers").innerText = locations.length.toString();
   document.getElementById("n-photos").innerText = n_photos;
 
+  members.reverse();
+
   loadMembers();
 
 }
@@ -61,14 +63,6 @@ function loadMembers() {
   } else {
     document.getElementById("n-members").innerText = members.length.toString().concat(" member");
   }
-
-  members.sort(function(a,b) {
-    var delta = (b[4]-a[4]);
-    if (delta == 0) {
-      return (b[5]-a[5]);
-    }
-    return delta;
-  });
 
   for (var i = 0; i < members.length; i++) {
 
