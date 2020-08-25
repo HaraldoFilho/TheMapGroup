@@ -26,7 +26,7 @@ var members = [
   ['21593175@N00', 'susannemichelle', 'Susie', "https://live.staticflickr.com/5674/buddyicons/21593175@N00_r.jpg", 4, 4],
   ['169904704@N04', 'eugeniocosta', 'Eugenio Costa', "https://live.staticflickr.com/5674/buddyicons/169904704@N04_r.jpg", 8, 8],
   ['132838898@N03', 'quelrr', 'Raquel Rampasio', "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg", 0, 0],
-  ['13445173@N06', 'bvi4092', 'bvi4092', "https://live.staticflickr.com/5674/buddyicons/13445173@N06_r.jpg", 1, 2],
+  ['13445173@N06', 'bvi4092', 'bvi4092', "https://live.staticflickr.com/5674/buddyicons/13445173@N06_r.jpg", 3, 4],
   ['66031636@N00', 'jnoval', 'Javier Noval', "https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg", 1, 1],
   ['57727182@N08', '57727182@N08', 'GEORGE', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 8, 9],
   ['76199006@N05', 'jasonfrels', 'Jason', "https://live.staticflickr.com/5674/buddyicons/76199006@N05_r.jpg", 5, 5],
