@@ -10,6 +10,7 @@
   <script src="../../mapbox_token.js"></script>
   <script src="../custom.js"></script>
   <script src="locations.py"></script>
+  <script src="locations_dict.py"></script>
 
   <style>
   body { margin: 0; padding: 0; }
@@ -65,7 +66,29 @@
     var east = -180;
     var north = -90;
 
-    locations.forEach(addMarker);
+    stop = false;
+    i = 0;
+    m = 0;
+
+    while (!stop) {
+      c = 0;
+      for (var country_code in locations_dict) {
+        c++;
+        if (i < locations_dict[country_code].length) {
+          addMarker(locations_dict[country_code][i]);
+          m++;
+        }
+      }
+      if (m > 100 || m >= user_info['markers']) {
+        stop = true;
+      }
+      i++;
+    }
+
+    console.log(i);
+    console.log(c);
+
+    //locations.forEach(addMarker);
 
     initial_bbox = current_bbox;
 
@@ -97,13 +120,13 @@
 
       var htmlText = "<div style=\"max-height:410px;overflow:auto;\">";
 
-      for (var i = 0; i < value[2].length; i++) {
-        htmlText = htmlText.concat("<a href=\"").concat(user_info['url']).concat(value[2][i][0])
-        .concat("/\" target=\"_blank\"><img src=\"").concat(value[2][i][1]).concat("\"/></a> ");
+      for (var i = 0; i < value[1].length; i++) {
+        htmlText = htmlText.concat("<a href=\"").concat(user_info['url']).concat(value[1][i][0])
+        .concat("/\" target=\"_blank\"><img src=\"").concat(value[1][i][1]).concat("\"/></a> ");
       }
       htmlText = htmlText.concat("</div>");
 
-      if (value[3] <= 35) {
+      if (value[1].length <= 35) {
         new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
         .setLngLat(value[0])
         .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(htmlText))

@@ -20,7 +20,7 @@ locations_dict = {
     [[-54.441981, -25.686045], [['23816949803', 'https://live.staticflickr.com/1531/23816949803_7c3ea8eef5_s.jpg']]],
     [[-54.441853, -25.68597], [['49785988798', 'https://live.staticflickr.com/65535/49785988798_5d9f05fcd7_s.jpg']]],
     [[-54.438045, -25.691031], [['24076333079', 'https://live.staticflickr.com/1657/24076333079_afcd3dc993_s.jpg']]]
-  ]
+  ],
   'HR': [
     [[15.978659, 45.80585], [['48807581763', 'https://live.staticflickr.com/65535/48807581763_81b0b46948_s.jpg']]],
     [[15.978713, 45.806486], [['48808035526', 'https://live.staticflickr.com/65535/48808035526_4c178dc9c3_s.jpg']]],
@@ -206,10 +206,10 @@ locations_dict = {
     [[18.110393, 42.640407], [['49478617577', 'https://live.staticflickr.com/65535/49478617577_dc35126272_s.jpg']]],
     [[18.111219, 42.64032], [['49478067703', 'https://live.staticflickr.com/65535/49478067703_a3bf2df940_s.jpg']]],
     [[18.110404, 42.640367], [['49478834737', 'https://live.staticflickr.com/65535/49478834737_8866741b3d_s.jpg']]]
-  ]
+  ],
   'PY': [
     [[-54.597439, -25.413787], [['49785986253', 'https://live.staticflickr.com/65535/49785986253_9943d27a21_s.jpg']]]
-  ]
+  ],
   'US': [
     [[-87.602834, 41.891663], [['2916538233', 'https://live.staticflickr.com/3211/2916538233_a87f783b2e_s.jpg']]],
     [[-87.632446, 41.888988], [['2916542695', 'https://live.staticflickr.com/3085/2916542695_4fdb7b9e47_s.jpg']]],
@@ -262,7 +262,7 @@ locations_dict = {
     [[-122.423028, 37.826786], [['38378384744', 'https://live.staticflickr.com/4547/38378384744_1e26f64712_s.jpg'], ['25221753908', 'https://live.staticflickr.com/4569/25221753908_eb10a759fd_s.jpg']]],
     [[-122.077449, 37.414166], [['39247223561', 'https://live.staticflickr.com/4688/39247223561_ca173057a2_s.jpg'], ['24385251027', 'https://live.staticflickr.com/4638/24385251027_9ace8da8fb_s.jpg'], ['38540113824', 'https://live.staticflickr.com/4728/38540113824_d847c8e69a_s.jpg'], ['38540260724', 'https://live.staticflickr.com/4692/38540260724_47cb5aa80a_s.jpg'], ['38371621695', 'https://live.staticflickr.com/4729/38371621695_e225e506ea_s.jpg'], ['39248029151', 'https://live.staticflickr.com/4589/39248029151_5975e2f3ae_s.jpg'], ['39219836692', 'https://live.staticflickr.com/4639/39219836692_31b97cc5b7_s.jpg'], ['24385874057', 'https://live.staticflickr.com/4730/24385874057_450e217213_s.jpg'], ['38371789865', 'https://live.staticflickr.com/4590/38371789865_c0c28594de_s.jpg'], ['39248182641', 'https://live.staticflickr.com/4727/39248182641_9d2d95693b_s.jpg'], ['39219967072', 'https://live.staticflickr.com/4692/39219967072_0349cce375_s.jpg'], ['38371865705', 'https://live.staticflickr.com/4600/38371865705_5e02c63ac2_s.jpg'], ['38540591854', 'https://live.staticflickr.com/4645/38540591854_a11b56ca6b_s.jpg'], ['38540628704', 'https://live.staticflickr.com/4644/38540628704_d1310cf223_s.jpg'], ['38540667314', 'https://live.staticflickr.com/4680/38540667314_0c0561b366_s.jpg'], ['24386099417', 'https://live.staticflickr.com/4693/24386099417_05c10acc18_s.jpg'], ['24386129727', 'https://live.staticflickr.com/4599/24386129727_a29d09042a_s.jpg'], ['39248423621', 'https://live.staticflickr.com/4646/39248423621_559a7b587e_s.jpg'], ['24401062337', 'https://live.staticflickr.com/4729/24401062337_1d89fb5ec1_s.jpg'], ['39248458551', 'https://live.staticflickr.com/4732/39248458551_890d62f9c1_s.jpg'], ['24386239557', 'https://live.staticflickr.com/4680/24386239557_286229b8c9_s.jpg'], ['39248565851', 'https://live.staticflickr.com/4726/39248565851_8297dd8a6c_s.jpg'], ['38372248535', 'https://live.staticflickr.com/4691/38372248535_a40c9db70c_s.jpg'], ['25381874338', 'https://live.staticflickr.com/4590/25381874338_c313e3e8c3_s.jpg'], ['24386344237', 'https://live.staticflickr.com/4682/24386344237_a3b2985093_s.jpg'], ['38540965834', 'https://live.staticflickr.com/4729/38540965834_a20df99411_s.jpg']]],
     [[-122.087974, 37.418495], [['39256070462', 'https://live.staticflickr.com/4640/39256070462_c2e0294861_s.jpg'], ['38408209735', 'https://live.staticflickr.com/4736/38408209735_32a36e7abc_s.jpg'], ['38577440414', 'https://live.staticflickr.com/4646/38577440414_6effea7748_s.jpg'], ['38577480254', 'https://live.staticflickr.com/4600/38577480254_c53d38abe0_s.jpg'], ['24422493537', 'https://live.staticflickr.com/4639/24422493537_c9c7a14531_s.jpg']]]
-  ]
+  ],
   'IT': [
     [[14.486261, 40.627327], [['49499107667', 'https://live.staticflickr.com/65535/49499107667_3fa2baf9bc_s.jpg']]],
     [[14.486938, 40.627952], [['49505856182', 'https://live.staticflickr.com/65535/49505856182_8acf016f34_s.jpg']]],
@@ -340,7 +340,7 @@ locations_dict = {
     [[12.483269, 41.900813], [['49611308586', 'https://live.staticflickr.com/65535/49611308586_bda6ff2cf9_s.jpg']]],
     [[12.483505, 41.901494], [['49610787978', 'https://live.staticflickr.com/65535/49610787978_98897a76f3_s.jpg']]],
     [[12.461585, 41.902138], [['49619530531', 'https://live.staticflickr.com/65535/49619530531_6fa0c353bb_s.jpg'], ['49615610283', 'https://live.staticflickr.com/65535/49615610283_94ec3cdf99_s.jpg']]]
-  ]
+  ],
   'VA': [
     [[12.454397, 41.906333], [['49630478562', 'https://live.staticflickr.com/65535/49630478562_e8600ba829_s.jpg']]],
     [[12.454451, 41.906612], [['49636479672', 'https://live.staticflickr.com/65535/49636479672_a3f8b553cc_s.jpg'], ['49635308882', 'https://live.staticflickr.com/65535/49635308882_7c06638e8f_s.jpg']]],
@@ -364,7 +364,7 @@ locations_dict = {
     [[12.45458, 41.906365], [['49681155792', 'https://live.staticflickr.com/65535/49681155792_79617d99c4_s.jpg']]],
     [[12.454301, 41.906357], [['49684320672', 'https://live.staticflickr.com/65535/49684320672_d528750e83_s.jpg'], ['49684298512', 'https://live.staticflickr.com/65535/49684298512_59e36c03f3_s.jpg'], ['49683738767', 'https://live.staticflickr.com/65535/49683738767_4516466bbb_s.jpg'], ['49683395446', 'https://live.staticflickr.com/65535/49683395446_89a90d5cf3_s.jpg'], ['49683290356', 'https://live.staticflickr.com/65535/49683290356_c8b5be451a_s.jpg']]],
     [[12.453861, 41.906596], [['49687632177', 'https://live.staticflickr.com/65535/49687632177_edb5a6783c_s.jpg'], ['49686873401', 'https://live.staticflickr.com/65535/49686873401_ef5b2a64d8_s.jpg']]]
-  ]
+  ],
   'BR': [
     [[-32.410193, -3.837857], [['3067500873', 'https://live.staticflickr.com/3208/3067500873_9543d9a7be_s.jpg'], ['2917356302', 'https://live.staticflickr.com/3243/2917356302_c7e95d8681_s.jpg']]],
     [[-32.431361, -3.846645], [['3068338400', 'https://live.staticflickr.com/3031/3068338400_00fb3ed5af_s.jpg']]],
