@@ -186,10 +186,6 @@ p.place {
   cursor: default;
 }
 
-p.place:hover {
-  color: white;
-}
-
 p.photo {
   font-family: arial;
   font-size: 16px;
