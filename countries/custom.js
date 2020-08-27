@@ -268,9 +268,9 @@ function getIconSrc(name) {
 function setSelectorPosition() {
   var pixels;
   if (document.getElementById("overlay").style.width == "0%") {
-    pixels = window.innerWidth/2;
+    pixels = (window.innerWidth-150)/2;
   } else {
-    pixels = (window.innerWidth+400)/2;
+    pixels = (window.innerWidth+100)/2;
   }
   var selector_position = pixels.toString() + "px";
   document.getElementById("selector").style.left = selector_position;
