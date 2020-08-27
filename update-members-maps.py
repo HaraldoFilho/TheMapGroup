@@ -117,25 +117,25 @@ for page_number in range(number_of_pages, 0, -1):
                 os.system(command)
 
             # upload map
-            if (diffs > 0 or is_new_member) and locations_exists and countries_exists and user_exists:
-                print('Uploading map data...')
-                os.system("git pull -q origin master")
-                os.system("git add -f {}/index.html".format(member_path))
-                os.system("git add -f {}/locations.py".format(member_path))
-                os.system("git add -f {}/countries.py".format(member_path))
-                os.system("git add -f {}/user.py".format(member_path))
-                os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
-                os.system("git push -q origin master")
-                print('Done!')
-            else:
-                print("Everything is up-to-date. Nothing to upload!")
+            #if (diffs > 0 or is_new_member) and locations_exists and countries_exists and user_exists:
+            #    print('Uploading map data...')
+            #    os.system("git pull -q origin master")
+            #    os.system("git add -f {}/index.html".format(member_path))
+            #    os.system("git add -f {}/locations.py".format(member_path))
+            #    os.system("git add -f {}/countries.py".format(member_path))
+            #    os.system("git add -f {}/user.py".format(member_path))
+            #    os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
+            #    os.system("git push -q origin master")
+            #    print('Done!')
+            #else:
+            #    print("Everything is up-to-date. Nothing to upload!")
 
-            if is_new_member:
-                topic_subject = "[MAP] {}".format(member_name)
-                member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
-                topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, member_map)
-                flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
-                print('Created discussion topic for new member')
+            #if is_new_member:
+            #    topic_subject = "[MAP] {}".format(member_name)
+            #    member_map = "{0}/people/{1}/".format(map_group_url, member_alias)
+            #    topic_message = "[{0}/{1}/] Map link: <a href=\"{3}\"><b>{3}</b></a>\n\nClick on the markers to see the photos taken on the corresponding location.".format(photos_url, member_alias, member_name, member_map)
+            #    flickr.groups.discuss.topics.add(api_key=api_key, group_id=group_id, subject=topic_subject, message=topic_message)
+            #    print('Created discussion topic for new member')
         except:
             pass
 
@@ -157,12 +157,12 @@ for page_number in range(number_of_pages, 0, -1):
         member_n_places = user_info['markers']
         member_n_photos = user_info['photos']
 
-        if os.path.exists("{}/locations.py".format(member_path)):
-            os.system("rm {}/locations.py".format(member_path))
-        if os.path.exists("{}/countries.py".format(member_path)):
-            os.system("rm {}/countries.py".format(member_path))
-        if os.path.exists("{}/user.py".format(member_path)):
-            os.system("rm {}/user.py".format(member_path))
+        #if os.path.exists("{}/locations.py".format(member_path)):
+        #    os.system("rm {}/locations.py".format(member_path))
+        #if os.path.exists("{}/countries.py".format(member_path)):
+        #    os.system("rm {}/countries.py".format(member_path))
+        #if os.path.exists("{}/user.py".format(member_path)):
+        #    os.system("rm {}/user.py".format(member_path))
         os.system("rm -fr {}/__pycache__".format(member_path))
         os.system("rm {}/diffs".format(member_path))
 
