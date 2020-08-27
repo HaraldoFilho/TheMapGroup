@@ -136,11 +136,70 @@ function custom() {
 
 // Functions
 
+function fitBoundingBox(bbox) {
+
+  current_bbox = bbox;
+
+  var overlay_status = document.getElementById("overlay").style.width;
+
+  if (overlay_status == '400px') {
+    padding_left = 450;
+  } else {
+    padding_left = 50;
+  }
+
+  map.fitBounds([
+    [bbox[0], bbox[1]],
+    [bbox[2], bbox[3]]],
+    {padding: {top:50, bottom:50, left:padding_left, right:50}}
+  );
+
+};
+
+function fitInitialBoundingBox(initial_bbox) {
+
+  var overlay_status = document.getElementById("overlay").style.width;
+
+  if (overlay_status == '400px') {
+    padding_left = 450;
+  } else {
+    padding_left = 50;
+  }
+
+  map.fitBounds([
+    [initial_bbox[0], initial_bbox[1]],
+    [initial_bbox[2], initial_bbox[3]]],
+    {padding: {top:50, bottom:50, left:padding_left, right:50}}
+  );
+
+  current_bbox = initial_bbox;
+
+};
+
 function addMarkersToCountry(country_code, start_index) {
     var country_array = locations_dict[country_code];
     for (var i = start_index; i < country_array.length; i++) {
       addMarker(country_array[i]);
     }
+}
+
+function addListener(country) {
+  var country_code = country[0];
+  var country_bbox = [];
+  var bbox_defined = true;
+
+  if (typeof countries_bbox[country_code] === 'undefined') {
+    bbox_defined = false;
+  }
+
+  if (bbox_defined) {
+    country_bbox = countries_bbox[country_code][1];
+  }
+
+  var country_url = "https://the-map-group.pictures/countries/".concat(country_code.toLowerCase());
+  document.getElementById(country_code).addEventListener('click', function() { addMarkersToCountry(country_code, current_index); fitBoundingBox(country_bbox); });
+  document.getElementById(country_code.concat("_markers")).addEventListener('click', function() { addMarkersToCountry(country_code, current_index); fitBoundingBox(country_bbox); });
+
 }
 
 function addFavicon() {
@@ -276,65 +335,6 @@ function closeOverlay() {
 function getIconSrc(name) {
   return "../../icons/flags/".concat(name.replace(/\s/g, "-").toLowerCase()).concat(".svg");
 }
-
-function addListener(country) {
-  var country_code = country[0];
-  var country_bbox = [];
-  var bbox_defined = true;
-
-  if (typeof countries_bbox[country_code] === 'undefined') {
-    bbox_defined = false;
-  }
-
-  if (bbox_defined) {
-    country_bbox = countries_bbox[country_code][1];
-  }
-
-  var country_url = "https://the-map-group.pictures/countries/".concat(country_code.toLowerCase());
-  document.getElementById(country_code).addEventListener('click', function() { addMarkersToCountry(country_code, current_index); fitBoundingBox(country_bbox); });
-  document.getElementById(country_code.concat("_markers")).addEventListener('click', function() { addMarkersToCountry(country_code, current_index); fitBoundingBox(country_bbox); });
-
-}
-
-function fitBoundingBox(bbox) {
-
-  current_bbox = bbox;
-
-  var overlay_status = document.getElementById("overlay").style.width;
-
-  if (overlay_status == '400px') {
-    padding_left = 450;
-  } else {
-    padding_left = 50;
-  }
-
-  map.fitBounds([
-    [bbox[0], bbox[1]],
-    [bbox[2], bbox[3]]],
-    {padding: {top:50, bottom:50, left:padding_left, right:50}}
-  );
-
-};
-
-function fitInitialBoundingBox(initial_bbox) {
-
-  var overlay_status = document.getElementById("overlay").style.width;
-
-  if (overlay_status == '400px') {
-    padding_left = 450;
-  } else {
-    padding_left = 50;
-  }
-
-  map.fitBounds([
-    [initial_bbox[0], initial_bbox[1]],
-    [initial_bbox[2], initial_bbox[3]]],
-    {padding: {top:50, bottom:50, left:padding_left, right:50}}
-  );
-
-  current_bbox = initial_bbox;
-
-};
 
 function changeUserBackgroundColor() {
   if (document.getElementById("overlay").scrollTop > 25) {
