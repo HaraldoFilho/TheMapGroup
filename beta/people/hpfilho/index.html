@@ -67,26 +67,21 @@
     var north = -90;
 
     stop = false;
-    i = 0;
+    current_index = 0;
     m = 0;
 
     while (!stop) {
-      c = 0;
       for (var country_code in locations_dict) {
-        c++;
-        if (i < locations_dict[country_code].length) {
-          addMarker(locations_dict[country_code][i]);
+        if (current_index < locations_dict[country_code].length) {
+          addMarker(locations_dict[country_code][current_index]);
           m++;
         }
       }
       if (m > 100 || m >= user_info['markers']) {
         stop = true;
       }
-      i++;
+      current_index++;
     }
-
-    console.log(i);
-    console.log(c);
 
     //locations.forEach(addMarker);
 
