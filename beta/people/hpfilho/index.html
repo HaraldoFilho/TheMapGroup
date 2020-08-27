@@ -19,9 +19,10 @@
 
   <!-- Begin of customization includes -->
   <link href="../style.css" rel="stylesheet" />
+  <script src="../config.js"></script>
+  <script src="../../countries_bbox.js"></script>
   <script src="user.py"></script>
   <script src="countries.py"></script>
-  <script src="../../countries_bbox.js"></script>
   <!-- End of customization includes -->
 
 </head>
@@ -65,24 +66,22 @@
     var east = -180;
     var north = -90;
 
-    stop = false;
-    current_index = 0;
-    m = 0;
+    var stop = false;
+    var current_index = 0;
+    var current_n_markers = 0;
 
     while (!stop) {
       for (var country_code in locations_dict) {
         if (current_index < locations_dict[country_code].length) {
           addMarker(locations_dict[country_code][current_index]);
-          m++;
+          current_n_markers++;
         }
       }
-      if (m > 100 || m >= user_info['markers']) {
+      if (current_n_markers > max_init_n_markers || current_n_markers >= user_info['markers']) {
         stop = true;
       }
       current_index++;
     }
-
-    //locations.forEach(addMarker);
 
     initial_bbox = current_bbox;
 
@@ -114,13 +113,13 @@
 
       var htmlText = "<div style=\"max-height:410px;overflow:auto;\">";
 
-      for (var i = 0; i < value[2].length; i++) {
-        htmlText = htmlText.concat("<a href=\"").concat(user_info['url']).concat(value[2][i][0])
-        .concat("/\" target=\"_blank\"><img src=\"").concat(value[2][i][1]).concat("\"/></a> ");
+      for (var i = 0; i < value[1].length; i++) {
+        htmlText = htmlText.concat("<a href=\"").concat(user_info['url']).concat(value[1][i][0])
+        .concat("/\" target=\"_blank\"><img src=\"").concat(value[1][i][1]).concat("\"/></a> ");
       }
       htmlText = htmlText.concat("</div>");
 
-      if (value[3] <= 35) {
+      if (value[1].length <= 35) {
         new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
         .setLngLat(value[0])
         .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(htmlText))
