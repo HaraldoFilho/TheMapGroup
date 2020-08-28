@@ -21,13 +21,13 @@ var members = [
   ['130828646@N02', '130828646@N02', 'Philippe Guillot', "https://live.staticflickr.com/5674/buddyicons/130828646@N02_r.jpg", 8931, 24316],
   ['93936890@N02', '93936890@N02', 'CLIFF BANCROFT', "https://live.staticflickr.com/5674/buddyicons/93936890@N02_r.jpg", 622, 917],
   ['7182681@N07', 'grundi1', 'Christian Grundner', "https://live.staticflickr.com/5674/buddyicons/7182681@N07_r.jpg", 224, 697],
-  ['158292715@N07', 'fvega', 'Fernando Vega', "https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg", 2223, 3204],
+  ['158292715@N07', 'fvega', 'Fernando Vega', "https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg", 2224, 3205],
   ['7812564@N02', 'zoi05', 'kbulut58', "https://live.staticflickr.com/5674/buddyicons/7812564@N02_r.jpg", 189, 620],
   ['21593175@N00', 'susannemichelle', 'Susie', "https://live.staticflickr.com/5674/buddyicons/21593175@N00_r.jpg", 151, 3196],
   ['169904704@N04', 'eugeniocosta', 'Eugenio Costa', "https://live.staticflickr.com/5674/buddyicons/169904704@N04_r.jpg", 589, 607],
   ['132838898@N03', 'quelrr', 'Raquel Rampasio', "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg", 35, 48],
   ['13445173@N06', 'bvi4092', 'bvi4092', "https://live.staticflickr.com/5674/buddyicons/13445173@N06_r.jpg", 526, 1014],
-  ['66031636@N00', 'jnoval', 'Javier Noval', "https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg", 225, 422],
+  ['66031636@N00', 'jnoval', 'Javier Noval', "https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg", 225, 423],
   ['57727182@N08', '57727182@N08', 'GEORGE', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 387, 7244],
   ['76199006@N05', 'jasonfrels', 'Jason', "https://live.staticflickr.com/5674/buddyicons/76199006@N05_r.jpg", 46, 52],
   ['63713558@N00', 'staneastwood', 'Stanley Eastwood', "https://live.staticflickr.com/5674/buddyicons/63713558@N00_r.jpg", 4927, 28190],
@@ -39,3 +39,5 @@ var members = [
   ['147135779@N02', '147135779@N02', 'giovanni Campus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 1928, 2123],
   ['38286807@N03', 'jimgreig', 'James Greig', "https://live.staticflickr.com/5674/buddyicons/38286807@N03_r.jpg", 2273, 2749],
   ['14463685@N07', '14463685@N07', 'Howard Somerville', "https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg", 477, 557],
+  ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1292, 2450]
+]
