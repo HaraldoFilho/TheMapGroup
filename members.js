@@ -33,7 +33,7 @@ var members = [
   ['63713558@N00', 'staneastwood', 'Stanley Eastwood', "https://live.staticflickr.com/5674/buddyicons/63713558@N00_r.jpg", 4927, 28185],
   ['135298455@N04', 'quanito', 'Pascal VU', "https://live.staticflickr.com/5674/buddyicons/135298455@N04_r.jpg", 1249, 13144],
   ['189479352@N07', '189479352@N07', 'Jeffrey Lovelace', "https://live.staticflickr.com/5674/buddyicons/189479352@N07_r.jpg", 15, 15],
-  ['33989856@N04', 'beatrixmvarga', 'Beatrix', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 178, 178],
+  ['33989856@N04', 'beatrixmvarga', 'Beatrix', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 179, 179],
   ['97974874@N00', 'blackdiamondimages', 'Black Diamond Images', "https://live.staticflickr.com/5674/buddyicons/97974874@N00_r.jpg", 7781, 11204],
   ['120861725@N07', '120861725@N07', 'GSB', "https://live.staticflickr.com/5674/buddyicons/120861725@N07_r.jpg", 136, 158],
   ['147135779@N02', '147135779@N02', 'giovanni Campus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 1927, 2122],
