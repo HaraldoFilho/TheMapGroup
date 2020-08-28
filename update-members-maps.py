@@ -74,6 +74,7 @@ for page_number in range(number_of_pages, 0, -1):
             if member_alias == None:
                 member_alias = member_id
             member_path = people_path + "/" + member_alias
+
             # create member directory and topic if doesn't exist yet
             is_new_member = False
             if not os.path.isdir(member_path):
@@ -100,7 +101,10 @@ for page_number in range(number_of_pages, 0, -1):
                 except:
                     pass
 
-            prev_loc_fsize = os.stat("{}/locations.py".format(member_path)).st_size
+            if os.path.exists("{}/locations.py".format(member_path)):
+                prev_loc_fsize = os.stat("{}/locations.py".format(member_path)).st_size
+            else:
+                prev_loc_fsize = 0
 
             # generate/update member's map
             print('Starting \'Flickr Map\' script...')
@@ -113,6 +117,8 @@ for page_number in range(number_of_pages, 0, -1):
 
             if locations_exists:
                 loc_fsize_diff = os.stat("{}/locations.py".format(member_path)).st_size - prev_loc_fsize
+            else:
+                loc_fsize_diff = 0
 
             # updates countries members file
             if locations_exists and countries_exists and user_exists:
