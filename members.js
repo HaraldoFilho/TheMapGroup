@@ -3,8 +3,8 @@ var members = [
   ['14320768@N07', 'nebraskasc', 'Dale  Kaminski', "https://live.staticflickr.com/5674/buddyicons/14320768@N07_r.jpg", 1911, 17365],
   ['8121206@N07', 'chrispricephotography', 'Chris Price', "https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg", 592, 839],
   ['79292646@N05', 'ellebedeva', 'Elena Lebedeva (IG: ellebedeva', "https://live.staticflickr.com/5674/buddyicons/79292646@N05_r.jpg", 184, 194],
-  ['15029120@N00', 'michael_from_berlin', 'michael_jeddah', "https://live.staticflickr.com/5674/buddyicons/15029120@N00_r.jpg", 3129, 3225],
   ['51207582@N08', '51207582@N08', 'Gary Cadman', "https://live.staticflickr.com/5674/buddyicons/51207582@N08_r.jpg", 2580, 3101],
+  ['15029120@N00', 'michael_from_berlin', 'michael_jeddah', "https://live.staticflickr.com/5674/buddyicons/15029120@N00_r.jpg", 3129, 3225],
   ['57729348@N02', 'mosesharold', 'Harold  Moses', "https://live.staticflickr.com/5674/buddyicons/57729348@N02_r.jpg", 2282, 3262],
   ['30717887@N05', '30717887@N05', 'Tor Einar Andersen', "https://live.staticflickr.com/5674/buddyicons/30717887@N05_r.jpg", 215, 309],
   ['40749798@N07', 'lemmo2009', 'Paul', "https://live.staticflickr.com/5674/buddyicons/40749798@N07_r.jpg", 4572, 4924],
@@ -38,5 +38,4 @@ var members = [
   ['120861725@N07', '120861725@N07', 'GSB', "https://live.staticflickr.com/5674/buddyicons/120861725@N07_r.jpg", 136, 158],
   ['147135779@N02', '147135779@N02', 'giovanni Campus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 1928, 2123],
   ['38286807@N03', 'jimgreig', 'James Greig', "https://live.staticflickr.com/5674/buddyicons/38286807@N03_r.jpg", 2273, 2749],
-  ['14463685@N07', '14463685@N07', 'Howard Somerville', "https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg", 477, 557]
-]
+  ['14463685@N07', '14463685@N07', 'Howard Somerville', "https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg", 477, 557],

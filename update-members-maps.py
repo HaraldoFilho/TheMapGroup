@@ -100,16 +100,19 @@ for page_number in range(number_of_pages, 0, -1):
                 except:
                     pass
 
+            prev_loc_fsize = os.stat("{}/locations.py".format(member_path)).st_size
+
             # generate/update member's map
             print('Starting \'Flickr Map\' script...')
             command = "{}/generate-map-data.py".format(member_path)
             os.system(command)
 
-            os.system("git diff {0}/* > {0}/diffs".format(member_path))
-            diffs = os.stat("{}/diffs".format(member_path)).st_size
             locations_exists = os.path.exists("{}/locations.py".format(member_path))
             countries_exists = os.path.exists("{}/countries.py".format(member_path))
             user_exists = os.path.exists("{}/user.py".format(member_path))
+
+            if locations_exists:
+                loc_fsize_diff = os.stat("{}/locations.py".format(member_path)).st_size - prev_loc_fsize
 
             # updates countries members file
             if locations_exists and countries_exists and user_exists:
@@ -117,7 +120,7 @@ for page_number in range(number_of_pages, 0, -1):
                 os.system(command)
 
             # upload map
-            if (diffs > 0 or is_new_member) and locations_exists and countries_exists and user_exists:
+            if (loc_fsize_diff != 0 or is_new_member) and locations_exists and countries_exists and user_exists:
                 print('Uploading map data...')
                 os.system("git pull -q origin master")
                 os.system("git add -f {}/index.html".format(member_path))
@@ -164,7 +167,6 @@ for page_number in range(number_of_pages, 0, -1):
         if os.path.exists("{}/user.py".format(member_path)):
             os.system("rm {}/user.py".format(member_path))
         os.system("rm -fr {}/__pycache__".format(member_path))
-        os.system("rm {}/diffs".format(member_path))
 
         members_js_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
         if member_number > 0:
