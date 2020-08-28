@@ -92,9 +92,9 @@ function custom() {
     i_countries.setAttribute("class", "country");
     i_countries.setAttribute("style", "cursor:pointer");
 
-    if (country_name.length > 15) {
+    if (country_name.length > 12) {
       i_countries.setAttribute("title", country_name);
-      country_name = country_name.substring(0, 13).concat("...");
+      country_name = country_name.substring(0, 10).concat("...");
     }
 
     i_countries.innerText = country_name;
