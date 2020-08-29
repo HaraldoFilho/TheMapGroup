@@ -14,10 +14,10 @@ var members = [
   ['32557441@N02', 'santelia', 'Alfonso Santelia', "https://live.staticflickr.com/5674/buddyicons/32557441@N02_r.jpg", 463, 690],
   ['46721940@N00', 'nothingpersonal', 'Dmitry Djouce', "icons/photographer.svg", 2349, 2684],
   ['88196436@N04', 'saw_that', 'I saw_that', "https://live.staticflickr.com/5674/buddyicons/88196436@N04_r.jpg", 714, 1357],
-  ['31155442@N03', '31155442@N03', 'Joseph Hollick', "https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg", 7788, 9823],
+  ['31155442@N03', '31155442@N03', 'Joseph Hollick', "https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg", 7789, 9827],
   ['32770136@N05', 'chris_macdonald1983', 'CJphoto83', "https://live.staticflickr.com/5674/buddyicons/32770136@N05_r.jpg", 32, 53],
-  ['25404639@N08', 'barbaraelaw', 'Barbara Lawrence', "https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg", 2355, 3149],
-  ['145400672@N02', '145400672@N02', 'Pit Spielmann', "https://live.staticflickr.com/5674/buddyicons/145400672@N02_r.jpg", 402, 919],
+  ['25404639@N08', 'barbaraelaw', 'Barbara Lawrence', "https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg", 2356, 3150],
+  ['145400672@N02', '145400672@N02', 'Pit Spielmann', "https://live.staticflickr.com/5674/buddyicons/145400672@N02_r.jpg", 403, 920],
   ['130828646@N02', '130828646@N02', 'Philippe Guillot', "https://live.staticflickr.com/5674/buddyicons/130828646@N02_r.jpg", 8931, 24316],
   ['93936890@N02', '93936890@N02', 'CLIFF BANCROFT', "https://live.staticflickr.com/5674/buddyicons/93936890@N02_r.jpg", 622, 917],
   ['7182681@N07', 'grundi1', 'Christian Grundner', "https://live.staticflickr.com/5674/buddyicons/7182681@N07_r.jpg", 224, 697],
@@ -33,11 +33,12 @@ var members = [
   ['63713558@N00', 'staneastwood', 'Stanley Eastwood', "https://live.staticflickr.com/5674/buddyicons/63713558@N00_r.jpg", 4927, 28190],
   ['135298455@N04', 'quanito', 'Pascal VU', "https://live.staticflickr.com/5674/buddyicons/135298455@N04_r.jpg", 1249, 13144],
   ['189479352@N07', '189479352@N07', 'Jeffrey Lovelace', "https://live.staticflickr.com/5674/buddyicons/189479352@N07_r.jpg", 15, 15],
-  ['33989856@N04', 'beatrixmvarga', 'Beatrix', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 180, 180],
+  ['33989856@N04', 'beatrixmvarga', 'Beatrix', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 181, 181],
   ['97974874@N00', 'blackdiamondimages', 'Black Diamond Images', "https://live.staticflickr.com/5674/buddyicons/97974874@N00_r.jpg", 7781, 11204],
   ['120861725@N07', '120861725@N07', 'GSB', "https://live.staticflickr.com/5674/buddyicons/120861725@N07_r.jpg", 136, 158],
   ['147135779@N02', '147135779@N02', 'giovanni Campus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 1928, 2123],
   ['38286807@N03', 'jimgreig', 'James Greig', "https://live.staticflickr.com/5674/buddyicons/38286807@N03_r.jpg", 2273, 2749],
   ['14463685@N07', '14463685@N07', 'Howard Somerville', "https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg", 477, 557],
-  ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1292, 2450]
+  ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1292, 2450],
+  ['189316105@N08', '189316105@N08', 'Miguel Angel Flores', "https://live.staticflickr.com/5674/buddyicons/189316105@N08_r.jpg", 14, 80]
 ]
