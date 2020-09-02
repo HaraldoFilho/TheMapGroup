@@ -34,7 +34,7 @@ function custom() {
   var member_link = document.createElement("A");
 
   if (member_name.length > 18) {
-    member_link.setAttribute("title", country_name);
+    member_link.setAttribute("title", member_name);
     member_name = member_name.substring(0, 14).concat("...");
   }
 
