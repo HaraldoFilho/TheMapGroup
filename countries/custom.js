@@ -32,9 +32,9 @@ function custom() {
 
   var country_link = document.createElement("A");
 
-  if (country_name.length > 12) {
+  if (country_name.length > 17) {
     country_link.setAttribute("title", country_name);
-    country_name = country_name.substring(0, 10).concat("...");
+    country_name = country_name.substring(0, 14).concat("...");
   }
 
   country_link.setAttribute("id", "country_link");

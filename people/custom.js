@@ -33,7 +33,7 @@ function custom() {
   var member_name = user_info["name"];
   var member_link = document.createElement("A");
 
-  if (member_name.length > 18) {
+  if (member_name.length > 17) {
     member_link.setAttribute("title", member_name);
     member_name = member_name.substring(0, 14).concat("...");
   }

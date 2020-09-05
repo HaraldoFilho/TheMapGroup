@@ -244,6 +244,7 @@ countries_dict = {
   'PS': 'West Bank',
   'SG': 'Singapore',
   'TF': 'Fr. S. and Antarctic Lands',
+  'SM': 'San Marino',
   'VG': 'British Virgin Islands'
 }
 
@@ -292,7 +293,7 @@ latitude_dict = {
   41: {'FR', 'ME', 'GR', 'KG', 'TR', 'VA', 'AL', 'UZ', 'US', 'KP', 'PT', 'TJ', 'AM', 'GE', 'MK', 'KZ', 'MN', 'ES', 'TM', 'JP', 'IT', 'BG', 'CN', 'AZ', 'AD'},
   42: {'FR', 'ME', 'RS', 'GR', 'KG', 'TR', 'HR', 'VA', 'AL', 'US', 'UZ', 'CA', 'KP', 'PT', 'GE', 'AM', 'MK', 'MN', 'KZ', 'ES', 'BA', 'TM', 'RU', 'JP', 'XK', 'IT', 'BG', 'CN', 'AZ', 'AD'},
   43: {'FR', 'ME', 'RS', 'KG', 'TR', 'HR', 'VA', 'AL', 'UZ', 'US', 'CA', 'KP', 'GE', 'KZ', 'MN', 'MK', 'ES', 'BA', 'TM', 'RU', 'JP', 'XK', 'IT', 'BG', 'CN', 'RO', 'AD', 'MC'},
-  44: {'KZ', 'MN', 'FR', 'ME', 'UZ', 'US', 'CA', 'JP', 'RS', 'BA', 'XK', 'IT', 'BG', 'ES', 'GE', 'RO', 'KG', 'CN', 'UA', 'HR', 'RU', 'MC'},
+  44: {'KZ', 'MN', 'FR', 'ME', 'UZ', 'US', 'CA', 'JP', 'RS', 'BA', 'XK', 'IT', 'BG', 'ES', 'GE', 'RO', 'KG', 'CN', 'UA', 'HR', 'RU', 'MC', 'SM'},
   45: {'KZ', 'MN', 'FR', 'UZ', 'US', 'SI', 'CA', 'JP', 'RS', 'BA', 'CH', 'IT', 'BG', 'HU', 'RO', 'CN', 'UA', 'HR', 'RU'},
   46: {'KZ', 'MN', 'HR', 'FR', 'US', 'UZ', 'SI', 'CA', 'AT', 'CH', 'RS', 'JP', 'IT', 'BA', 'MD', 'RO', 'CN', 'UA', 'HU', 'RU'},
   47: {'KZ', 'MN', 'HR', 'FR', 'DE', 'US', 'SI', 'CA', 'AT', 'CH', 'RS', 'IT', 'MD', 'SK', 'RO', 'CN', 'UA', 'HU', 'RU', 'LI'},
@@ -437,8 +438,8 @@ longitude_dict = {
   9: {'AQ', 'DZ', 'FR', 'DE', 'TN', 'AT', 'CH', 'GA', 'IT', 'NE', 'LY', 'DK', 'GQ', 'NO', 'CM', 'NG', 'LI'},
   10: {'AQ', 'DZ', 'SE', 'FR', 'DE', 'TN', 'AT', 'CH', 'GA', 'IT', 'NE', 'LY', 'DK', 'GQ', 'NO', 'CM', 'NG', 'LI'},
   11: {'AQ', 'DZ', 'SE', 'NA', 'DE', 'CG', 'VA', 'AO', 'TN', 'AT', 'GA', 'IT', 'NE', 'LY', 'DK', 'GQ', 'NO', 'CM', 'NG'},
-  12: {'AQ', 'NA', 'VA', 'SE', 'CG', 'DE', 'CZ', 'CD', 'DZ', 'AO', 'TN', 'AT', 'GA', 'IT', 'NE', 'LY', 'DK', 'GQ', 'NO', 'CM', 'NG'},
-  13: {'AQ', 'NA', 'SE', 'CG', 'DE', 'CZ', 'VA', 'CD', 'SI', 'AO', 'AT', 'MT', 'GA', 'IT', 'NE', 'LY', 'DK', 'NO', 'CM', 'TD', 'HR', 'NG'},
+  12: {'AQ', 'NA', 'VA', 'SE', 'CG', 'DE', 'CZ', 'CD', 'DZ', 'AO', 'TN', 'AT', 'GA', 'IT', 'NE', 'LY', 'DK', 'GQ', 'NO', 'CM', 'NG', 'SM'},
+  13: {'AQ', 'NA', 'SE', 'CG', 'DE', 'CZ', 'VA', 'CD', 'SI', 'AO', 'AT', 'MT', 'GA', 'IT', 'NE', 'LY', 'DK', 'NO', 'CM', 'TD', 'HR', 'NG', 'SM'},
   14: {'AQ', 'CF', 'HR', 'SE', 'SI', 'AT', 'DK', 'NG', 'DE', 'CZ', 'LY', 'GA', 'NE', 'NO', 'NA', 'CG', 'CD', 'AO', 'MT', 'PL', 'IT', 'CM', 'TD'},
   15: {'AQ', 'CF', 'HR', 'SE', 'SI', 'AT', 'DK', 'NG', 'DE', 'CZ', 'BA', 'LY', 'GA', 'NE', 'NO', 'NA', 'CG', 'CD', 'AO', 'MT', 'PL', 'IT', 'CM', 'TD'},
   16: {'AQ', 'NA', 'SE', 'CG', 'CZ', 'CD', 'SI', 'AO', 'AT', 'ZA', 'BA', 'PL', 'IT', 'HU', 'LY', 'NE', 'DK', 'CF', 'NO', 'CM', 'TD', 'HR'},
@@ -785,4 +786,3 @@ longitude_dict = {
   -2: {'AQ', 'GB', 'DZ', 'FR', 'GH', 'JE', 'CI', 'ES', 'MA', 'ML', 'BF''GG'},
   -1: {'AQ', 'GB', 'DZ', 'FR', 'GH', 'JE', 'ES', 'ML', 'MA', 'BF'}
 }
-
