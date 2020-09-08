@@ -4,6 +4,6 @@ user_info = {
   'name': 'Javier Noval',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/jnoval/',
-  'markers': 234,
-  'photos': 432
+  'markers': 235,
+  'photos': 433
 }
