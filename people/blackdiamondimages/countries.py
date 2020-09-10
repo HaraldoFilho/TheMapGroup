@@ -1,3 +1,26 @@
 countries_dict = {
-  'AU': ['Australia', 6, 6]
+  'AT': ['Austria', 1, 1],
+  'CA': ['Canada', 524, 724],
+  'DE': ['Germany', 50, 83],
+  'GB': ['United Kingdom', 1, 1],
+  'CH': ['Switzerland', 2, 2],
+  'PE': ['Peru', 84, 420],
+  'SG': ['Singapore', 90, 532],
+  'NL': ['The Netherlands', 1, 1],
+  'NZ': ['New Zealand', 136, 164],
+  'US': ['United States of America', 350, 405],
+  'TL': ['East Timor', 4, 4],
+  'UY': ['Uruguay', 1, 2],
+  'BR': ['Brazil', 18, 18],
+  'BO': ['Bolivia', 30, 95],
+  'CL': ['Chile', 123, 299],
+  'HR': ['Croatia', 1, 1],
+  'IT': ['Italy', 5, 5],
+  'AR': ['Argentina', 69, 220],
+  'ME': ['Montenegro', 1, 1],
+  'JP': ['Japan', 45, 45],
+  'AL': ['Albania', 2, 2],
+  'GR': ['Greece', 1, 2],
+  'FR': ['France', 1, 1],
+  'AU': ['Australia', 6269, 8206]
 }
