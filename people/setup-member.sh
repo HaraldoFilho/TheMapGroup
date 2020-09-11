@@ -11,6 +11,7 @@ fi
 mkdir $REPO_DIR/people/$1
 cd $REPO_DIR/people/$1
 ln -s ../../api_credentials.py .
+ln -s ../../mapbox_token.py .
 ln -s ../../countries_info.py .
 ln -s ../../countries/members.py countries_members.py
 ln -P $GEN_MAP_DIR/generate-map-data.py .

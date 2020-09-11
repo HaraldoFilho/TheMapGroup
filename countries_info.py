@@ -1,9 +1,14 @@
 #!/usr/bin/python3
 
 from geopy.geocoders import Nominatim
+from geopy.geocoders import GeoNames
+from geopy.geocoders import MapBox
+from mapbox_token import mapbox_token
 
 try:
-    geolocator = Nominatim(user_agent="flickr_map")
+    geolocator1 = Nominatim(user_agent='flickr_map')
+    geolocator2 = GeoNames(username='haraldo.filho')
+    geolocator3 = MapBox(api_key=mapbox_token)
 except:
     print("ERROR: FATAL: Unable to get geolocator")
     sys.exit()
@@ -21,14 +26,40 @@ def getCountryInfo(lat, long):
         code = codes.pop()
         name = countries_dict[code]
     else:
+        latlong = (lat, long)
+        # get info from Nominatim
         try:
-            latlong = "{0},{1}".format(lat, long)
-            location = geolocator.reverse(latlong, language='en-US', exactly_one=True, zoom=18)
+            location = geolocator1.reverse(latlong, language='en-US', exactly_one=True)
             code = location.raw['address']['country_code'].upper()
             name = location.raw['address']['country']
         except:
             code = ''
             name = ''
+        # get info from GeoNames if not found in Nominatim
+        if code == '':
+            try:
+                location = geolocator2.reverse(latlong, lang='en-US', exactly_one=True)
+                code = location.raw['countryCode']
+                name = location.raw['countryName']
+            except:
+                pass
+        # get info from MapBox if not found in Nominatim and Geocodes
+        if code == '':
+            try:
+                location = geolocator3.reverse(latlong, exactly_one=True)
+                location_info = location.raw['context']
+                len_info = len(location_info)
+                if len_info > 4:
+                    info_index = 3
+                else:
+                    info_index = len_info - 1
+                code = location_info[info_index]['short_code'].upper()
+                name = location_info[info_index]['text']
+                if len(code) > 2:
+                    code = code[:2]
+                    name = ''
+            except:
+                pass
 
     return [code, name]
 
