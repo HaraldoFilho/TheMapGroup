@@ -4,6 +4,6 @@ user_info = {
   'name': 'peter.rath',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/189226334@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/peterrath/',
-  'markers': 389,
-  'photos': 708
+  'markers': 390,
+  'photos': 709
 }
