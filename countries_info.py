@@ -276,6 +276,7 @@ countries_dict = {
   'SG': 'Singapore',
   'TF': 'Fr. S. and Antarctic Lands',
   'SM': 'San Marino',
+  'RE': 'Reunion',
   'VG': 'British Virgin Islands'
 }
 
@@ -432,9 +433,9 @@ latitude_dict = {
   -25: {'NA', 'MZ', 'BW', 'TO', 'CL', 'ZA', 'SZ', 'PY', 'BR', 'AU', 'AR', 'MG'},
   -24: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CL', 'ZA', 'PY', 'BR', 'AU', 'AR', 'MG'},
   -23: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CK', 'CL', 'ZA', 'ZW', 'PY', 'BR', 'AU', 'BO', 'AR', 'MG', 'NC'},
-  -22: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CK', 'CL', 'ZA', 'FJ', 'ZW', 'PY', 'BR', 'BO', 'AU', 'AR', 'MG', 'NC'},
-  -21: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CK', 'VU', 'CL', 'FJ', 'AR', 'ZW', 'PY', 'BR', 'BO', 'AU', 'MG', 'MU', 'NC'},
-  -20: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CK', 'VU', 'NU', 'CL', 'FJ', 'ZW', 'PY', 'BR', 'BO', 'AU', 'PE', 'MG', 'MU', 'NC'},
+  -22: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CK', 'CL', 'ZA', 'FJ', 'ZW', 'PY', 'BR', 'BO', 'AU', 'AR', 'MG', 'NC', 'RE'},
+  -21: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CK', 'VU', 'CL', 'FJ', 'AR', 'ZW', 'PY', 'BR', 'BO', 'AU', 'MG', 'MU', 'NC', 'RE'},
+  -20: {'NA', 'FR', 'MZ', 'BW', 'TO', 'CK', 'VU', 'NU', 'CL', 'FJ', 'ZW', 'PY', 'BR', 'BO', 'AU', 'PE', 'MG', 'MU', 'NC', 'RE'},
   -19: {'NA', 'FR', 'MZ', 'TO', 'NU', 'CK', 'BW', 'VU', 'CL', 'FJ', 'ZW', 'PY', 'BR', 'BO', 'AU', 'PE', 'MG', 'MU', 'NC'},
   -18: {'NA', 'FR', 'MZ', 'BW', 'VU', 'CK', 'AO', 'TO', 'NU', 'CL', 'FJ', 'ZW', 'BR', 'BO', 'AU', 'PE', 'ZM', 'MG', 'KN'},
   -17: {'NA', 'FR', 'MZ', 'TO', 'VU', 'BW', 'AO', 'CK', 'FJ', 'ZW', 'MW', 'BR', 'BO', 'AU', 'PE', 'ZM', 'MG', 'KN'},
@@ -512,8 +513,8 @@ longitude_dict = {
   52: {'AQ', 'KZ', 'QA', 'SC', 'OM', 'IR', 'SA', 'SO', 'AE', 'TM', 'YE', 'RU', 'TF'},
   53: {'AQ', 'KZ', 'SC', 'OM', 'IR', 'SA', 'AE', 'TM', 'YE', 'RU', 'TF'},
   54: {'AQ', 'KZ', 'QA', 'SC', 'OM', 'IR', 'SA', 'AE', 'TM', 'YE', 'RU', 'TF'},
-  55: {'AQ', 'QA', 'KZ', 'OM', 'UZ', 'IR', 'SA', 'AE', 'TM', 'RU', 'TF'},
-  56: {'AQ', 'KZ', 'QA', 'UZ', 'OM', 'IR', 'SA', 'AE', 'TM', 'RU', 'TF'},
+  55: {'AQ', 'QA', 'KZ', 'OM', 'UZ', 'IR', 'SA', 'AE', 'TM', 'RU', 'TF', 'RE'},
+  56: {'AQ', 'KZ', 'QA', 'UZ', 'OM', 'IR', 'SA', 'AE', 'TM', 'RU', 'TF', 'RE'},
   57: {'AQ', 'KZ', 'OM', 'UZ', 'IR', 'AE', 'TM', 'RU', 'MU', 'TF'},
   58: {'AQ', 'KZ', 'OM', 'UZ', 'IR', 'TM', 'RU', 'MU', 'TF'},
   59: {'AQ', 'KZ', 'OM', 'UZ', 'IR', 'TM', 'RU', 'TF'},
