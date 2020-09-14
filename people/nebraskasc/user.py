@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dale  Kaminski',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/14320768@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/nebraskasc/',
-  'markers': 1912,
-  'photos': 17471
+  'markers': 1913,
+  'photos': 17479
 }
