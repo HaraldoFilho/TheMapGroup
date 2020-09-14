@@ -23,7 +23,7 @@ from countries_info import getCountryInfo
 photos_per_page = '500'
 max_number_of_pages = 200
 max_number_of_photos = max_number_of_pages * int(photos_per_page)
-max_number_of_markers = 5000
+max_number_of_markers = 2500
 
 
 # ===============================================================

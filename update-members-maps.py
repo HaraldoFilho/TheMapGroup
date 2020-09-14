@@ -32,6 +32,17 @@ repo_path = os.path.dirname(os.path.realpath(__file__))
 people_path = repo_path + "/people"
 
 
+#===== FUNCTIONS ==============================================================#
+
+def memberFilesExist(member_path):
+    locations_exists = os.path.exists("{}/locations.py".format(member_path))
+    countries_exists = os.path.exists("{}/countries.py".format(member_path))
+    user_exists = os.path.exists("{}/user.py".format(member_path))
+    if locations_exists and countries_exists and user_exists:
+        return True
+    return False
+
+
 #===== MAIN CODE ==============================================================#
 
 # created members info file
@@ -101,7 +112,10 @@ for page_number in range(number_of_pages, 0, -1):
                 except:
                     pass
 
-            if os.path.exists("{}/locations.py".format(member_path)):
+            if not is_new_member and not memberFilesExist(member_path):
+                continue
+
+            if memberFilesExist(member_path):
                 prev_loc_fsize = os.stat("{}/locations.py".format(member_path)).st_size
             else:
                 prev_loc_fsize = 0
@@ -111,22 +125,18 @@ for page_number in range(number_of_pages, 0, -1):
             command = "{}/generate-map-data.py".format(member_path)
             os.system(command)
 
-            locations_exists = os.path.exists("{}/locations.py".format(member_path))
-            countries_exists = os.path.exists("{}/countries.py".format(member_path))
-            user_exists = os.path.exists("{}/user.py".format(member_path))
-
-            if locations_exists:
+            if memberFilesExist(member_path):
                 loc_fsize_diff = os.stat("{}/locations.py".format(member_path)).st_size - prev_loc_fsize
             else:
                 loc_fsize_diff = 0
 
             # updates countries members file
-            if locations_exists and countries_exists and user_exists:
+            if memberFilesExist(member_path):
                 command = "{}/update-countries-map-data.py".format(member_path)
                 os.system(command)
 
             # upload map
-            if (loc_fsize_diff != 0 or is_new_member) and locations_exists and countries_exists and user_exists:
+            if (loc_fsize_diff != 0 or is_new_member) and memberFilesExist(member_path):
                 print('Uploading map data...')
                 os.system("git pull -q origin master")
                 os.system("git add -f {}/index.html".format(member_path))
