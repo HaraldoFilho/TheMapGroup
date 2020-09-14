@@ -147,13 +147,13 @@
 .members {
   display: grid;
   grid-area: members;
-  width: 120px;
+  width: 110px;
 }
 
 .places {
   display: grid;
   grid-area: places;
-  width: 40px;
+  width: 50px;
   text-align: right;
 }
 
