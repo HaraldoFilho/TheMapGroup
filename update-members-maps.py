@@ -89,6 +89,8 @@ for page_number in range(number_of_pages, 0, -1):
                 member_alias = member_id
             member_path = people_path + "/" + member_alias
 
+            members_file.write("{}\n".format(member_alias))
+
             # create member directory and topic if doesn't exist yet
             is_new_member = False
             if not os.path.isdir(member_path):
@@ -186,8 +188,6 @@ for page_number in range(number_of_pages, 0, -1):
         if os.path.exists("{}/user.py".format(member_path)):
             os.system("rm {}/user.py".format(member_path))
         os.system("rm -fr {}/__pycache__".format(member_path))
-
-        members_file.write("{}\n".format(member_alias))
 
         members_js_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
         if member_number > 0:
