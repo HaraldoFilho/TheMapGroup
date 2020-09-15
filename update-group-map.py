@@ -52,6 +52,7 @@ if os.path.exists("{}/last_total.py".format(repo_path)):
 command = "{}/generate-map-data.py".format(repo_path)
 os.system(command)
 print('Uploading map data...')
+os.system("git pull origin master")
 os.system("git add -f {}/locations.py".format(repo_path))
 os.system("git add -f {}/members.js".format(repo_path))
 os.system("git commit -m \"Updated group map\"")

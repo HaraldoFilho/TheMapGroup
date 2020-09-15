@@ -45,7 +45,10 @@ def memberFilesExist(member_path):
 
 #===== MAIN CODE ==============================================================#
 
-# created members info file
+# create members list file
+members_file = open("{}/members_list".format(people_path), 'w')
+
+# create members info file
 members_js_file = open("{}/members.js".format(repo_path), 'w')
 members_js_file.write("var members = [\n")
 
@@ -184,6 +187,8 @@ for page_number in range(number_of_pages, 0, -1):
             os.system("rm {}/user.py".format(member_path))
         os.system("rm -fr {}/__pycache__".format(member_path))
 
+        members_file.write("{}\n".format(member_alias))
+
         members_js_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
         if member_number > 0:
             members_js_file.write("],\n")
@@ -191,11 +196,14 @@ for page_number in range(number_of_pages, 0, -1):
             members_js_file.write("]\n")
         print("Finished!\n")
 
+members_file.close()
+
 members_js_file.write("]\n")
 members_js_file.close()
 
 if os.path.exists("{}/countries/members.py".format(repo_path)):
     os.system("git pull -q origin master")
     os.system("git add -f {}/countries/*".format(repo_path))
-    os.system("git commit -m \"Updated countries members file\"")
+    os.system("git commit -m \"Updated countries members files\"")
     os.system("git push -q origin master")
+

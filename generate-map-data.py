@@ -173,10 +173,12 @@ print('\nAdding marker(s) to map...')
 
 # check if there is a file with the markers on map already
 # and import it otherwise created a new variable
+locations = []
 if os.path.exists("{}/locations.py".format(run_path)):
-    from locations import locations
-else:
-    locations = []
+    try:
+        from locations import locations
+    except:
+        pass
 
 # create a new location file or overwrite existing one
 locations_file = open("{}/locations.py".format(run_path), 'w')
