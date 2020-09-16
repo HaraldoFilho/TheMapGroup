@@ -45,8 +45,7 @@ def memberFilesExist(member_path):
 
 #===== MAIN CODE ==============================================================#
 
-# create members list file
-members_file = open("{}/members_list".format(people_path), 'w')
+current_members = []
 
 # create members info file
 members_js_file = open("{}/members.js".format(repo_path), 'w')
@@ -89,7 +88,7 @@ for page_number in range(number_of_pages, 0, -1):
                 member_alias = member_id
             member_path = people_path + "/" + member_alias
 
-            members_file.write("{}\n".format(member_alias))
+            current_members.append(member_alias)
 
             # create member directory and topic if doesn't exist yet
             is_new_member = False
@@ -163,6 +162,9 @@ for page_number in range(number_of_pages, 0, -1):
         except:
             pass
 
+        if not os.path.exists("{}/user.py".format(member_path)):
+            continue
+
         # get member information
         print("Getting member information...")
 
@@ -196,8 +198,6 @@ for page_number in range(number_of_pages, 0, -1):
             members_js_file.write("]\n")
         print("Finished!\n")
 
-members_file.close()
-
 members_js_file.write("]\n")
 members_js_file.close()
 
@@ -207,3 +207,51 @@ if os.path.exists("{}/countries/members.py".format(repo_path)):
     os.system("git commit -m \"Updated countries members files\"")
     os.system("git push -q origin master")
 
+
+print("\n#### Removing members which have left the group...")
+
+# get member directories list
+os.system("ls -d {0}/*/ > {0}/dirs".format(people_path))
+if os.path.exists("{}/dirs".format(people_path)):
+    members_dirs_file = open("{}/dirs".format(people_path))
+    members_dirs_file_lines = members_dirs_file.readlines()
+    os.system("rm {}/dirs".format(people_path))
+    members_dirs = []
+    for member in members_dirs_file_lines:
+        members_dirs.append(member.replace(people_path, '').replace('/', '').replace('\n',''))
+
+
+topics = []
+
+topics_num_of_pages = flickr.groups.discuss.topics.getList(api_key=api_key, group_id=group_id, per_page='500')['topics']['pages']
+
+# iterate over each topics page
+for page_number in range(topics_num_of_pages, 0, -1):
+
+    try:
+        topics_page = flickr.groups.discuss.topics.getList(api_key=api_key, group_id=group_id, page=page_number, per_page='500')['topics']['topic']
+    except:
+        sys.exit()
+
+    # iterate over each member in page
+    for topic in topics_page:
+        topics.append([topic['id'], topic['message']['_content']])
+
+# for each member directory check if member has left the group
+removed = 0
+for member in members_dirs:
+    if member not in current_members:
+        # remove member directory
+        os.system("git rm -fr {0}/{1}".format(people_path, member))
+        os.system("git commit -m \"Removed member \'{}\'\"".format(member))
+        os.system("git push -q origin master")
+        os.system("rm -fr {0}/{1}".format(people_path, member))
+        print("Removed member: {}".format(member))
+        removed += 1
+        for topic in topics:
+            if member in topic[1]:
+                reply_message = "[https://www.flickr.com/photos/{}/] Your map was removed. Feel free to come back anytime and a new map will be generated for you.".format(member)
+                flickr.groups.discuss.replies.add(api_key=api_key, group_id=group_id, topic_id=topic[0], message=reply_message)
+
+if removed == 0:
+    print("No member has left the group!")
