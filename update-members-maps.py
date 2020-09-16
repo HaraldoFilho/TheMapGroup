@@ -250,7 +250,7 @@ for member in members_dirs:
         removed += 1
         for topic in topics:
             if member in topic[1]:
-                reply_message = "[https://www.flickr.com/photos/{}/] Your map was removed. Feel free to come back anytime and a new map will be generated for you.".format(member)
+                reply_message = "[https://www.flickr.com/photos/{}/] Your map was removed. Feel free to come back anytime and a new map will be created for you.".format(member)
                 flickr.groups.discuss.replies.add(api_key=api_key, group_id=group_id, topic_id=topic[0], message=reply_message)
 
 if removed == 0:
