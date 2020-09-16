@@ -208,7 +208,9 @@ if os.path.exists("{}/countries/members.py".format(repo_path)):
     os.system("git push -q origin master")
 
 
-print("\n#### Removing members which have left the group...")
+# check if all members were processed before remove members
+if len(current_members) < total_of_members:
+    sys.exit()
 
 # get member directories list
 os.system("ls -d {0}/*/ > {0}/dirs".format(people_path))
@@ -220,6 +222,11 @@ if os.path.exists("{}/dirs".format(people_path)):
     for member in members_dirs_file_lines:
         members_dirs.append(member.replace(people_path, '').replace('/', '').replace('\n',''))
 
+if len(current_members) == len(members_dirs):
+    print("\nNo member has left the group!")
+    sys.exit()
+
+print("\n##### Removing members which have left the group...")
 
 topics = []
 
@@ -252,6 +259,3 @@ for member in members_dirs:
             if member in topic[1]:
                 reply_message = "[https://www.flickr.com/photos/{}/] Your map was removed. Feel free to come back anytime and a new map will be created for you.".format(member)
                 flickr.groups.discuss.replies.add(api_key=api_key, group_id=group_id, topic_id=topic[0], message=reply_message)
-
-if removed == 0:
-    print("No member has left the group!")
