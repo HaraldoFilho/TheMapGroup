@@ -201,12 +201,27 @@ for page_number in range(number_of_pages, 0, -1):
 members_js_file.write("]\n")
 members_js_file.close()
 
-if os.path.exists("{}/countries/members.py".format(repo_path)):
-    os.system("git pull -q origin master")
-    os.system("git add -f {}/countries/*".format(repo_path))
-    os.system("git commit -m \"Updated countries members files\"")
-    os.system("git push -q origin master")
+# update group map
+print("##### Updating Group's Map...")
 
+if os.path.exists("{}/last_total.py".format(repo_path)):
+    os.system("rm {}/last_total.py".format(repo_path))
+
+command = "{}/generate-map-data.py".format(repo_path)
+os.system(command)
+
+print('Uploading map data...')
+os.system("git pull -q origin master")
+os.system("git add -f {}/locations.py".format(repo_path))
+os.system("git add -f {}/members.js".format(repo_path))
+os.system("git add -f {}/countries/*".format(repo_path))
+os.system("git commit -m \"Updated group map\"")
+os.system("git push -q origin master")
+print('Done!')
+
+os.system("rm {}/locations.py".format(repo_path))
+os.system("rm {}/members.js".format(repo_path))
+os.system("rm -fr {}/__pycache__".format(repo_path))
 
 # check if all members were processed before remove members
 if len(current_members) < total_of_members:
@@ -259,3 +274,4 @@ for member in members_dirs:
             if member in topic[1]:
                 reply_message = "[https://www.flickr.com/photos/{}/] Your map was removed. Feel free to come back anytime and a new map will be created for you.".format(member)
                 flickr.groups.discuss.replies.add(api_key=api_key, group_id=group_id, topic_id=topic[0], message=reply_message)
+
