@@ -3,12 +3,13 @@
 from geopy.geocoders import Nominatim
 from geopy.geocoders import GeoNames
 from geopy.geocoders import MapBox
-from mapbox_token import mapbox_token
+
+import api_credentials
 
 try:
-    geolocator1 = Nominatim(user_agent='flickr_map')
-    geolocator2 = GeoNames(username='haraldo.filho')
-    geolocator3 = MapBox(api_key=mapbox_token)
+    geolocator1 = Nominatim(user_agent=api_credentials.nominatim_agent)
+    geolocator2 = GeoNames(username=api_credentials.geonames_user)
+    geolocator3 = MapBox(api_key=api_credentials.mapbox_token)
 except:
     print("ERROR: FATAL: Unable to get geolocator")
     sys.exit()
