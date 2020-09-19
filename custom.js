@@ -377,6 +377,7 @@ function openOverlay() {
   document.getElementById("menu").style.display = "none";
   document.getElementById("nav-button").style.margin = "60px 0 0 400px";
   setSelectorPosition();
+  fitBoundingBox(current_bbox);
 }
 
 function closeOverlay() {
@@ -385,6 +386,7 @@ function closeOverlay() {
   document.getElementById("nav-button").style.display = "block";
   document.getElementById("nav-button").style.margin = "60px 0 0 0";
   setSelectorPosition();
+  fitBoundingBox(current_bbox);
 }
 
 function getIconSrc(name) {
