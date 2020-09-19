@@ -4,6 +4,6 @@ user_info = {
   'name': 'Eugenio Costa',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/169904704@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/eugeniocosta/',
-  'markers': 597,
-  'photos': 615
+  'markers': 598,
+  'photos': 616
 }
