@@ -14,7 +14,7 @@ var members = [
   ['32557441@N02', 'santelia', 'Alfonso Santelia', "https://live.staticflickr.com/5674/buddyicons/32557441@N02_r.jpg", 468, 696],
   ['46721940@N00', 'nothingpersonal', 'Dmitry Djouce', "icons/photographer.svg", 2348, 2683],
   ['88196436@N04', 'saw_that', 'I saw_that', "https://live.staticflickr.com/5674/buddyicons/88196436@N04_r.jpg", 723, 1372],
-  ['31155442@N03', '31155442@N03', 'Joseph Hollick', "https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg", 7926, 10046],
+  ['31155442@N03', '31155442@N03', 'Joseph Hollick', "https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg", 7928, 10048],
   ['32770136@N05', 'chris_macdonald1983', 'CJphoto83', "https://live.staticflickr.com/5674/buddyicons/32770136@N05_r.jpg", 32, 53],
   ['25404639@N08', 'barbaraelaw', 'Barbara Lawrence', "https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg", 2356, 3152],
   ['145400672@N02', '145400672@N02', 'Pit Spielmann', "https://live.staticflickr.com/5674/buddyicons/145400672@N02_r.jpg", 414, 734],
@@ -54,8 +54,12 @@ var members = [
   ['100112015@N06', '100112015@N06', 'Francois Le Rumeur', "https://live.staticflickr.com/5674/buddyicons/100112015@N06_r.jpg", 168, 242],
   ['88123769@N02', 'volvob12b', 'Bernard Spragg. NZ', "https://live.staticflickr.com/5674/buddyicons/88123769@N02_r.jpg", 4165, 5753],
   ['123895834@N08', '123895834@N08', 'tquist24', "https://live.staticflickr.com/5674/buddyicons/123895834@N08_r.jpg", 2287, 3152],
+  ['35555507@N03', 'hutterdesign', 'Frederic Hutter', "https://live.staticflickr.com/5674/buddyicons/35555507@N03_r.jpg", 138, 165],
   ['165713115@N07', 'manfred_h', 'Manfred Hermann', "https://live.staticflickr.com/5674/buddyicons/165713115@N07_r.jpg", 483, 760],
   ['31248131@N05', '31248131@N05', 'Rosie Chilton', "https://live.staticflickr.com/5674/buddyicons/31248131@N05_r.jpg", 248, 493],
+  ['113339808@N08', '113339808@N08', 'Michael Leek', "https://live.staticflickr.com/5674/buddyicons/113339808@N08_r.jpg", 1373, 2114],
+  ['163799240@N04', 'kamo_kamoeiras', 'KAMO KAMOEIRAS', "https://live.staticflickr.com/5674/buddyicons/163799240@N04_r.jpg", 811, 1238],
   ['129959166@N02', 'pacozerpa', 'paco zerpa', "https://live.staticflickr.com/5674/buddyicons/129959166@N02_r.jpg", 204, 266],
   ['63488298@N00', 'shoa', 'Joe Dyndale', "https://live.staticflickr.com/5674/buddyicons/63488298@N00_r.jpg", 15, 15],
+  ['138182637@N08', '138182637@N08', 'Dimitri Verledens', "https://live.staticflickr.com/5674/buddyicons/138182637@N08_r.jpg", 284, 364]
 ]
