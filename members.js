@@ -39,7 +39,7 @@ var members = [
   ['147135779@N02', '147135779@N02', 'giovanni Campus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 1979, 2185],
   ['38286807@N03', 'jimgreig', 'James Greig', "https://live.staticflickr.com/5674/buddyicons/38286807@N03_r.jpg", 2273, 2749],
   ['14463685@N07', '14463685@N07', 'Howard Somerville', "https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg", 477, 557],
-  ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1587, 2856],
+  ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1588, 2858],
   ['189316105@N08', '189316105@N08', 'Miguel Angel Flores', "https://live.staticflickr.com/5674/buddyicons/189316105@N08_r.jpg", 17, 97],
   ['43413480@N07', 'liamcheasty', 'Liam Cheasty', "https://live.staticflickr.com/5674/buddyicons/43413480@N07_r.jpg", 2398, 13718],
   ['51073972@N02', 'karen_ds1101', 'Karen', "https://live.staticflickr.com/5674/buddyicons/51073972@N02_r.jpg", 954, 1158],
@@ -54,12 +54,8 @@ var members = [
   ['100112015@N06', '100112015@N06', 'Francois Le Rumeur', "https://live.staticflickr.com/5674/buddyicons/100112015@N06_r.jpg", 168, 242],
   ['88123769@N02', 'volvob12b', 'Bernard Spragg. NZ', "https://live.staticflickr.com/5674/buddyicons/88123769@N02_r.jpg", 4165, 5753],
   ['123895834@N08', '123895834@N08', 'tquist24', "https://live.staticflickr.com/5674/buddyicons/123895834@N08_r.jpg", 2287, 3152],
-  ['35555507@N03', 'hutterdesign', 'Frederic Hutter', "https://live.staticflickr.com/5674/buddyicons/35555507@N03_r.jpg", 138, 165],
   ['165713115@N07', 'manfred_h', 'Manfred Hermann', "https://live.staticflickr.com/5674/buddyicons/165713115@N07_r.jpg", 483, 760],
   ['31248131@N05', '31248131@N05', 'Rosie Chilton', "https://live.staticflickr.com/5674/buddyicons/31248131@N05_r.jpg", 248, 493],
-  ['113339808@N08', '113339808@N08', 'Michael Leek', "https://live.staticflickr.com/5674/buddyicons/113339808@N08_r.jpg", 1373, 2114],
-  ['163799240@N04', 'kamo_kamoeiras', 'KAMO KAMOEIRAS', "https://live.staticflickr.com/5674/buddyicons/163799240@N04_r.jpg", 811, 1238],
   ['129959166@N02', 'pacozerpa', 'paco zerpa', "https://live.staticflickr.com/5674/buddyicons/129959166@N02_r.jpg", 204, 266],
   ['63488298@N00', 'shoa', 'Joe Dyndale', "https://live.staticflickr.com/5674/buddyicons/63488298@N00_r.jpg", 15, 15],
-  ['138182637@N08', '138182637@N08', 'Dimitri Verledens', "https://live.staticflickr.com/5674/buddyicons/138182637@N08_r.jpg", 284, 364]
 ]
