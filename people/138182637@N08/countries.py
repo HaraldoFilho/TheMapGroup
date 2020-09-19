@@ -1,0 +1,20 @@
+countries_dict = {
+  'ME': ['Montenegro', 9, 11],
+  'CU': ['Cuba', 32, 41],
+  'AT': ['Austria', 1, 1],
+  'BA': ['Bosnia and Herzegovina', 9, 10],
+  'PT': ['Portugal', 11, 13],
+  'MX': ['Mexico', 10, 11],
+  'HU': ['Hungary', 14, 19],
+  'KH': ['Cambodia', 11, 30],
+  'CL': ['Chile', 4, 5],
+  'JM': ['Jamaika', 5, 11],
+  'ID': ['Indonesia', 10, 16],
+  'AR': ['Argentina', 4, 4],
+  'BE': ['Belgium', 137, 152],
+  'TH': ['Thailand', 5, 8],
+  'HR': ['Croatia', 3, 3],
+  'BO': ['Bolivia', 1, 1],
+  'PL': ['Poland', 14, 21],
+  'MY': ['Malaysia', 4, 7]
+}
