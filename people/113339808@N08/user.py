@@ -4,6 +4,6 @@ user_info = {
   'name': 'Michael Leek',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/113339808@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/113339808@N08/',
-  'markers': 1373,
-  'photos': 2114
+  'markers': 1375,
+  'photos': 2118
 }
