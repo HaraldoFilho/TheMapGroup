@@ -8,7 +8,7 @@
 
   <!-- change path if needed -->
   <script src="locations.py"></script>
-  <script src="members.js"></script>
+  <script src="members.py"></script>
   <script src="mapbox_token.js"></script>
   <script src="custom.js"></script>
 
@@ -138,8 +138,8 @@
     var member = false;
     var markerColor = '#999999';
 
-    for (var i = 0; i < members.length; i++) {
-      if (value[2] == members[i][0]) {
+    for (var i = 0; i < members_list.length; i++) {
+      if (value[2] == members_list[i][0]) {
         markerColor = '#C2185B';
         member = true;
         break;

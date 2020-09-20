@@ -31,10 +31,10 @@ function custom() {
   document.getElementById("group-name").appendChild(group_link);
   document.getElementById("group_link").innerText = group_name;
 
-  if (members.length > 1) {
-    document.getElementById("n-members").innerText = members.length.toString().concat(" members");
+  if (members_list.length > 1) {
+    document.getElementById("n-members").innerText = members_list.length.toString().concat(" members");
   } else {
-    document.getElementById("n-members").innerText = members.length.toString().concat(" member");
+    document.getElementById("n-members").innerText = members_list.length.toString().concat(" member");
   }
 
   var n_photos = 0;
@@ -47,7 +47,7 @@ function custom() {
   document.getElementById("n-markers").innerText = locations.length.toString();
   document.getElementById("n-photos").innerText = n_photos;
 
-  members.reverse();
+  members_list.reverse();
 
   loadMembers();
 
@@ -58,18 +58,18 @@ function custom() {
 
 function loadMembers() {
 
-  if (members.length > 1) {
-    document.getElementById("n-members").innerText = members.length.toString().concat(" members");
+  if (members_list.length > 1) {
+    document.getElementById("n-members").innerText = members_list.length.toString().concat(" members");
   } else {
-    document.getElementById("n-members").innerText = members.length.toString().concat(" member");
+    document.getElementById("n-members").innerText = members_list.length.toString().concat(" member");
   }
 
-  for (var i = 0; i < members.length; i++) {
+  for (var i = 0; i < members_list.length; i++) {
 
-    var member_name = members[i][2];
+    var member_name = members_list[i][2];
 
     var i_members_avatar = document.createElement("IMG");
-    var icon_src = members[i][3];
+    var icon_src = members_list[i][3];
     i_members_avatar.setAttribute("width", "16px");
     i_members_avatar.setAttribute("height", "16px");
     i_members_avatar.setAttribute("style", "border-radius: 50%");
@@ -79,7 +79,7 @@ function loadMembers() {
 
     var i_members = document.createElement("P");
     i_members.setAttribute("class", "member");
-    i_members.setAttribute("id", members[i][0]);
+    i_members.setAttribute("id", members_list[i][0]);
 
     if (member_name.length > 12) {
       i_members.setAttribute("title", member_name);
@@ -91,7 +91,7 @@ function loadMembers() {
 
     var i_places = document.createElement("P");
     i_places.setAttribute("class", "item");
-    i_places.innerText = members[i][4];
+    i_places.innerText = members_list[i][4];
     document.getElementById("places").appendChild(i_places);
 
     var i_places_icon = document.createElement("IMG");
@@ -102,7 +102,7 @@ function loadMembers() {
 
     var i_photos = document.createElement("P");
     i_photos.setAttribute("class", "item");
-    i_photos.innerText = members[i][5];
+    i_photos.innerText = members_list[i][5];
     document.getElementById("photos").appendChild(i_photos);
 
     var i_photos_icon = document.createElement("IMG");
@@ -112,7 +112,7 @@ function loadMembers() {
     document.getElementById("photo-icon").appendChild(i_photos_icon);
   }
 
-  members.forEach(addListenerToPeople);
+  members_list.forEach(addListenerToPeople);
 
   document.getElementById("menu-members").setAttribute("class", "menu-active");
   document.getElementById("menu-countries").setAttribute("class", "menu-inactive");
@@ -215,7 +215,7 @@ function emptyLoadMembers() {
 }
 
 function emptyLoadCountries() {
-  emptyList(members.length);
+  emptyList(members_list.length);
   loadCountries();
 }
 
@@ -223,8 +223,8 @@ function emptyList(list_size) {
   for (var i = list_size-1; i >= 0; i--) {
     var avatares_list = document.getElementById("members-avatar");
     avatares_list.removeChild(avatares_list.childNodes[i]);
-    var members_list = document.getElementById("members");
-    members_list.removeChild(members_list.childNodes[i]);
+    var names_list = document.getElementById("members");
+    names_list.removeChild(names_list.childNodes[i]);
     var places_list = document.getElementById("places");
     places_list.removeChild(places_list.childNodes[i]);
     var place_icon_list = document.getElementById("place-icon");
