@@ -47,9 +47,17 @@ def memberFilesExist(member_path):
 
 current_members = []
 
-# create members info file
-members_js_file = open("{}/members.js".format(repo_path), 'w')
-members_js_file.write("var members = [\n")
+try:
+    if not os.path.exists("{}/members.py".format(repo_path)):
+        command = "wget -q -P {} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/members.py".format(repo_path)
+        os.system(command)
+except:
+    pass
+
+if os.path.exists("{}/members.py".format(repo_path)):
+    from members import members_list
+else:
+    members_list = []
 
 # get group id and name from group url
 try:
@@ -183,6 +191,18 @@ for page_number in range(number_of_pages, 0, -1):
         member_n_places = user_info['markers']
         member_n_photos = user_info['photos']
 
+        already_in_list = False
+        for i in range(len(members_list)):
+            if members_list[i][0] == member_id:
+                members_list[i][4] = member_n_places
+                members_list[i][5] = member_n_photos
+                already_in_list = True
+
+        if not already_in_list:
+            members_list.append([member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos])
+
+        print("Finished!\n")
+
         if os.path.exists("{}/locations.py".format(member_path)):
             os.system("rm {}/locations.py".format(member_path))
         if os.path.exists("{}/countries.py".format(member_path)):
@@ -191,15 +211,23 @@ for page_number in range(number_of_pages, 0, -1):
             os.system("rm {}/user.py".format(member_path))
         os.system("rm -fr {}/__pycache__".format(member_path))
 
-        members_js_file.write("  [\'{0}\', \'{1}\', \'{2}\', {3}, {4}, {5}".format(member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos))
-        if member_number > 0:
-            members_js_file.write("],\n")
-        else:
-            members_js_file.write("]\n")
-        print("Finished!\n")
+# removed from the list members who left the group
+for i in range(len(members_list)-1, -1, -1):
+    if members_list[i][1] not in current_members:
+        members_list.pop(i)
 
-members_js_file.write("]\n")
-members_js_file.close()
+members_file = open("{}/members.py".format(repo_path), 'w')
+members_file.write("members_list = [\n")
+
+for i in range(len(members_list)):
+    members_file.write("  [\'{0}\', \'{1}\', \'{2}\', \"{3}\", {4}, {5}".format(members_list[i][0], members_list[i][1], members_list[i][2], members_list[i][3], members_list[i][4], members_list[i][5]))
+    if i < len(members_list)-1:
+        members_file.write("],\n")
+    else:
+        members_file.write("]\n")
+
+members_file.write("]\n")
+members_file.close()
 
 # update group map
 print("##### Updating Group's Map...")
@@ -213,14 +241,14 @@ os.system(command)
 print('Uploading map data...')
 os.system("git pull -q origin master")
 os.system("git add -f {}/locations.py".format(repo_path))
-os.system("git add -f {}/members.js".format(repo_path))
+os.system("git add -f {}/members.py".format(repo_path))
 os.system("git add -f {}/countries/*".format(repo_path))
 os.system("git commit -m \"Updated group map\"")
 os.system("git push -q origin master")
 print('Done!')
 
 os.system("rm {}/locations.py".format(repo_path))
-os.system("rm {}/members.js".format(repo_path))
+os.system("rm {}/members.py".format(repo_path))
 os.system("rm -fr {}/__pycache__".format(repo_path))
 
 # check if all members were processed before remove members
