@@ -21,7 +21,7 @@
   <link href="../style.css" rel="stylesheet" />
   <script src="country_code.js"></script>
   <script src="../members.py"></script>
-  <script src="../../members.js"></script>
+  <script src="../../members.py"></script>
   <script src="../../countries_bbox.js"></script>
   <!-- End of customization includes -->
 
@@ -136,8 +136,8 @@
     var member = false;
     var markerColor = '#999999';
 
-    for (var i = 0; i < members.length; i++) {
-      if (value[2] == members[i][0]) {
+    for (var i = 0; i < members_list.length; i++) {
+      if (value[2] == members_list[i][0]) {
         markerColor = '#C2185B';
         member = true;
         break;
