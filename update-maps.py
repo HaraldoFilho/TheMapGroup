@@ -186,7 +186,7 @@ for page_number in range(number_of_pages, 0, -1):
         if len(member_name) > 30:
             member_name = member_name[:30]
 
-        member_avatar = "\"{}\"".format(user_info['avatar'].replace('../../', ''))
+        member_avatar = "{}".format(user_info['avatar'].replace('../../', ''))
 
         member_n_places = user_info['markers']
         member_n_photos = user_info['photos']
