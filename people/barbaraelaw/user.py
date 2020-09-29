@@ -4,6 +4,6 @@ user_info = {
   'name': 'Barbara Lawrence',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/barbaraelaw/',
-  'markers': 2364,
-  'photos': 3160
+  'markers': 2365,
+  'photos': 3161
 }
