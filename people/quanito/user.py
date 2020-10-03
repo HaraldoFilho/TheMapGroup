@@ -4,6 +4,6 @@ user_info = {
   'name': 'Pascal VU',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/135298455@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/quanito/',
-  'markers': 1320,
-  'photos': 13623
+  'markers': 1322,
+  'photos': 13642
 }
