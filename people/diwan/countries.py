@@ -1,0 +1,23 @@
+countries_dict = {
+  'CZ': ['Czech Republic', 41, 41],
+  'TR': ['Turkey', 166, 176],
+  'PL': ['Poland', 15, 15],
+  'GB': ['United Kingdom', 129, 132],
+  'AT': ['Austria', 1, 1],
+  'FI': ['Finland', 73, 75],
+  'US': ['United States of America', 241, 247],
+  'ES': ['Spain', 368, 408],
+  'LV': ['Latvia', 41, 42],
+  'IT': ['Italy', 194, 200],
+  'AE': ['United Arab Emirates', 65, 67],
+  'IE': ['Ireland', 142, 145],
+  'NL': ['The Netherlands', 53, 53],
+  'EE': ['Estonia', 29, 31],
+  'MT': ['Malta', 166, 168],
+  'VA': ['Vatican City', 50, 56],
+  'DK': ['Denmark', 31, 31],
+  'DE': ['Germany', 5168, 5495],
+  'FR': ['France', 205, 219],
+  'PT': ['Portugal', 182, 184],
+  'SG': ['Singapore', 108, 111]
+}
