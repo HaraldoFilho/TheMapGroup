@@ -4,6 +4,6 @@ user_info = {
   'name': 'James Greig',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/38286807@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/jimgreig/',
-  'markers': 2273,
-  'photos': 2750
+  'markers': 2274,
+  'photos': 2751
 }
