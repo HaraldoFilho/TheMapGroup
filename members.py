@@ -27,6 +27,7 @@ members_list = [
   ['132838898@N03', 'quelrr', 'Raquel Rampasio', "https://live.staticflickr.com/5674/buddyicons/132838898@N03_r.jpg", 35, 48],
   ['13445173@N06', 'bvi4092', 'bvi4092', "https://live.staticflickr.com/5674/buddyicons/13445173@N06_r.jpg", 534, 1030],
   ['66031636@N00', 'jnoval', 'Javier Noval', "https://live.staticflickr.com/5674/buddyicons/66031636@N00_r.jpg", 270, 472],
+  ['57727182@N08', '57727182@N08', 'GEORGE', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 387, 7283],
   ['76199006@N05', 'jasonfrels', 'Jason', "https://live.staticflickr.com/5674/buddyicons/76199006@N05_r.jpg", 54, 61],
   ['63713558@N00', 'staneastwood', 'Stanley Eastwood', "https://live.staticflickr.com/5674/buddyicons/63713558@N00_r.jpg", 5056, 29423],
   ['135298455@N04', 'quanito', 'Pascal VU', "https://live.staticflickr.com/5674/buddyicons/135298455@N04_r.jpg", 1444, 14188],
@@ -34,7 +35,7 @@ members_list = [
   ['33989856@N04', 'beatrixmvarga', 'Beatrix', "https://live.staticflickr.com/5674/buddyicons/33989856@N04_r.jpg", 217, 217],
   ['97974874@N00', 'blackdiamondimages', 'Black Diamond Images', "https://live.staticflickr.com/5674/buddyicons/97974874@N00_r.jpg", 7997, 11484],
   ['120861725@N07', '120861725@N07', 'GSB', "https://live.staticflickr.com/5674/buddyicons/120861725@N07_r.jpg", 128, 148],
-  ['147135779@N02', '147135779@N02', 'giovannicampus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 2053, 2274],
+  ['147135779@N02', '147135779@N02', 'giovanni Campus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 2053, 2274],
   ['38286807@N03', 'jimgreig', 'James Greig', "https://live.staticflickr.com/5674/buddyicons/38286807@N03_r.jpg", 2274, 2751],
   ['14463685@N07', '14463685@N07', 'Howard Somerville', "https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg", 477, 558],
   ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1667, 2947],
@@ -75,6 +76,5 @@ members_list = [
   ['143552306@N02', 'alessandrociquivalente', 'Alessandro Valente', "https://live.staticflickr.com/5674/buddyicons/143552306@N02_r.jpg", 141, 148],
   ['54916020@N06', 'victor-san', 'victor san', "https://live.staticflickr.com/5674/buddyicons/54916020@N06_r.jpg", 29, 32],
   ['79369350@N08', 'malioli', 'Oliver Švob', "https://live.staticflickr.com/5674/buddyicons/79369350@N08_r.jpg", 1018, 2638],
-  ['130942318@N07', 'beddo86', 'Andrea Beddini', "https://live.staticflickr.com/5674/buddyicons/130942318@N07_r.jpg", 114, 118],
-  ['57727182@N08', '57727182@N08', 'GEORGE', "https://live.staticflickr.com/5674/buddyicons/57727182@N08_r.jpg", 387, 7283]
+  ['130942318@N07', 'beddo86', 'Andrea Beddini', "https://live.staticflickr.com/5674/buddyicons/130942318@N07_r.jpg", 114, 118]
 ]
