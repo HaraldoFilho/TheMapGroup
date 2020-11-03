@@ -1,18 +1,18 @@
 countries_dict = {
-  'VA': ['Vatican City', 7, 7],
+  'CU': ['Cuba', 136, 221],
   'NL': ['The Netherlands', 31, 66],
-  'US': ['United States of America', 7, 7],
+  'LK': ['Sri Lanka', 159, 165],
   'RO': ['Romania', 1, 1],
   'IN': ['India', 738, 769],
-  'AE': ['United Arab Emirates', 1, 1],
-  'KZ': ['Kazakhstan', 1, 1],
+  'FR': ['France', 1, 1],
+  'US': ['United States of America', 7, 7],
   'TZ': ['Tanzania', 1, 1],
-  'IT': ['Italy', 769, 833],
-  'MV': ['Maldives', 1, 1],
-  'KE': ['Kenya', 9, 9],
+  'AE': ['United Arab Emirates', 1, 1],
   'PT': ['Portugal', 1, 1],
-  'CU': ['Cuba', 136, 221],
+  'MV': ['Maldives', 1, 1],
   'UZ': ['Uzbekistan', 215, 218],
-  'LK': ['Sri Lanka', 158, 164],
-  'FR': ['France', 1, 1]
+  'VA': ['Vatican City', 7, 7],
+  'KE': ['Kenya', 9, 9],
+  'KZ': ['Kazakhstan', 1, 1],
+  'IT': ['Italy', 769, 833]
 }
