@@ -178,8 +178,15 @@ function fitInitialBoundingBox(initial_bbox) {
 
 function addMarkersToCountry(country_code, start_index) {
     var country_array = locations_dict[country_code];
-    for (var i = start_index; i < country_array.length; i++) {
+    var end_index = start_index + add_markers_increment;
+
+    if (end_index > country_array.length) {
+      end_index = country_array.length;
+    }
+
+    for (var i = start_index; i < end_index; i++) {
       addMarker(country_array[i]);
+      current_index = i;
     }
 }
 
@@ -198,7 +205,7 @@ function addListener(country) {
 
   var country_url = "https://the-map-group.pictures/countries/".concat(country_code.toLowerCase());
   document.getElementById(country_code).addEventListener('click', function() { addMarkersToCountry(country_code, current_index); fitBoundingBox(country_bbox); });
-  document.getElementById(country_code.concat("_markers")).addEventListener('click', function() { addMarkersToCountry(country_code, current_index); fitBoundingBox(country_bbox); });
+  document.getElementById(country_code.concat("_markers")).addEventListener('click', function() { addMarkersToCountry(country_code, current_index); });
 
 }
 
