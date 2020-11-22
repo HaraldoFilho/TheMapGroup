@@ -4,6 +4,6 @@ user_info = {
   'name': 'Miguel Angel Flores',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/189316105@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/189316105@N08/',
-  'markers': 28,
-  'photos': 141
+  'markers': 29,
+  'photos': 147
 }
