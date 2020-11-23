@@ -4,6 +4,6 @@ user_info = {
   'name': 'Gilles Letang',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/132920569@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/132920569@N02/',
-  'markers': 169,
-  'photos': 190
+  'markers': 170,
+  'photos': 191
 }
