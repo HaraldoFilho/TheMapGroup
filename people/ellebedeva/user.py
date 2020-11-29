@@ -4,6 +4,6 @@ user_info = {
   'name': 'Elena Lebedeva (IG: ellebedeva',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/79292646@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/ellebedeva/',
-  'markers': 198,
-  'photos': 209
+  'markers': 199,
+  'photos': 210
 }
