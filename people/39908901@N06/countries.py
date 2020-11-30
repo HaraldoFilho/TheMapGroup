@@ -1,13 +1,13 @@
 countries_dict = {
-  'NL': ['The Netherlands', 14, 32],
+  'IN': ['India', 67, 413],
   'PK': ['Pakistan', 1, 2],
   'TH': ['Thailand', 12, 82],
-  'CA': ['Canada', 188, 419],
-  'IN': ['India', 61, 391],
-  'LK': ['Sri Lanka', 14, 80],
+  'NL': ['The Netherlands', 14, 32],
   'MV': ['Maldives', 12, 24],
-  'ES': ['Spain', 8, 23],
+  'US': ['United States of America', 5785, 21621],
   'FR': ['France', 2, 7],
-  'US': ['United States of America', 5775, 21592],
+  'CA': ['Canada', 188, 419],
+  'LK': ['Sri Lanka', 14, 80],
+  'ES': ['Spain', 8, 23],
   'PT': ['Portugal', 49, 205]
 }
