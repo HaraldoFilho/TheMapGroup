@@ -5,5 +5,5 @@ user_info = {
   'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/viccolon/',
   'markers': 91,
-  'photos': 181
+  'photos': 182
 }
