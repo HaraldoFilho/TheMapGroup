@@ -46,18 +46,7 @@ def memberFilesExist(member_path):
 #===== MAIN CODE ==============================================================#
 
 current_members = []
-
-try:
-    if not os.path.exists("{}/members.py".format(repo_path)):
-        command = "wget -q -P {} https://raw.githubusercontent.com/the-map-group/the-map-group.github.io/master/members.py".format(repo_path)
-        os.system(command)
-except:
-    pass
-
-if os.path.exists("{}/members.py".format(repo_path)):
-    from members import members_list
-else:
-    members_list = []
+members_list = []
 
 # get group id and name from group url
 try:
