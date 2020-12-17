@@ -4,6 +4,6 @@ user_info = {
   'name': 'Tom Jutte',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/47035764@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/hereistom/',
-  'markers': 1464,
-  'photos': 1572
+  'markers': 1465,
+  'photos': 1573
 }
