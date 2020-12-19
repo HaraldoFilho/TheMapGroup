@@ -4,6 +4,6 @@ user_info = {
   'name': 'paco zerpa',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/129959166@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/pacozerpa/',
-  'markers': 215,
-  'photos': 277
+  'markers': 216,
+  'photos': 278
 }
