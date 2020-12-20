@@ -1,3 +1,3 @@
 countries_dict = {
-  'US': ['United States of America', 1932, 17714]
+  'US': ['United States of America', 1958, 17859]
 }
