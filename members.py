@@ -39,7 +39,7 @@ members_list = [
   ['147135779@N02', '147135779@N02', 'giovanni Campus', "https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg", 2175, 2431],
   ['38286807@N03', 'jimgreig', 'James Greig', "https://live.staticflickr.com/5674/buddyicons/38286807@N03_r.jpg", 2278, 2758],
   ['14463685@N07', '14463685@N07', 'Howard Somerville', "https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg", 482, 563],
-  ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1819, 3154],
+  ['95282411@N00', 'justaslice', '█ Slices of Light █▀ ▀ ▀', "https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg", 1820, 3155],
   ['189316105@N08', '189316105@N08', 'Miguel Angel Flores', "https://live.staticflickr.com/5674/buddyicons/189316105@N08_r.jpg", 35, 161],
   ['43413480@N07', 'liamcheasty', 'Liam Cheasty', "https://live.staticflickr.com/5674/buddyicons/43413480@N07_r.jpg", 2415, 13801],
   ['51073972@N02', 'karen_ds1101', 'Karen', "https://live.staticflickr.com/5674/buddyicons/51073972@N02_r.jpg", 967, 1171],
