@@ -75,8 +75,12 @@ for page_number in range(number_of_pages, 0, -1):
     except:
         sys.exit()
 
+    members_in_page = len(members)
+    if members_in_page > members_per_page:
+        members_in_page = members_per_page
+
     # iterate over each member in page
-    for member_number in range(len(members)-1, -1, -1):
+    for member_number in range(members_in_page-1, -1, -1):
         try:
             member_name = members[member_number]['username']
             member_id = members[member_number]['nsid']
