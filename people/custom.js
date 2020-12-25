@@ -23,7 +23,7 @@ function custom() {
     }
   }
 
-  var avatar= document.createElement("IMG");
+  var avatar = document.createElement("IMG");
   avatar.setAttribute("style", "border-radius: 50%");
   avatar.setAttribute("src", user_info["avatar"]);
   avatar.setAttribute("width", "80px");
