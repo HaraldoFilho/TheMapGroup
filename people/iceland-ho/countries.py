@@ -1,7 +1,7 @@
 countries_dict = {
-  'CN': ['South China Sea Islands (disputed)', 16, 16],
   'FO': ['Faroe Islands', 9, 9],
+  'CN': ['South China Sea Islands (disputed)', 16, 16],
+  'IS': ['Iceland', 2249, 2251],
   'GH': ['Ghana', 7, 7],
-  'IS': ['Iceland', 2248, 2250],
   'US': ['United States of America', 6, 6]
 }
