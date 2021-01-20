@@ -148,7 +148,7 @@ for page_number in range(number_of_pages, 0, -1):
                 os.system("git add -f {}/locations.py".format(member_path))
                 os.system("git add -f {}/countries.py".format(member_path))
                 os.system("git add -f {}/user.py".format(member_path))
-                os.system("git commit -m \"Updated map for member \'{}\'\"".format(member_name))
+                os.system("git commit -m \"[auto] Updated map for member \'{}\'\"".format(member_name))
                 os.system("git push -q origin master")
                 print('Done!')
             else:
@@ -236,7 +236,7 @@ os.system("git pull -q origin master")
 os.system("git add -f {}/locations.py".format(repo_path))
 os.system("git add -f {}/members.py".format(repo_path))
 os.system("git add -f {}/countries/*".format(repo_path))
-os.system("git commit -m \"Updated group map\"")
+os.system("git commit -m \"[auto] Updated group map\"")
 os.system("git push -q origin master")
 print('Done!')
 
