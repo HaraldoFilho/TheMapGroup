@@ -4,6 +4,6 @@ user_info = {
   'name': '█ Slices of Light ✴ █▀ ▀ ▀',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/95282411@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/justaslice/',
-  'markers': 1857,
-  'photos': 3213
+  'markers': 1858,
+  'photos': 3214
 }
