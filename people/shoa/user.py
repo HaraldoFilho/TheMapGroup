@@ -4,6 +4,6 @@ user_info = {
   'name': 'Joe Dyndale',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/63488298@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/shoa/',
-  'markers': 18,
-  'photos': 18
+  'markers': 20,
+  'photos': 20
 }
