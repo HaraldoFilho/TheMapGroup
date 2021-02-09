@@ -1,3 +1,3 @@
 countries_dict = {
-  'HR': ['Croatia', 30, 45]
+  'HR': ['Croatia', 31, 46]
 }
