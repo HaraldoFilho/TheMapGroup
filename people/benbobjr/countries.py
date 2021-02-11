@@ -1,13 +1,13 @@
 countries_dict = {
-  'NL': ['The Netherlands', 29, 33],
-  'DK': ['Denmark', 20, 33],
-  'BE': ['Belgium', 75, 149],
+  'BE': ['Belgium', 75, 150],
+  'GB': ['United Kingdom', 32270, 37465],
   'AU': ['Australia', 366, 415],
-  'US': ['United States of America', 9, 9],
-  'IT': ['Italy', 109, 143],
   'AE': ['United Arab Emirates', 167, 175],
-  'CN': ['South China Sea Islands (disputed)', 4, 23],
-  'GB': ['United Kingdom', 32258, 37429],
+  'SE': ['Sweden', 20, 56],
+  'NL': ['The Netherlands', 29, 33],
+  'CN': ['South China Sea Islands (disputed)', 4, 24],
   'AT': ['Austria', 5, 6],
-  'SE': ['Sweden', 20, 56]
+  'IT': ['Italy', 109, 145],
+  'DK': ['Denmark', 21, 34],
+  'US': ['United States of America', 9, 9]
 }
