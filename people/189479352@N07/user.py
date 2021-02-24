@@ -4,6 +4,6 @@ user_info = {
   'name': 'Jeffrey Lovelace',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/189479352@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/189479352@N07/',
-  'markers': 23,
-  'photos': 23
+  'markers': 24,
+  'photos': 24
 }
