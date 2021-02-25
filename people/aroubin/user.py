@@ -4,6 +4,6 @@ user_info = {
   'name': 'aroubin - Yay! 3 MILLION views',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/37775553@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/aroubin/',
-  'markers': 1435,
-  'photos': 7024
+  'markers': 1436,
+  'photos': 7025
 }
