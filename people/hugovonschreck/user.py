@@ -4,6 +4,6 @@ user_info = {
   'name': 'Hugo von Schreck',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/74758246@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/hugovonschreck/',
-  'markers': 1499,
-  'photos': 5060
+  'markers': 1500,
+  'photos': 5061
 }
