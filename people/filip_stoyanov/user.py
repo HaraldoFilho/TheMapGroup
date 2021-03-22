@@ -4,6 +4,6 @@ user_info = {
   'name': 'Filip Stoyanov',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/58071047@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/filip_stoyanov/',
-  'markers': 159,
-  'photos': 159
+  'markers': 160,
+  'photos': 160
 }
