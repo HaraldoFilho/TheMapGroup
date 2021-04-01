@@ -4,6 +4,6 @@ user_info = {
   'name': 'khoi tranduc',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/45919374@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/khoitranduc/',
-  'markers': 313,
-  'photos': 487
+  'markers': 314,
+  'photos': 489
 }
