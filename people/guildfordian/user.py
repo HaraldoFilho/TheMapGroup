@@ -4,6 +4,6 @@ user_info = {
   'name': 'Guildfordian',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/35523433@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/guildfordian/',
-  'markers': 866,
-  'photos': 1451
+  'markers': 870,
+  'photos': 1455
 }
