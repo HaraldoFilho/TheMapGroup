@@ -4,6 +4,6 @@ user_info = {
   'name': 'Bernard Spragg. NZ',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/88123769@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/volvob12b/',
-  'markers': 4047,
-  'photos': 5640
+  'markers': 4048,
+  'photos': 5642
 }
