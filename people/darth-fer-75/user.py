@@ -4,6 +4,6 @@ user_info = {
   'name': 'Fernando Forniés Revuelta',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/30148069@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/darth-fer-75/',
-  'markers': 1622,
-  'photos': 9215
+  'markers': 1623,
+  'photos': 9216
 }
