@@ -407,8 +407,10 @@ function setSelectorPosition() {
 }
 
 function addListenerToPeople(member) {
-  var member_url = "https://the-map-group.pictures/people/".concat(member[1]);
-  document.getElementById(member[0]).addEventListener('click', function() { window.location.href = member_url });
+  if (member[4] > 0) {
+    var member_url = "https://the-map-group.pictures/people/".concat(member[1]);
+    document.getElementById(member[0]).addEventListener('click', function() { window.location.href = member_url });
+  }
 }
 
 function addListenerToCountries(country) {
