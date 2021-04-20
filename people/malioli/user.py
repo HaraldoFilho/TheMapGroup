@@ -4,6 +4,6 @@ user_info = {
   'name': 'Oliver Švob',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/79369350@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/malioli/',
-  'markers': 1234,
-  'photos': 3009
+  'markers': 1236,
+  'photos': 3011
 }
