@@ -4,6 +4,6 @@ user_info = {
   'name': 'Gary Cadman',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/51207582@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/51207582@N08/',
-  'markers': 2665,
-  'photos': 3197
+  'markers': 2667,
+  'photos': 3199
 }
