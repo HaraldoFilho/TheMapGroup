@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dmitry Djouce',
   'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/nothingpersonal/',
-  'markers': 2380,
-  'photos': 2720
+  'markers': 2379,
+  'photos': 2719
 }
