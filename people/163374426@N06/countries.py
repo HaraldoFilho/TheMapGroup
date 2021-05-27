@@ -1,8 +1,8 @@
 countries_dict = {
-  'AR': ['Argentina', 1, 1],
   'CL': ['Chile', 2, 3],
-  'AU': ['Australia', 59, 70],
+  'AR': ['Argentina', 1, 1],
+  'NZ': ['New Zealand', 1, 1],
   'PE': ['Peru', 2, 2],
   'IS': ['Iceland', 3, 3],
-  'NZ': ['New Zealand', 1, 1]
+  'AU': ['Australia', 60, 71]
 }
