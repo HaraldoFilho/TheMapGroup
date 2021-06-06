@@ -4,6 +4,6 @@ user_info = {
   'name': 'Joao de Mio',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/23402613@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/23402613@N03/',
-  'markers': 120,
-  'photos': 169
+  'markers': 122,
+  'photos': 171
 }
