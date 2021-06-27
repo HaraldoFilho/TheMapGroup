@@ -4,6 +4,6 @@ user_info = {
   'name': 'Hugi Ólafsson',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/59509464@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/iceland-ho/',
-  'markers': 2385,
-  'photos': 2387
+  'markers': 2386,
+  'photos': 2388
 }
