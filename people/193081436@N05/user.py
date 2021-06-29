@@ -4,6 +4,6 @@ user_info = {
   'name': 'Craig Daffin',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/193081436@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/193081436@N05/',
-  'markers': 270,
-  'photos': 287
+  'markers': 281,
+  'photos': 298
 }
