@@ -4,6 +4,6 @@ user_info = {
   'name': 'paul manley',
   'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/167278372@N02/',
-  'markers': 59,
-  'photos': 61
+  'markers': 60,
+  'photos': 62
 }
