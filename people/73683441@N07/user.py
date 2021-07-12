@@ -4,6 +4,6 @@ user_info = {
   'name': 'Gerald (Wayne) Prout',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/73683441@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/73683441@N07/',
-  'markers': 3800,
-  'photos': 8319
+  'markers': 3802,
+  'photos': 8321
 }
