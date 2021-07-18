@@ -4,6 +4,6 @@ user_info = {
   'name': 'Viktor Kirilko',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/90411943@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/visavis/',
-  'markers': 385,
-  'photos': 414
+  'markers': 386,
+  'photos': 415
 }
