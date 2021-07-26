@@ -1,13 +1,13 @@
 countries_dict = {
-  'AT': ['Austria', 63, 270],
-  'IT': ['Italy', 131, 523],
-  'MT': ['Malta', 129, 524],
   'EG': ['Egypt', 88, 515],
+  'MT': ['Malta', 129, 524],
+  'QA': ['Qatar', 1, 10],
+  'AT': ['Austria', 63, 270],
+  'GB': ['United Kingdom', 52, 529],
+  'IT': ['Italy', 131, 523],
   'FR': ['France', 180, 793],
   'PH': ['Philippines', 19, 418],
-  'VA': ['Vatican City', 4, 59],
+  'ES': ['Spain', 893, 5958],
   'DE': ['Germany', 133, 343],
-  'ES': ['Spain', 887, 5937],
-  'QA': ['Qatar', 1, 10],
-  'GB': ['United Kingdom', 52, 529]
+  'VA': ['Vatican City', 4, 59]
 }
