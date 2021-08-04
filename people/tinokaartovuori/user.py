@@ -4,6 +4,6 @@ user_info = {
   'name': 'Tino Kaartovuori',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/99502057@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/tinokaartovuori/',
-  'markers': 33,
-  'photos': 34
+  'markers': 34,
+  'photos': 35
 }
