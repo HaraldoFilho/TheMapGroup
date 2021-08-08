@@ -1,8 +1,8 @@
 countries_dict = {
   'CA': ['Canada', 15, 17],
-  'MC': ['Monaco', 3, 56],
-  'US': ['United States of America', 1376, 3392],
+  'US': ['United States of America', 1377, 3393],
   'FR': ['France', 44, 3125],
+  'DO': ['Dominican Republic', 37, 401],
   'IT': ['Italy', 2, 75],
-  'DO': ['Dominican Republic', 37, 401]
+  'MC': ['Monaco', 3, 56]
 }
