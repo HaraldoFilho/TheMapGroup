@@ -1,6 +1,6 @@
 countries_dict = {
-  'IM': ['Isle of Man', 651, 762],
-  'GB': ['United Kingdom', 1638, 2036],
+  'IE': ['Ireland', 35, 53],
+  'IM': ['Isle of Man', 652, 763],
   'TZ': ['Tanzania', 62, 335],
-  'IE': ['Ireland', 35, 53]
+  'GB': ['United Kingdom', 1638, 2036]
 }
