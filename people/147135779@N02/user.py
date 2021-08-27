@@ -4,6 +4,6 @@ user_info = {
   'name': 'giovanni Campus',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/147135779@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/147135779@N02/',
-  'markers': 2576,
-  'photos': 2981
+  'markers': 2577,
+  'photos': 2983
 }
