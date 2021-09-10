@@ -4,6 +4,6 @@ user_info = {
   'name': 'Sebastián Aguilar',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/144107033@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/144107033@N04/',
-  'markers': 12542,
-  'photos': 16158
+  'markers': 12556,
+  'photos': 16178
 }
