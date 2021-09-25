@@ -4,6 +4,6 @@ user_info = {
   'name': 'Gray Moon Gallery',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/26915283@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/26915283@N07/',
-  'markers': 169,
-  'photos': 187
+  'markers': 170,
+  'photos': 188
 }
