@@ -4,6 +4,6 @@ user_info = {
   'name': 'Giovanni C.',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/8299662@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/gcap/',
-  'markers': 704,
-  'photos': 1677
+  'markers': 705,
+  'photos': 1678
 }
