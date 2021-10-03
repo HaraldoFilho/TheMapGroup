@@ -4,6 +4,6 @@ user_info = {
   'name': 'Atila Yumusakkaya',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/8009375@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/atila_y/',
-  'markers': 1160,
-  'photos': 1306
+  'markers': 1163,
+  'photos': 1309
 }
