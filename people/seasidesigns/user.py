@@ -4,6 +4,6 @@ user_info = {
   'name': 'SeaSide Signs ~ Vancouver, Can',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/55069387@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/seasidesigns/',
-  'markers': 134,
-  'photos': 179
+  'markers': 135,
+  'photos': 180
 }
