@@ -4,6 +4,6 @@ user_info = {
   'name': 'bram reinders',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/28628934@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/bramreinders/',
-  'markers': 2046,
-  'photos': 2564
+  'markers': 2047,
+  'photos': 2565
 }
