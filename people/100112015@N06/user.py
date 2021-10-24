@@ -4,6 +4,6 @@ user_info = {
   'name': 'Francois Le Rumeur',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/100112015@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/100112015@N06/',
-  'markers': 170,
-  'photos': 244
+  'markers': 171,
+  'photos': 245
 }
