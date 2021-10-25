@@ -4,6 +4,6 @@ user_info = {
   'name': 'PAFC1015',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/90238473@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/tguppy37401/',
-  'markers': 716,
-  'photos': 2594
+  'markers': 717,
+  'photos': 2595
 }
