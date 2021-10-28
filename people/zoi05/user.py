@@ -4,6 +4,6 @@ user_info = {
   'name': 'kbulut58',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/7812564@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/zoi05/',
-  'markers': 207,
-  'photos': 822
+  'markers': 208,
+  'photos': 824
 }
