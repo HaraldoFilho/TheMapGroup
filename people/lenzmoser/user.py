@@ -4,6 +4,6 @@ user_info = {
   'name': '::ErWin',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/123096458@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/lenzmoser/',
-  'markers': 4742,
-  'photos': 4880
+  'markers': 4745,
+  'photos': 4883
 }
