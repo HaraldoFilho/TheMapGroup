@@ -4,6 +4,6 @@ user_info = {
   'name': 'Mário  Martins (Pepe Martín)',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/188218905@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/mariomartins/',
-  'markers': 87,
-  'photos': 143
+  'markers': 88,
+  'photos': 144
 }
