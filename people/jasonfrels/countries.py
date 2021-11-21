@@ -1,4 +1,4 @@
 countries_dict = {
-  'SG': ['Singapore', 1, 2],
-  'US': ['United States', 64, 71]
+  'US': ['United States', 65, 72],
+  'SG': ['Singapore', 1, 2]
 }
