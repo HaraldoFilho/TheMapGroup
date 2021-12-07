@@ -4,6 +4,6 @@ user_info = {
   'name': 'Thirty Seven 401',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/90238473@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/tguppy37401/',
-  'markers': 741,
-  'photos': 2631
+  'markers': 742,
+  'photos': 2633
 }
