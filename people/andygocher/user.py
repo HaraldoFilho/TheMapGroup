@@ -4,6 +4,6 @@ user_info = {
   'name': 'Andy Gocher',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/110839836@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/andygocher/',
-  'markers': 588,
-  'photos': 1486
+  'markers': 589,
+  'photos': 1487
 }
