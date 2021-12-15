@@ -1,11 +1,11 @@
 countries_dict = {
-  'AL': ['Albania', 1, 2],
-  'AT': ['Austria', 1, 1],
-  'GR': ['Greece', 697, 1687],
-  'MA': ['Morocco', 20, 23],
-  'MV': ['Maldives', 2, 14],
-  'BE': ['Belgium', 2, 3],
-  'QA': ['Qatar', 2, 3],
   'IT': ['Italy', 1, 1],
+  'MA': ['Morocco', 20, 23],
+  'BE': ['Belgium', 2, 3],
+  'MV': ['Maldives', 2, 14],
+  'QA': ['Qatar', 2, 3],
+  'AT': ['Austria', 1, 1],
+  'AL': ['Albania', 1, 2],
+  'GR': ['Greece', 698, 1688],
   'RW': ['Rwanda', 3, 3]
 }
