@@ -1,9 +1,9 @@
 countries_dict = {
-  'FI': ['Finland', 25, 25],
-  'ES': ['Spain', 1370, 2238],
-  'NL': ['Netherlands', 20, 21],
-  'IS': ['Iceland', 538, 745],
-  'GB': ['United Kingdom', 690, 816],
   'DE': ['Germany', 25, 26],
-  'CH': ['Switzerland', 7, 7]
+  'NL': ['Netherlands', 20, 21],
+  'FI': ['Finland', 25, 25],
+  'CH': ['Switzerland', 7, 7],
+  'ES': ['Spain', 1370, 2238],
+  'IS': ['Iceland', 544, 751],
+  'GB': ['United Kingdom', 690, 816]
 }
