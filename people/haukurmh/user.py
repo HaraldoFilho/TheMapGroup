@@ -4,6 +4,6 @@ user_info = {
   'name': 'Haukur Már Harðarson',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/74850178@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/haukurmh/',
-  'markers': 58,
-  'photos': 68
+  'markers': 59,
+  'photos': 69
 }
