@@ -4,6 +4,6 @@ user_info = {
   'name': 'Jonathan Brooks',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/187366688@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/jebrailwayphotography/',
-  'markers': 122,
-  'photos': 238
+  'markers': 123,
+  'photos': 239
 }
