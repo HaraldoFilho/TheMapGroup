@@ -4,6 +4,6 @@ user_info = {
   'name': 'Harold  Moses',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/57729348@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/mosesharold/',
-  'markers': 2564,
-  'photos': 3626
+  'markers': 2565,
+  'photos': 3627
 }
