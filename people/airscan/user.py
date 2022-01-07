@@ -4,6 +4,6 @@ user_info = {
   'name': 'Alexander Sand Halvorsen',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/88321829@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/airscan/',
-  'markers': 107,
-  'photos': 127
+  'markers': 108,
+  'photos': 128
 }
