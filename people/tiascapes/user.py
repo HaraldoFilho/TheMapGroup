@@ -4,6 +4,6 @@ user_info = {
   'name': 'TIA INTERNATIONAL PHOTOGRAPHY',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/12744878@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/tiascapes/',
-  'markers': 869,
-  'photos': 1226
+  'markers': 870,
+  'photos': 1227
 }
