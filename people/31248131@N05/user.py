@@ -4,6 +4,6 @@ user_info = {
   'name': 'Rosie Chilton',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/31248131@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/31248131@N05/',
-  'markers': 337,
-  'photos': 646
+  'markers': 338,
+  'photos': 650
 }
