@@ -4,6 +4,6 @@ user_info = {
   'name': 'Gary Giddens',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/28018306@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/ggphoto36/',
-  'markers': 898,
-  'photos': 941
+  'markers': 899,
+  'photos': 942
 }
