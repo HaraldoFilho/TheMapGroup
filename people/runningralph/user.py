@@ -4,6 +4,6 @@ user_info = {
   'name': 'Ralph Apeldoorn',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/95381107@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/runningralph/',
-  'markers': 5474,
-  'photos': 11001
+  'markers': 5477,
+  'photos': 11004
 }
