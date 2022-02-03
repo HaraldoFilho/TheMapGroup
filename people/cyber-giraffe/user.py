@@ -5,5 +5,5 @@ user_info = {
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/32142243@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/cyber-giraffe/',
   'markers': 35,
-  'photos': 200
+  'photos': 195
 }
