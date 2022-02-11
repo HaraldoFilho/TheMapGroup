@@ -4,6 +4,6 @@ user_info = {
   'name': 'Joseph Brimacombe',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/192536922@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/jbrimacombe/',
-  'markers': 622,
-  'photos': 1370
+  'markers': 625,
+  'photos': 1373
 }
