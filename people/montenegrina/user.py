@@ -4,6 +4,6 @@ user_info = {
   'name': 'ForceMajeureMontenegro',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/92496593@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/montenegrina/',
-  'markers': 983,
-  'photos': 1130
+  'markers': 984,
+  'photos': 1131
 }
