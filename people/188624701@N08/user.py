@@ -4,6 +4,6 @@ user_info = {
   'name': 'Vedran Peruničić',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/188624701@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/188624701@N08/',
-  'markers': 36,
-  'photos': 55
+  'markers': 37,
+  'photos': 56
 }
