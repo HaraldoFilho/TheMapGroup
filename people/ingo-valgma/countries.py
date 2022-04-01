@@ -1,3 +1,3 @@
 countries_dict = {
-  'EE': ['Estonia', 7, 12]
+  'EE': ['Estonia', 13, 18]
 }
