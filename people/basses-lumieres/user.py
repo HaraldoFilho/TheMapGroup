@@ -4,6 +4,6 @@ user_info = {
   'name': 'Jo 0405',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/108339617@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/basses-lumieres/',
-  'markers': 139,
-  'photos': 683
+  'markers': 140,
+  'photos': 684
 }
