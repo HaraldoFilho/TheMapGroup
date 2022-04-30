@@ -4,6 +4,6 @@ user_info = {
   'name': 'MountMan Photo',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/125923483@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/mountmanphoto/',
-  'markers': 456,
-  'photos': 553
+  'markers': 457,
+  'photos': 554
 }
