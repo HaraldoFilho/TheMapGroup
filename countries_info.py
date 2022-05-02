@@ -278,7 +278,8 @@ countries_dict = {
   'TF': 'Fr. S. and Antarctic Lands',
   'SM': 'San Marino',
   'RE': 'Reunion',
-  'VG': 'British Virgin Islands'
+  'VG': 'British Virgin Islands',
+  'MF': 'Saint-Martin'
 }
 
 latitude_dict = {
