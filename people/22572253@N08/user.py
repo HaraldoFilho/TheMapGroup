@@ -4,6 +4,6 @@ user_info = {
   'name': 'Northern Tony',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/22572253@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/22572253@N08/',
-  'markers': 92,
-  'photos': 92
+  'markers': 93,
+  'photos': 93
 }
