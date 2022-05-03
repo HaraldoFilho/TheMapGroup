@@ -4,6 +4,6 @@ user_info = {
   'name': 'Mauro Astolfi',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/160471444@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/160471444@N05/',
-  'markers': 1056,
-  'photos': 5086
+  'markers': 1058,
+  'photos': 5088
 }
