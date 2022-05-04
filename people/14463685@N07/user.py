@@ -4,6 +4,6 @@ user_info = {
   'name': 'Howard Somerville',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/14463685@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/14463685@N07/',
-  'markers': 538,
-  'photos': 623
+  'markers': 540,
+  'photos': 625
 }
