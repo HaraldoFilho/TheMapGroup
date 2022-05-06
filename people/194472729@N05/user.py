@@ -4,6 +4,6 @@ user_info = {
   'name': 'IVAN UJEVIC',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/194472729@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/194472729@N05/',
-  'markers': 19,
-  'photos': 20
+  'markers': 20,
+  'photos': 21
 }
