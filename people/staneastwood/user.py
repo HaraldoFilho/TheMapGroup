@@ -4,6 +4,6 @@ user_info = {
   'name': 'Stanley Eastwood',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/63713558@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/staneastwood/',
-  'markers': 5558,
-  'photos': 31513
+  'markers': 5567,
+  'photos': 31545
 }
