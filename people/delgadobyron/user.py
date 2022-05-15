@@ -4,6 +4,6 @@ user_info = {
   'name': 'ByronDelgado',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/28214158@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/delgadobyron/',
-  'markers': 106,
-  'photos': 313
+  'markers': 107,
+  'photos': 314
 }
