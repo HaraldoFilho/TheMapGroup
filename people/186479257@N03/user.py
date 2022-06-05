@@ -4,6 +4,6 @@ user_info = {
   'name': 'SeaLord 50+',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/186479257@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/186479257@N03/',
-  'markers': 74,
-  'photos': 81
+  'markers': 75,
+  'photos': 82
 }
