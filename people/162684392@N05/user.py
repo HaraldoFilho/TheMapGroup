@@ -4,6 +4,6 @@ user_info = {
   'name': 'Bernhard Niedermeier',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/162684392@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/162684392@N05/',
-  'markers': 209,
-  'photos': 229
+  'markers': 210,
+  'photos': 230
 }
