@@ -4,6 +4,6 @@ user_info = {
   'name': 'Robert Pittman',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/50144889@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/50144889@N08/',
-  'markers': 2302,
-  'photos': 2456
+  'markers': 2303,
+  'photos': 2457
 }
