@@ -1,8 +1,8 @@
 countries_dict = {
-  'ES': ['Spain', 479, 687],
   'FR': ['France', 161, 326],
   'TN': ['Tunisia', 220, 409],
-  'MA': ['Morocco', 93, 126],
   'IT': ['Italy', 12, 13],
-  'PT': ['Portugal', 2217, 3214]
+  'PT': ['Portugal', 2217, 3216],
+  'ES': ['Spain', 479, 687],
+  'MA': ['Morocco', 93, 126]
 }
