@@ -1,15 +1,16 @@
 countries_dict = {
-  'PT': ['Portugal', 621, 729],
-  'ZA': ['South Africa', 3, 3],
-  'IN': ['India', 1, 1],
-  'GB': ['United Kingdom', 116, 183],
+  'GR': ['Greece', 3, 3],
   'ER': ['Eritrea', 3, 3],
+  'IN': ['India', 4, 4],
+  'GB': ['United Kingdom', 117, 184],
   'VN': ['Vietnam', 4, 4],
-  'CN': ['South China Sea Islands (disputed)', 1, 1],
-  'CY': ['Cyprus', 4, 4],
-  'GR': ['Greece', 2, 2],
-  'NA': ['Namibia', 8, 8],
-  'IT': ['Italy', 9, 10],
   'BR': ['Brazil', 4, 4],
-  'ES': ['Spain', 3, 3]
+  'ZA': ['South Africa', 4, 4],
+  'HU': ['Hungary', 1, 1],
+  'CY': ['Cyprus', 4, 4],
+  'NA': ['Namibia', 8, 8],
+  'CN': ['South China Sea Islands (disputed)', 1, 1],
+  'IT': ['Italy', 11, 12],
+  'ES': ['Spain', 3, 3],
+  'PT': ['Portugal', 623, 732]
 }
