@@ -4,6 +4,6 @@ user_info = {
   'name': 'S Lynn Lee',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/144075308@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/slynnlee/',
-  'markers': 823,
-  'photos': 4505
+  'markers': 824,
+  'photos': 4508
 }
