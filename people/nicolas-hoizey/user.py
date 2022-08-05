@@ -4,6 +4,6 @@ user_info = {
   'name': 'Nicolas Hoizey',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/38608514@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/nicolas-hoizey/',
-  'markers': 288,
-  'photos': 344
+  'markers': 290,
+  'photos': 346
 }
