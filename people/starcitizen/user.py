@@ -4,6 +4,6 @@ user_info = {
   'name': 'Star Citizen (mountain photogr',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/169246257@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/starcitizen/',
-  'markers': 3020,
-  'photos': 3100
+  'markers': 3021,
+  'photos': 3101
 }
