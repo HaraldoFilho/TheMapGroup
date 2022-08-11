@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dimitri Verledens',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/138182637@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/138182637@N08/',
-  'markers': 645,
-  'photos': 741
+  'markers': 743,
+  'photos': 872
 }
