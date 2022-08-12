@@ -1,13 +1,13 @@
 countries_dict = {
-  'AU': ['Australia', 271, 389],
-  'SG': ['Singapore', 25, 29],
-  'US': ['United States', 371, 542],
-  'MY': ['Malaysia', 39, 58],
-  'BN': ['Brunei', 48, 61],
-  'CA': ['Canada', 257, 344],
-  'JP': ['Japan', 17, 32],
-  'NZ': ['New Zealand', 2920, 3963],
-  'PH': ['Philippines', 45, 94],
+  'CN': ['South China Sea Islands (disputed)', 179, 236],
   'TH': ['Thailand', 28, 30],
-  'CN': ['South China Sea Islands (disputed)', 179, 236]
+  'AU': ['Australia', 271, 389],
+  'MY': ['Malaysia', 39, 58],
+  'US': ['United States', 371, 542],
+  'BN': ['Brunei', 48, 61],
+  'NZ': ['New Zealand', 2921, 3964],
+  'SG': ['Singapore', 25, 29],
+  'CA': ['Canada', 257, 344],
+  'PH': ['Philippines', 45, 94],
+  'JP': ['Japan', 17, 32]
 }
