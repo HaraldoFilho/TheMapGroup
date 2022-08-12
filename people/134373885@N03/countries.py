@@ -1,9 +1,9 @@
 countries_dict = {
-  'SK': ['Slovakia', 112, 156],
-  'FR': ['France', 12, 15],
   'RU': ['Russia', 51, 55],
-  'UA': ['Ukraine', 5, 6],
-  'CZ': ['Czechia', 23, 25],
+  'FR': ['France', 12, 15],
   'PL': ['Poland', 1, 1],
+  'CZ': ['Czechia', 23, 25],
+  'UA': ['Ukraine', 5, 6],
+  'SK': ['Slovakia', 113, 157],
   'DE': ['Germany', 23, 24]
 }
