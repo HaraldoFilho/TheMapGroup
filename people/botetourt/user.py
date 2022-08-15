@@ -4,6 +4,6 @@ user_info = {
   'name': 'John McNeely Hudson',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/82487858@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/botetourt/',
-  'markers': 3776,
-  'photos': 6958
+  'markers': 3778,
+  'photos': 6960
 }
