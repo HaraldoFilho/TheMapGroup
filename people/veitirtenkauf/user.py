@@ -5,5 +5,5 @@ user_info = {
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/27539916@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/veitirtenkauf/',
   'markers': 185,
-  'photos': 1133
+  'photos': 1134
 }
