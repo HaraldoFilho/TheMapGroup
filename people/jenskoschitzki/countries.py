@@ -1,15 +1,15 @@
 countries_dict = {
-  'LT': ['Lithuania', 125, 136],
   'LV': ['Latvia', 149, 149],
+  'FI': ['Finland', 126, 127],
+  'AZ': ['Azerbaijan', 2, 2],
   'AT': ['Austria', 98, 119],
+  'IT': ['Italy', 761, 911],
+  'EE': ['Estonia', 170, 170],
+  'DE': ['Germany', 838, 27020],
+  'GE': ['Georgia', 155, 176],
+  'AM': ['Armenia', 159, 170],
+  'LT': ['Lithuania', 125, 136],
   'HR': ['Croatia', 214, 244],
   'RU': ['Russia', 427, 509],
-  'AZ': ['Azerbaijan', 2, 2],
-  'DE': ['Germany', 838, 27020],
-  'EE': ['Estonia', 170, 170],
-  'FI': ['Finland', 126, 127],
-  'IT': ['Italy', 726, 868],
-  'GE': ['Georgia', 155, 176],
-  'GB': ['United Kingdom', 147, 150],
-  'AM': ['Armenia', 159, 170]
+  'GB': ['United Kingdom', 147, 150]
 }
