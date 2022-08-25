@@ -1,11 +1,11 @@
 countries_dict = {
-  'CA': ['Canada', 90, 158],
-  'GB': ['United Kingdom', 26, 28],
-  'IT': ['Italy', 27, 31],
   'NZ': ['New Zealand', 9, 9],
-  'RU': ['Russia', 1, 1],
-  'PA': ['Panama', 1, 2],
+  'IT': ['Italy', 28, 32],
   'AU': ['Australia', 11, 11],
+  'CA': ['Canada', 90, 158],
   'US': ['United States of America', 524, 739],
-  'CH': ['Switzerland', 4, 7]
+  'CH': ['Switzerland', 4, 7],
+  'GB': ['United Kingdom', 26, 28],
+  'RU': ['Russia', 1, 1],
+  'PA': ['Panama', 1, 2]
 }
