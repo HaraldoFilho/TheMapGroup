@@ -4,6 +4,6 @@ user_info = {
   'name': 'Robin Shepperson',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/156210536@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/robinshepperson/',
-  'markers': 2,
-  'photos': 2
+  'markers': 3,
+  'photos': 3
 }
