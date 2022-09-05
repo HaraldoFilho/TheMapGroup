@@ -4,6 +4,6 @@ user_info = {
   'name': 'Faillace',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/194868714@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/faillace360/',
-  'markers': 113,
-  'photos': 117
+  'markers': 114,
+  'photos': 118
 }
