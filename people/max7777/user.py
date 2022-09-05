@@ -4,6 +4,6 @@ user_info = {
   'name': 'strategicus',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/30866147@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/max7777/',
-  'markers': 71,
-  'photos': 100
+  'markers': 68,
+  'photos': 94
 }
