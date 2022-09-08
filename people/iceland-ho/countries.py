@@ -1,10 +1,10 @@
 countries_dict = {
-  'MD': ['Moldova', 2, 2],
-  'IS': ['Iceland', 2490, 2492],
-  'FO': ['Faroe Islands', 9, 9],
   'CN': ['South China Sea Islands (disputed)', 16, 16],
+  'IS': ['Iceland', 2491, 2493],
+  'GB': ['United Kingdom', 7, 7],
   'GH': ['Ghana', 7, 7],
-  'ES': ['Spain', 5, 5],
   'US': ['United States of America', 6, 6],
-  'GB': ['United Kingdom', 7, 7]
+  'MD': ['Moldova', 2, 2],
+  'ES': ['Spain', 5, 5],
+  'FO': ['Faroe Islands', 9, 9]
 }
