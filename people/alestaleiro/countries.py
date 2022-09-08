@@ -1,13 +1,13 @@
 countries_dict = {
-  'ZA': ['South Africa', 129, 165],
-  'BR': ['Brazil', 1792, 2445],
-  'DE': ['Germany', 8, 8],
-  'AR': ['Argentina', 85, 89],
-  'FR': ['France', 1, 1],
+  'BR': ['Brazil', 1792, 2446],
   'US': ['United States of America', 82, 106],
-  'IT': ['Italy', 10, 11],
-  'CL': ['Chile', 26, 31],
-  'BE': ['Belgium', 2, 2],
   'NL': ['Netherlands', 2, 2],
-  'PE': ['Peru', 14, 24]
+  'CL': ['Chile', 26, 31],
+  'AR': ['Argentina', 85, 89],
+  'BE': ['Belgium', 2, 2],
+  'PE': ['Peru', 14, 24],
+  'DE': ['Germany', 8, 8],
+  'ZA': ['South Africa', 129, 165],
+  'FR': ['France', 1, 1],
+  'IT': ['Italy', 10, 11]
 }
