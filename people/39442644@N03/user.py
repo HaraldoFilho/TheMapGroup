@@ -4,6 +4,6 @@ user_info = {
   'name': 'Cranky Oldman',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/39442644@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/39442644@N03/',
-  'markers': 1056,
-  'photos': 1091
+  'markers': 1059,
+  'photos': 1094
 }
