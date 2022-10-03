@@ -4,6 +4,6 @@ user_info = {
   'name': 'mksfca',
   'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/mksfca/',
-  'markers': 6056,
-  'photos': 12787
+  'markers': 6057,
+  'photos': 12788
 }
