@@ -1,10 +1,10 @@
 countries_dict = {
-  'NE': ['Niger', 2, 3],
-  'CH': ['Switzerland', 12, 37],
-  'UA': ['Ukraine', 1, 1],
   'FR': ['France', 8, 9],
-  'ML': ['Mali', 5, 6],
+  'CH': ['Switzerland', 13, 38],
   'HU': ['Hungary', 2, 2],
-  'IT': ['Italy', 149, 192],
+  'NE': ['Niger', 2, 3],
+  'IT': ['Italy', 152, 195],
+  'UA': ['Ukraine', 1, 1],
+  'ML': ['Mali', 5, 6],
   'DZ': ['Algeria', 2, 2]
 }
