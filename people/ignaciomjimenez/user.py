@@ -2,8 +2,8 @@ user_info = {
   'id': '23499399@N02',
   'alias': 'ignaciomjimenez',
   'name': 'Nacho',
-  'avatar': 'https://live.staticflickr.com/5674/buddyicons/23499399@N02_r.jpg',
+  'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/ignaciomjimenez/',
-  'markers': 1026,
-  'photos': 1355
+  'markers': 1027,
+  'photos': 1356
 }
