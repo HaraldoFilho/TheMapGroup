@@ -4,6 +4,6 @@ user_info = {
   'name': 'Tor Einar Andersen',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/30717887@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/30717887@N05/',
-  'markers': 279,
-  'photos': 380
+  'markers': 280,
+  'photos': 382
 }
