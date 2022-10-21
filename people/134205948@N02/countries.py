@@ -1,9 +1,9 @@
 countries_dict = {
-  'HR': ['Croatia', 12, 14],
-  'CH': ['Switzerland', 637, 707],
+  'FR': ['France', 94, 105],
+  'IT': ['Italy', 4546, 4878],
+  'AT': ['Austria', 1, 1],
   'VA': ['Vatican City', 10, 10],
   'GB': ['United Kingdom', 8, 8],
-  'FR': ['France', 94, 105],
-  'AT': ['Austria', 1, 1],
-  'IT': ['Italy', 4543, 4875]
+  'CH': ['Switzerland', 638, 708],
+  'HR': ['Croatia', 12, 14]
 }
