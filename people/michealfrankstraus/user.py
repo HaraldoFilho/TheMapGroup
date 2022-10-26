@@ -4,6 +4,6 @@ user_info = {
   'name': 'Micheal Straus',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/188257341@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/michealfrankstraus/',
-  'markers': 933,
-  'photos': 1010
+  'markers': 935,
+  'photos': 1012
 }
