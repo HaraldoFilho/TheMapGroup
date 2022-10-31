@@ -4,6 +4,6 @@ user_info = {
   'name': 'Andrey Bogdanov',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/148320346@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/148320346@N07/',
-  'markers': 5604,
-  'photos': 5711
+  'markers': 5093,
+  'photos': 5197
 }
