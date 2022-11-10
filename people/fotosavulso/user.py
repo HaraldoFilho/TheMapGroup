@@ -4,6 +4,6 @@ user_info = {
   'name': 'Fotos Avulso',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/69623157@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/fotosavulso/',
-  'markers': 511,
-  'photos': 551
+  'markers': 518,
+  'photos': 558
 }
