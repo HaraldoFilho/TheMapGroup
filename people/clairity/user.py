@@ -4,6 +4,6 @@ user_info = {
   'name': 'Sharon Mollerus',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/38315261@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/clairity/',
-  'markers': 3464,
-  'photos': 14032
+  'markers': 3474,
+  'photos': 14056
 }
