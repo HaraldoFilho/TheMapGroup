@@ -5,5 +5,5 @@ user_info = {
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/185660941@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/zvonimir_skramonin/',
   'markers': 287,
-  'photos': 288
+  'photos': 289
 }
