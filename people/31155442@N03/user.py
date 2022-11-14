@@ -4,6 +4,6 @@ user_info = {
   'name': 'Joseph Hollick',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/31155442@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/31155442@N03/',
-  'markers': 10419,
-  'photos': 14540
+  'markers': 10421,
+  'photos': 14543
 }
