@@ -4,6 +4,6 @@ user_info = {
   'name': 'Jorge Franganillo',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/46191841@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/franganillo/',
-  'markers': 3250,
-  'photos': 5865
+  'markers': 3254,
+  'photos': 5872
 }
