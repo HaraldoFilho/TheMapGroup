@@ -4,6 +4,6 @@ user_info = {
   'name': 'Ingo Valgma',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/188179505@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/ingo-valgma/',
-  'markers': 20,
-  'photos': 25
+  'markers': 22,
+  'photos': 27
 }
