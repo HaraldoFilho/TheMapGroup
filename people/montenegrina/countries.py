@@ -1,15 +1,15 @@
 countries_dict = {
-  'AL': ['Albania', 4, 4],
   'IT': ['Italy', 107, 123],
-  'ME': ['Montenegro', 607, 683],
-  'FR': ['France', 63, 75],
-  'MA': ['Morocco', 14, 15],
-  'PT': ['Portugal', 15, 23],
-  'HR': ['Croatia', 51, 58],
-  'BA': ['Bosnia and Herzegovina', 17, 19],
-  'SI': ['Slovenia', 5, 6],
   'GR': ['Greece', 73, 84],
   'CZ': ['Czechia', 40, 48],
+  'MA': ['Morocco', 14, 15],
+  'BA': ['Bosnia and Herzegovina', 17, 19],
+  'FR': ['France', 63, 75],
+  'SI': ['Slovenia', 5, 6],
   'VA': ['Vatican City', 5, 7],
+  'HR': ['Croatia', 51, 58],
+  'ME': ['Montenegro', 609, 685],
+  'AL': ['Albania', 4, 4],
+  'PT': ['Portugal', 15, 23],
   'ES': ['Spain', 104, 122]
 }
