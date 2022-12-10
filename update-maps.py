@@ -140,19 +140,17 @@ for page_number in range(number_of_pages, 0, -1):
                 command = "{}/update-countries-map-data.py".format(member_path)
                 os.system(command)
 
-            # upload map
+            # commit map
             if (loc_fsize_diff != 0 or is_new_member) and memberFilesExist(member_path):
-                print('Uploading map data...')
-                os.system("git pull -q origin master")
+                print('Commiting map data...')
                 os.system("git add -f {}/index.html".format(member_path))
                 os.system("git add -f {}/locations.py".format(member_path))
                 os.system("git add -f {}/countries.py".format(member_path))
                 os.system("git add -f {}/user.py".format(member_path))
                 os.system("git commit -m \"[auto] Updated map for member \'{}\'\"".format(member_name))
-                os.system("git push -q origin master")
                 print('Done!')
             else:
-                print("Everything is up-to-date. Nothing to upload!")
+                print("Everything is up-to-date. Nothing to commit!")
 
             if is_new_member:
                 topic_subject = "[MAP] {}".format(member_name)
@@ -231,13 +229,11 @@ if os.path.exists("{}/last_total.py".format(repo_path)):
 command = "{}/generate-map-data.py".format(repo_path)
 os.system(command)
 
-print('Uploading map data...')
-os.system("git pull -q origin master")
+print('Commiting map data...')
 os.system("git add -f {}/locations.py".format(repo_path))
 os.system("git add -f {}/members.py".format(repo_path))
 os.system("git add -f {}/countries/*".format(repo_path))
 os.system("git commit -m \"[auto] Updated group map\"")
-os.system("git push -q origin master")
 print('Done!')
 
 os.system("rm {}/locations.py".format(repo_path))
@@ -287,7 +283,6 @@ for member in members_dirs:
         # remove member directory
         os.system("git rm -fr {0}/{1}".format(people_path, member))
         os.system("git commit -m \"Removed member \'{}\'\"".format(member))
-        os.system("git push -q origin master")
         os.system("rm -fr {0}/{1}".format(people_path, member))
         print("Removed member: {}".format(member))
         removed += 1
