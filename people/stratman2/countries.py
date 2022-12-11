@@ -1,7 +1,7 @@
 countries_dict = {
-  'SG': ['Singapore', 27, 200],
+  'MY': ['Malaysia', 475, 4371],
   'MW': ['Malawi', 1, 1],
-  'ID': ['Indonesia', 14, 46],
-  'MY': ['Malaysia', 473, 4368],
-  'US': ['United States of America', 1, 1]
+  'US': ['United States of America', 1, 1],
+  'SG': ['Singapore', 27, 200],
+  'ID': ['Indonesia', 14, 46]
 }
