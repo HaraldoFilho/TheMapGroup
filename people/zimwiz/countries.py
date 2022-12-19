@@ -1,6 +1,6 @@
 countries_dict = {
-  'BM': ['Bermuda', 3, 3],
-  'CA': ['Canada', 1, 1],
-  'AQ': ['Antarctica', 1, 1],
-  'US': ['United States of America', 433, 536]
+  'CA': ['Canada', 3, 3],
+  'BM': ['Bermuda', 4, 4],
+  'US': ['United States of America', 490, 633],
+  'AQ': ['Antarctica', 1, 1]
 }
