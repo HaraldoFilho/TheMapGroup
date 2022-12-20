@@ -5,5 +5,5 @@ user_info = {
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/68420538@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/dmitry_kolesnikov/',
   'markers': 87,
-  'photos': 174
+  'photos': 175
 }
