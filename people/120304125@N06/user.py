@@ -4,6 +4,6 @@ user_info = {
   'name': 'András Karsai',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/120304125@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/120304125@N06/',
-  'markers': 326,
-  'photos': 328
+  'markers': 327,
+  'photos': 329
 }
