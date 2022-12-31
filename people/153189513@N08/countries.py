@@ -1,7 +1,7 @@
 countries_dict = {
-  'RU': ['Russia', 615, 700],
-  'UZ': ['Uzbekistan', 4, 7],
+  'RU': ['Russia', 616, 701],
   'KZ': ['Kazakhstan', 21, 22],
-  'AZ': ['Azerbaijan', 10, 10],
-  'BY': ['Belarus', 14, 16]
+  'BY': ['Belarus', 14, 16],
+  'UZ': ['Uzbekistan', 4, 7],
+  'AZ': ['Azerbaijan', 10, 10]
 }
