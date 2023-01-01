@@ -5,5 +5,5 @@ user_info = {
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/55341805@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/russellcardwell/',
   'markers': 919,
-  'photos': 1986
+  'photos': 1992
 }
