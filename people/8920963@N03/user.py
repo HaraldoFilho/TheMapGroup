@@ -4,6 +4,6 @@ user_info = {
   'name': 'Steen Jeppesen',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/8920963@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/8920963@N03/',
-  'markers': 10727,
-  'photos': 15235
+  'markers': 10730,
+  'photos': 15238
 }
