@@ -4,6 +4,6 @@ user_info = {
   'name': 'Ted McGrath',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/90955804@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/time-to-look/',
-  'markers': 11477,
-  'photos': 13414
+  'markers': 11483,
+  'photos': 13420
 }
