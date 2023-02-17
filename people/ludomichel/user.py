@@ -4,6 +4,6 @@ user_info = {
   'name': 'Lцdо\/іс M',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/124072682@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/ludomichel/',
-  'markers': 3187,
-  'photos': 3546
+  'markers': 3188,
+  'photos': 3547
 }
