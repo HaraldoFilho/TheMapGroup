@@ -2,8 +2,8 @@ user_info = {
   'id': '23808252@N00',
   'alias': 'khrawlings',
   'name': 'khrawlings',
-  'avatar': 'https://live.staticflickr.com/5674/buddyicons/23808252@N00_r.jpg',
+  'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/khrawlings/',
-  'markers': 2427,
-  'photos': 3168
+  'markers': 2428,
+  'photos': 3169
 }
