@@ -4,6 +4,6 @@ user_info = {
   'name': 'donnebryant',
   'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/donnebryant/',
-  'markers': 48,
-  'photos': 1974
+  'markers': 50,
+  'photos': 1993
 }
