@@ -4,6 +4,6 @@ user_info = {
   'name': 'Pierre Nordström',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/10456518@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/fam_nordstrom/',
-  'markers': 4678,
-  'photos': 13447
+  'markers': 4679,
+  'photos': 13451
 }
