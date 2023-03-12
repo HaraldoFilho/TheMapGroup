@@ -4,6 +4,6 @@ user_info = {
   'name': 'Enrico Sprea',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/129342869@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/enricosprea/',
-  'markers': 958,
-  'photos': 970
+  'markers': 959,
+  'photos': 971
 }
