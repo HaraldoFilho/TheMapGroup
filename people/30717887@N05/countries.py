@@ -1,14 +1,14 @@
 countries_dict = {
-  'EE': ['Estonia', 2, 2],
-  'FR': ['France', 9, 9],
-  'ES': ['Spain', 30, 37],
-  'DK': ['Denmark', 22, 28],
-  'GB': ['United Kingdom', 19, 37],
-  'SE': ['Sweden', 15, 39],
-  'DE': ['Germany', 9, 9],
   'NL': ['Netherlands', 1, 1],
-  'IT': ['Italy', 28, 32],
+  'ES': ['Spain', 30, 37],
   'RU': ['Russia', 9, 24],
+  'IT': ['Italy', 29, 33],
+  'DK': ['Denmark', 22, 28],
+  'DE': ['Germany', 9, 9],
+  'FR': ['France', 9, 9],
+  'GB': ['United Kingdom', 19, 37],
+  'FI': ['Finland', 4, 11],
   'NO': ['Norway', 197, 232],
-  'FI': ['Finland', 4, 11]
+  'EE': ['Estonia', 2, 2],
+  'SE': ['Sweden', 15, 39]
 }
