@@ -1,12 +1,12 @@
 countries_dict = {
-  'BS': ['The Bahamas', 2, 2],
-  'CA': ['Canada', 1, 1],
+  'HT': ['Haiti', 1, 1],
+  'NL': ['Netherlands', 13, 13],
   'AQ': ['Antarctica', 11, 11],
   'GI': ['Gibraltar', 14, 14],
-  'HT': ['Haiti', 1, 1],
-  'MA': ['Morocco', 13, 13],
+  'BS': ['The Bahamas', 2, 2],
   'ES': ['Spain', 40, 58],
+  'MA': ['Morocco', 13, 13],
   'US': ['United States of America', 132, 246],
-  'NL': ['Netherlands', 13, 13],
-  'BZ': ['Belize', 4, 7]
+  'BZ': ['Belize', 4, 7],
+  'CA': ['Canada', 1, 1]
 }
