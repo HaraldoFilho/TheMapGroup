@@ -4,6 +4,6 @@ user_info = {
   'name': 'Gary Bond',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/33352310@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/shabbagaz/',
-  'markers': 11641,
-  'photos': 17056
+  'markers': 11661,
+  'photos': 17080
 }
