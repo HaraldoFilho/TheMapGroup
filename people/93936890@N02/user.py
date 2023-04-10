@@ -4,6 +4,6 @@ user_info = {
   'name': 'CLIFF BANCROFT',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/93936890@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/93936890@N02/',
-  'markers': 772,
-  'photos': 1101
+  'markers': 773,
+  'photos': 1102
 }
