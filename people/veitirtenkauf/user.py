@@ -4,6 +4,6 @@ user_info = {
   'name': 'Veit',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/27539916@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/veitirtenkauf/',
-  'markers': 155,
-  'photos': 1058
+  'markers': 156,
+  'photos': 1063
 }
