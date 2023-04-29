@@ -1,10 +1,10 @@
 countries_dict = {
-  'FR': ['France', 3, 48],
-  'AU': ['Australia', 1100, 23941],
-  'CA': ['Canada', 17, 803],
-  'GB': ['United Kingdom', 1, 1],
-  'VU': ['Vanuatu', 5, 174],
-  'US': ['United States', 1, 156],
+  'FJ': ['Fiji', 4, 147],
+  'FR': ['France', 4, 56],
   'NZ': ['New Zealand', 35, 1888],
-  'FJ': ['Fiji', 4, 147]
+  'US': ['United States', 1, 156],
+  'CA': ['Canada', 17, 803],
+  'VU': ['Vanuatu', 5, 174],
+  'GB': ['United Kingdom', 1, 1],
+  'AU': ['Australia', 1100, 23941]
 }
