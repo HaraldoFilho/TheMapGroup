@@ -4,6 +4,6 @@ user_info = {
   'name': 'Charlie Zimmerman',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/14461370@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/zimwiz/',
-  'markers': 505,
-  'photos': 656
+  'markers': 506,
+  'photos': 657
 }
