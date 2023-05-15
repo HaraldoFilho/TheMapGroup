@@ -1,13 +1,13 @@
 countries_dict = {
-  'NL': ['Netherlands', 17, 32],
-  'GB': ['United Kingdom', 56, 92],
-  'SK': ['Slovakia', 2, 2],
-  'BE': ['Belgium', 1, 1],
-  'DE': ['Germany', 6, 8],
-  'IE': ['Ireland', 24, 31],
-  'MT': ['Malta', 23, 44],
-  'FR': ['France', 84, 325],
   'AT': ['Austria', 10, 15],
+  'NL': ['Netherlands', 17, 32],
+  'SK': ['Slovakia', 2, 2],
   'DK': ['Denmark', 62, 102],
-  'CZ': ['Czechia', 4, 4]
+  'GB': ['United Kingdom', 57, 93],
+  'BE': ['Belgium', 1, 1],
+  'FR': ['France', 84, 325],
+  'CZ': ['Czechia', 4, 4],
+  'DE': ['Germany', 6, 8],
+  'MT': ['Malta', 23, 44],
+  'IE': ['Ireland', 24, 31]
 }
