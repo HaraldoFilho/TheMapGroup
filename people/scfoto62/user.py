@@ -4,6 +4,6 @@ user_info = {
   'name': 'Sébastien Croës',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/51101129@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/scfoto62/',
-  'markers': 1652,
-  'photos': 2705
+  'markers': 1653,
+  'photos': 2708
 }
