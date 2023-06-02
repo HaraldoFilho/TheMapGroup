@@ -1,14 +1,14 @@
 countries_dict = {
-  'MA': ['Morocco', 11, 11],
-  'FO': ['Faroe Islands', 9, 9],
-  'IS': ['Iceland', 2626, 2628],
-  'US': ['United States of America', 8, 8],
+  'GB': ['United Kingdom', 13, 13],
   'GH': ['Ghana', 7, 7],
-  'JP': ['Japan', 6, 6],
   'ES': ['Spain', 5, 5],
   'CN': ['South China Sea Islands (disputed)', 16, 16],
+  'IS': ['Iceland', 2627, 2629],
+  'US': ['United States of America', 8, 8],
+  'JP': ['Japan', 6, 6],
   'MD': ['Moldova', 2, 2],
+  'FO': ['Faroe Islands', 9, 9],
   'SE': ['Sweden', 1, 1],
   'UY': ['Uruguay', 6, 6],
-  'GB': ['United Kingdom', 13, 13]
+  'MA': ['Morocco', 11, 11]
 }
