@@ -4,6 +4,6 @@ user_info = {
   'name': '- Ozymandias -',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/138177073@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/archstanton/',
-  'markers': 17276,
-  'photos': 21658
+  'markers': 17277,
+  'photos': 21659
 }
