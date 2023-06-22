@@ -4,6 +4,6 @@ user_info = {
   'name': 'Alejandro David Olivera',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/99949037@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/alestaleiro/',
-  'markers': 2697,
-  'photos': 3634
+  'markers': 2698,
+  'photos': 3635
 }
