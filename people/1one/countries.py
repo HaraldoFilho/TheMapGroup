@@ -1,7 +1,7 @@
 countries_dict = {
-  'US': ['United States', 18, 21],
+  'JP': ['Japan', 2390, 36344],
   'BS': ['The Bahamas', 6, 8],
   'GB': ['United Kingdom', 1, 1],
-  'JP': ['Japan', 2389, 36343],
+  'US': ['United States', 18, 21],
   'IT': ['Italy', 2, 2]
 }
