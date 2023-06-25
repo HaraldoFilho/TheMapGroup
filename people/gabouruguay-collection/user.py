@@ -5,5 +5,5 @@ user_info = {
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/93293461@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/gabouruguay-collection/',
   'markers': 767,
-  'photos': 2673
+  'photos': 2674
 }
