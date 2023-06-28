@@ -4,6 +4,6 @@ user_info = {
   'name': 'Jim Smith',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/23244764@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/23244764@N08/',
-  'markers': 235,
-  'photos': 378
+  'markers': 236,
+  'photos': 379
 }
