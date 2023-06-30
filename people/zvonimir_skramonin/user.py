@@ -4,6 +4,6 @@ user_info = {
   'name': 'Zvonimir Skramončin',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/185660941@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/zvonimir_skramonin/',
-  'markers': 299,
-  'photos': 301
+  'markers': 300,
+  'photos': 302
 }
