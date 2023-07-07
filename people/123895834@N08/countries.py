@@ -1,14 +1,14 @@
 countries_dict = {
   'BZ': ['Belize', 6, 6],
-  'GB': ['United Kingdom', 96, 113],
   'PR': ['Puerto Rico', 4, 4],
-  'CA': ['Canada', 10, 12],
+  'GB': ['United Kingdom', 96, 113],
   'AI': ['Anguilla', 7, 9],
-  'US': ['United States of America', 2830, 3774],
   'NL': ['The Netherlands', 19, 21],
-  'DO': ['Dominican Republic', 4, 33],
+  'BS': ['Bahamas', 12, 12],
   'MX': ['Mexico', 12, 13],
-  'CU': ['Cuba', 6, 7],
+  'US': ['United States of America', 2830, 3774],
+  'CA': ['Canada', 10, 12],
   'KY': ['Cayman Islands', 5, 5],
-  'BS': ['Bahamas', 12, 12]
+  'CU': ['Cuba', 7, 8],
+  'DO': ['Dominican Republic', 4, 33]
 }
