@@ -4,6 +4,6 @@ user_info = {
   'name': 'Giorgio Rodano',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/134205948@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/134205948@N02/',
-  'markers': 5652,
-  'photos': 6126
+  'markers': 5654,
+  'photos': 6128
 }
