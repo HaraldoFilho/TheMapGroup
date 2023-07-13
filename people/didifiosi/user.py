@@ -4,6 +4,6 @@ user_info = {
   'name': 'JEAN PAUL NEVEU',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/131237713@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/didifiosi/',
-  'markers': 25,
-  'photos': 757
+  'markers': 26,
+  'photos': 760
 }
