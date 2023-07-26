@@ -4,6 +4,6 @@ user_info = {
   'name': 'Marco Brandstetter',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/149556095@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/marcostetter/',
-  'markers': 584,
-  'photos': 2295
+  'markers': 585,
+  'photos': 2297
 }
