@@ -4,6 +4,6 @@ user_info = {
   'name': 'Markus Bahlmann',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/48646584@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/cnmark/',
-  'markers': 3520,
-  'photos': 4738
+  'markers': 3521,
+  'photos': 4739
 }
