@@ -4,6 +4,6 @@ user_info = {
   'name': 'Philippe Guillot',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/130828646@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/130828646@N02/',
-  'markers': 13190,
-  'photos': 33313
+  'markers': 13194,
+  'photos': 33317
 }
