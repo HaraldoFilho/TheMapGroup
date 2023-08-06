@@ -4,6 +4,6 @@ user_info = {
   'name': 'Enrico Veneruso',
   'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/enricoveneruso/',
-  'markers': 63,
-  'photos': 66
+  'markers': 64,
+  'photos': 67
 }
