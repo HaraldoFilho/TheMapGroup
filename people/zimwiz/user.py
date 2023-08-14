@@ -1,9 +1,9 @@
 user_info = {
   'id': '14461370@N03',
   'alias': 'zimwiz',
-  'name': 'Charlie Zimmerman',
+  'name': 'zimwizdotcom',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/14461370@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/zimwiz/',
   'markers': 513,
-  'photos': 683
+  'photos': 684
 }
