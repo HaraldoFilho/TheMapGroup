@@ -4,6 +4,6 @@ user_info = {
   'name': 'David Stanley',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/79721788@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/davidstanleytravel/',
-  'markers': 6340,
-  'photos': 7325
+  'markers': 6342,
+  'photos': 7328
 }
