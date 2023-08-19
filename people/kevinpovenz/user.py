@@ -4,6 +4,6 @@ user_info = {
   'name': 'Kevin Povenz',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/19613665@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/kevinpovenz/',
-  'markers': 725,
-  'photos': 2189
+  'markers': 726,
+  'photos': 2190
 }
