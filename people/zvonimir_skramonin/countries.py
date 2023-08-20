@@ -1,4 +1,4 @@
 countries_dict = {
-  'HR': ['Croatia', 301, 303],
-  'BA': ['Bosnia and Herzegovina', 1, 1]
+  'BA': ['Bosnia and Herzegovina', 1, 1],
+  'HR': ['Croatia', 298, 300]
 }
