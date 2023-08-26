@@ -4,6 +4,6 @@ user_info = {
   'name': 'John Woolley',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/59961745@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/pics-by-john/',
-  'markers': 2236,
-  'photos': 9568
+  'markers': 2237,
+  'photos': 9570
 }
