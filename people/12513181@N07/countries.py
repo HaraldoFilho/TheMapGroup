@@ -1,6 +1,6 @@
 countries_dict = {
-  'TC': ['Turks and Caicos Islands', 10, 19],
+  'US': ['United States', 515, 669],
   'GR': ['Greece', 1, 1],
-  'US': ['United States', 514, 668],
-  'FR': ['France', 1, 1]
+  'FR': ['France', 1, 1],
+  'TC': ['Turks and Caicos Islands', 10, 19]
 }
