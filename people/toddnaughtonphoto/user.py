@@ -4,6 +4,6 @@ user_info = {
   'name': 'Photos.By.Todd',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/197647139@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/toddnaughtonphoto/',
-  'markers': 968,
-  'photos': 1357
+  'markers': 971,
+  'photos': 1361
 }
