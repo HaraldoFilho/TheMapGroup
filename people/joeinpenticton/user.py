@@ -4,6 +4,6 @@ user_info = {
   'name': 'Joe (José)  Garcia',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/23349126@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/joeinpenticton/',
-  'markers': 600,
-  'photos': 609
+  'markers': 601,
+  'photos': 610
 }
