@@ -1,11 +1,11 @@
 countries_dict = {
-  'FR': ['France', 176, 177],
+  'NO': ['Norway', 751, 780],
+  'ES': ['Spain', 1128, 1154],
+  'NZ': ['New Zealand', 235, 250],
+  'IT': ['Italy', 69, 69],
   'CH': ['Switzerland', 6, 6],
   'AR': ['Argentina', 187, 190],
-  'IT': ['Italy', 69, 69],
-  'AD': ['Andorra', 587, 595],
-  'NZ': ['New Zealand', 235, 250],
-  'ES': ['Spain', 1128, 1154],
+  'FR': ['France', 176, 177],
   'CL': ['Chile', 69, 74],
-  'NO': ['Norway', 750, 779]
+  'AD': ['Andorra', 587, 595]
 }
