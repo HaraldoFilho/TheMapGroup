@@ -4,6 +4,6 @@ user_info = {
   'name': 'amalthus',
   'avatar': '../../icons/photographer.svg',
   'url': 'https://www.flickr.com/photos/168583569@N03/',
-  'markers': 20,
-  'photos': 589
+  'markers': 21,
+  'photos': 590
 }
