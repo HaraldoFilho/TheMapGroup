@@ -4,6 +4,6 @@ user_info = {
   'name': 'Martin Thum',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/39904644@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/39904644@N05/',
-  'markers': 1592,
-  'photos': 1862
+  'markers': 1593,
+  'photos': 1863
 }
