@@ -4,6 +4,6 @@ user_info = {
   'name': 'Patrice Dardoize',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/192276370@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/192276370@N06/',
-  'markers': 528,
-  'photos': 671
+  'markers': 530,
+  'photos': 673
 }
