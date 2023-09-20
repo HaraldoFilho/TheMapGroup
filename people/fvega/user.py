@@ -1,9 +1,9 @@
 user_info = {
   'id': '158292715@N07',
   'alias': 'fvega',
-  'name': 'Fernando Vega',
+  'name': 'Fernando Vega (off)',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/fvega/',
-  'markers': 3163,
-  'photos': 4726
+  'markers': 3141,
+  'photos': 4705
 }
