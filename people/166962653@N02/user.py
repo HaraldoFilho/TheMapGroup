@@ -4,6 +4,6 @@ user_info = {
   'name': 'CravingEscape',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/166962653@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/166962653@N02/',
-  'markers': 51,
-  'photos': 55
+  'markers': 53,
+  'photos': 57
 }
