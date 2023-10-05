@@ -4,6 +4,6 @@ user_info = {
   'name': 'Michael Pfau',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/120177649@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/120177649@N03/',
-  'markers': 1199,
-  'photos': 6864
+  'markers': 1200,
+  'photos': 6870
 }
