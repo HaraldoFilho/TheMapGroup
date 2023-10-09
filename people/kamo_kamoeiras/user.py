@@ -4,6 +4,6 @@ user_info = {
   'name': 'KAMO KAMOEIRAS',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/163799240@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/kamo_kamoeiras/',
-  'markers': 1443,
-  'photos': 1971
+  'markers': 1444,
+  'photos': 1972
 }
