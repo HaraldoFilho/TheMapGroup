@@ -1,18 +1,18 @@
 countries_dict = {
+  'PE': ['Peru', 14, 24],
   'EG': ['Egypt', 118, 156],
+  'IT': ['Italy', 13, 14],
   'PT': ['Portugal', 50, 59],
+  'US': ['United States of America', 84, 108],
   'NL': ['Netherlands', 2, 2],
-  'FR': ['France', 1, 1],
+  'DE': ['Germany', 8, 8],
+  'BE': ['Belgium', 2, 2],
   'AR': ['Argentina', 224, 251],
   'ZA': ['South Africa', 130, 166],
-  'AE': ['United Arab Emirates', 27, 40],
+  'FR': ['France', 1, 1],
   'MA': ['Morocco', 96, 134],
-  'US': ['United States of America', 84, 108],
-  'IT': ['Italy', 13, 14],
+  'AE': ['United Arab Emirates', 27, 40],
   'ES': ['Spain', 126, 176],
   'CL': ['Chile', 26, 31],
-  'DE': ['Germany', 8, 8],
-  'PE': ['Peru', 14, 24],
-  'BE': ['Belgium', 2, 2],
-  'BR': ['Brazil', 2228, 3078]
+  'BR': ['Brazil', 2232, 3082]
 }
