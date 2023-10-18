@@ -1,4 +1,4 @@
 countries_dict = {
-  'CN': ['China', 1, 2],
-  'VN': ['Vietnam', 440, 712]
+  'VN': ['Vietnam', 441, 713],
+  'CN': ['China', 1, 2]
 }
