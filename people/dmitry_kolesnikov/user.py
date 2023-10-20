@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dmitry Kolesnikov',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/68420538@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/dmitry_kolesnikov/',
-  'markers': 102,
-  'photos': 190
+  'markers': 103,
+  'photos': 191
 }
