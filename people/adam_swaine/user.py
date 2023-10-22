@@ -4,6 +4,6 @@ user_info = {
   'name': 'Adam Swaine',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/43499552@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/adam_swaine/',
-  'markers': 15150,
-  'photos': 22953
+  'markers': 15151,
+  'photos': 22954
 }
