@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dirk Wandel',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/81504125@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/diwan/',
-  'markers': 7957,
-  'photos': 8430
+  'markers': 7958,
+  'photos': 8431
 }
