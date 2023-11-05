@@ -4,6 +4,6 @@ user_info = {
   'name': 'Ivor Jones',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/74974888@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/photos-by-ivor/',
-  'markers': 1322,
-  'photos': 28114
+  'markers': 1327,
+  'photos': 28119
 }
