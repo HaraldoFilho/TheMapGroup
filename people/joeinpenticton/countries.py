@@ -1,9 +1,9 @@
 countries_dict = {
-  'US': ['United States', 107, 108],
-  'FR': ['France', 1, 1],
-  'ES': ['Spain', 7, 7],
   'DE': ['Germany', 2, 2],
+  'CA': ['Canada', 463, 470],
+  'ES': ['Spain', 7, 7],
   'PT': ['Portugal', 33, 34],
-  'CA': ['Canada', 462, 469],
-  'CU': ['Cuba', 1, 1]
+  'CU': ['Cuba', 1, 1],
+  'FR': ['France', 1, 1],
+  'US': ['United States', 107, 108]
 }
