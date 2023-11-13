@@ -1,8 +1,8 @@
 countries_dict = {
-  'AQ': ['Antarctica', 1, 1],
-  'VN': ['Vietnam', 2, 2],
-  'CA': ['Canada', 3, 3],
   'GL': ['Greenland', 1, 1],
-  'US': ['United States of America', 525, 700],
-  'BM': ['Bermuda', 4, 4]
+  'US': ['United States of America', 526, 701],
+  'BM': ['Bermuda', 4, 4],
+  'VN': ['Vietnam', 2, 2],
+  'AQ': ['Antarctica', 1, 1],
+  'CA': ['Canada', 3, 3]
 }
