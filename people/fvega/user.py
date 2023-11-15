@@ -4,6 +4,6 @@ user_info = {
   'name': 'Fernando Vega',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/158292715@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/fvega/',
-  'markers': 3183,
-  'photos': 4731
+  'markers': 3188,
+  'photos': 4736
 }
