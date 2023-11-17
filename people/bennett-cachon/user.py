@@ -4,6 +4,6 @@ user_info = {
   'name': 'Gérard Cachon',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/96671573@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/bennett-cachon/',
-  'markers': 274,
-  'photos': 364
+  'markers': 275,
+  'photos': 365
 }
