@@ -281,7 +281,8 @@ countries_dict = {
   'VG': 'British Virgin Islands',
   'MF': 'Saint-Martin',
   'YT': 'Mayotte',
-  'MS': 'Montserrat'
+  'MS': 'Montserrat',
+  'NR': 'Nauru'
 }
 
 latitude_dict = {
