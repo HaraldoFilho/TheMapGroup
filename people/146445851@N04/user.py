@@ -4,6 +4,6 @@ user_info = {
   'name': 'Giosuè Bolis',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/146445851@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/146445851@N04/',
-  'markers': 203,
-  'photos': 274
+  'markers': 204,
+  'photos': 275
 }
