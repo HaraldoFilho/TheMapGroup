@@ -4,6 +4,6 @@ user_info = {
   'name': 'Nacho',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/23499399@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/ignaciomjimenez/',
-  'markers': 1085,
-  'photos': 1429
+  'markers': 1086,
+  'photos': 1430
 }
