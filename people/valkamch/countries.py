@@ -1,14 +1,14 @@
 countries_dict = {
-  'RU': ['Russia', 1321, 1544],
-  'NO': ['Norway', 1, 1],
-  'KH': ['Cambodia', 316, 378],
-  'MC': ['Monaco', 5, 12],
-  'MT': ['Malta', 1, 1],
-  'UA': ['Ukraine', 1254, 1402],
-  'IR': ['Iran', 1, 1],
+  'LK': ['Sri Lanka', 119, 175],
   'IT': ['Italy', 1370, 1578],
-  'FR': ['France', 1, 1],
+  'UA': ['Ukraine', 1257, 1405],
+  'IR': ['Iran', 1, 1],
+  'KH': ['Cambodia', 316, 378],
   'UZ': ['Uzbekistan', 169, 187],
+  'FR': ['France', 1, 1],
+  'NO': ['Norway', 1, 1],
   'SG': ['Singapore', 2, 16],
-  'LK': ['Sri Lanka', 119, 175]
+  'MT': ['Malta', 1, 1],
+  'RU': ['Russia', 1321, 1544],
+  'MC': ['Monaco', 5, 12]
 }
