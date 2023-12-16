@@ -1,13 +1,13 @@
 countries_dict = {
-  'US': ['United States of America', 2, 2],
-  'NO': ['Norway', 193, 293],
+  'NO': ['Norway', 194, 302],
   'SE': ['Sweden', 3, 3],
-  'IT': ['Italy', 6, 7],
-  'GB': ['United Kingdom', 21, 30],
-  'CH': ['Switzerland', 1, 1],
   'DE': ['Germany', 1, 1],
-  'SM': ['San Marino', 3, 3],
-  'TH': ['Thailand', 2, 2],
+  'GB': ['United Kingdom', 21, 30],
+  'VN': ['Vietnam', 1, 1],
+  'CH': ['Switzerland', 1, 1],
   'AT': ['Austria', 2, 2],
-  'VN': ['Vietnam', 1, 1]
+  'TH': ['Thailand', 2, 2],
+  'IT': ['Italy', 6, 7],
+  'US': ['United States of America', 2, 2],
+  'SM': ['San Marino', 3, 3]
 }
