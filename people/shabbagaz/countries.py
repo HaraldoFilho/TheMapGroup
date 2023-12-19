@@ -1,6 +1,6 @@
 countries_dict = {
-  'IE': ['Ireland', 54, 58],
-  'GB': ['United Kingdom', 12304, 17517],
+  'GB': ['United Kingdom', 12330, 17546],
+  'ES': ['Spain', 21, 103],
   'DE': ['Germany', 25, 230],
-  'ES': ['Spain', 21, 103]
+  'IE': ['Ireland', 54, 58]
 }
