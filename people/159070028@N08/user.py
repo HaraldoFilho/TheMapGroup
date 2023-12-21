@@ -4,6 +4,6 @@ user_info = {
   'name': 'iLOVEnature Photography Inspir',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/159070028@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/159070028@N08/',
-  'markers': 119,
-  'photos': 133
+  'markers': 120,
+  'photos': 134
 }
