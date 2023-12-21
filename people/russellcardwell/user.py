@@ -4,6 +4,6 @@ user_info = {
   'name': 'Russell Cardwell',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/55341805@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/russellcardwell/',
-  'markers': 1114,
-  'photos': 2459
+  'markers': 1115,
+  'photos': 2461
 }
