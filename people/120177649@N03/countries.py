@@ -1,10 +1,10 @@
 countries_dict = {
   'CH': ['Switzerland', 35, 131],
-  'AT': ['Austria', 4, 16],
-  'BE': ['Belgium', 3, 29],
-  'GB': ['United Kingdom', 429, 2955],
-  'DE': ['Germany', 639, 3174],
   'JE': ['Jersey', 14, 81],
-  'IT': ['Italy', 18, 71],
-  'FR': ['France', 124, 802]
+  'DE': ['Germany', 639, 3174],
+  'FR': ['France', 124, 802],
+  'GB': ['United Kingdom', 430, 2962],
+  'BE': ['Belgium', 3, 29],
+  'AT': ['Austria', 4, 16],
+  'IT': ['Italy', 18, 71]
 }
