@@ -4,6 +4,6 @@ user_info = {
   'name': 'Haraldo Albergaria',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/hpfilho/',
-  'markers': 553,
-  'photos': 998
+  'markers': 556,
+  'photos': 1007
 }
