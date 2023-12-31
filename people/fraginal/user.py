@@ -4,6 +4,6 @@ user_info = {
   'name': 'PINOY PHOTOGRAPHER',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/9060404@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/fraginal/',
-  'markers': 18791,
-  'photos': 48788
+  'markers': 18828,
+  'photos': 48825
 }
