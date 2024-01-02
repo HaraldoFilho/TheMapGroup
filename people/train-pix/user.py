@@ -4,6 +4,6 @@ user_info = {
   'name': 'Ron Fisher',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/40052043@N03_r.jpg',
   'url': 'https://www.flickr.com/photos/train-pix/',
-  'markers': 11315,
-  'photos': 22567
+  'markers': 11316,
+  'photos': 22578
 }
