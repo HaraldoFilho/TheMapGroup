@@ -1,7 +1,7 @@
 countries_dict = {
+  'ES': ['Spain', 73, 104],
   'NO': ['Norway', 63, 69],
   'FR': ['France', 154, 370],
-  'ES': ['Spain', 73, 104],
-  'MC': ['Monaco', 7, 16],
-  'GB': ['United Kingdom', 15151, 22744]
+  'GB': ['United Kingdom', 15154, 22747],
+  'MC': ['Monaco', 7, 16]
 }
