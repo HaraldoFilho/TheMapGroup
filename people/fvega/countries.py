@@ -1,12 +1,12 @@
 countries_dict = {
+  'SE': ['Sweden', 33, 44],
   'FI': ['Finland', 25, 25],
-  'GB': ['United Kingdom', 776, 916],
-  'SE': ['Sweden', 32, 43],
-  'IS': ['Iceland', 633, 850],
-  'IE': ['Ireland', 208, 252],
+  'NO': ['Norway', 172, 201],
   'ES': ['Spain', 1403, 2541],
   'NL': ['Netherlands', 19, 20],
-  'DE': ['Germany', 23, 24],
   'CH': ['Switzerland', 7, 7],
-  'NO': ['Norway', 170, 199]
+  'GB': ['United Kingdom', 776, 916],
+  'IE': ['Ireland', 208, 252],
+  'DE': ['Germany', 23, 24],
+  'IS': ['Iceland', 633, 850]
 }
