@@ -1,5 +1,5 @@
 members_list = [
-  ['30622510@N02', 'hpfilho', 'Haraldo Albergaria', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 563, 1025],
+  ['30622510@N02', 'hpfilho', 'Haraldo Albergaria', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 564, 1026],
   ['8121206@N07', 'chrispricephotography', 'Chris Price', "https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg", 950, 1329],
   ['79292646@N05', 'ellebedeva', 'Elena Lebedeva (IG: ellebedeva', "https://live.staticflickr.com/5674/buddyicons/79292646@N05_r.jpg", 229, 242],
   ['51839301@N00', '51839301@N00', 'Hans Pohl', "https://live.staticflickr.com/5674/buddyicons/51839301@N00_r.jpg", 3539, 5329],
@@ -7,7 +7,7 @@ members_list = [
   ['15029120@N00', 'michael_from_berlin', 'michael_jeddah', "https://live.staticflickr.com/5674/buddyicons/15029120@N00_r.jpg", 4099, 4222],
   ['57729348@N02', 'mosesharold', 'Harold  Moses', "https://live.staticflickr.com/5674/buddyicons/57729348@N02_r.jpg", 3129, 4386],
   ['30717887@N05', '30717887@N05', 'Tor Einar Andersen', "https://live.staticflickr.com/5674/buddyicons/30717887@N05_r.jpg", 349, 465],
-  ['40749798@N07', 'lemmo2009', 'Paul', "https://live.staticflickr.com/5674/buddyicons/40749798@N07_r.jpg", 5459, 5992],
+  ['40749798@N07', 'lemmo2009', 'Paul', "https://live.staticflickr.com/5674/buddyicons/40749798@N07_r.jpg", 5459, 5994],
   ['22572253@N08', '22572253@N08', 'Northern Tony', "https://live.staticflickr.com/5674/buddyicons/22572253@N08_r.jpg", 100, 100],
   ['27109078@N05', '27109078@N05', 'Norma Fincher', "https://live.staticflickr.com/5674/buddyicons/27109078@N05_r.jpg", 151, 37174],
   ['110839836@N07', 'andygocher', 'Andy Gocher', "https://live.staticflickr.com/5674/buddyicons/110839836@N07_r.jpg", 607, 1512],
@@ -112,6 +112,7 @@ members_list = [
   ['191886689@N08', '191886689@N08', 'MesphotosAmateur.', "https://live.staticflickr.com/5674/buddyicons/191886689@N08_r.jpg", 109, 126],
   ['191609180@N06', '191609180@N06', 'Abdou Nabile', "icons/photographer.svg", 0, 0],
   ['23631104@N02', 'sculptorli', 'sculptorli', "https://live.staticflickr.com/5674/buddyicons/23631104@N02_r.jpg", 198, 204],
+  ['131237713@N04', 'didifiosi', 'JEAN PAUL NEVEU', "https://live.staticflickr.com/5674/buddyicons/131237713@N04_r.jpg", 32, 1019],
   ['69623157@N05', 'fotosavulso', 'Fotos Avulso', "https://live.staticflickr.com/5674/buddyicons/69623157@N05_r.jpg", 556, 598],
   ['100209004@N04', 'oldboyscout', 'gsegelken', "https://live.staticflickr.com/5674/buddyicons/100209004@N04_r.jpg", 1551, 1738],
   ['31693521@N08', '79080', 'Robert C. Abraham', "https://live.staticflickr.com/5674/buddyicons/31693521@N08_r.jpg", 162, 177],
@@ -141,7 +142,7 @@ members_list = [
   ['39777440@N03', 'fraganda', 'fraganda.photo', "https://live.staticflickr.com/5674/buddyicons/39777440@N03_r.jpg", 256, 256],
   ['112196494@N02', '112196494@N02', 'thunderbird-72', "https://live.staticflickr.com/5674/buddyicons/112196494@N02_r.jpg", 1413, 2704],
   ['63558969@N08', 'massimo_francesconi', 'Massimo Francesconi', "https://live.staticflickr.com/5674/buddyicons/63558969@N08_r.jpg", 63, 68],
-  ['88321829@N03', 'airscan', 'Alexander Sand Halvorsen', "https://live.staticflickr.com/5674/buddyicons/88321829@N03_r.jpg", 245, 364],
+  ['88321829@N03', 'airscan', 'Alexander Sand Halvorsen', "https://live.staticflickr.com/5674/buddyicons/88321829@N03_r.jpg", 251, 370],
   ['92496593@N08', 'montenegrina', 'ForceMajeureMontenegro', "https://live.staticflickr.com/5674/buddyicons/92496593@N08_r.jpg", 1226, 1404],
   ['108339617@N08', 'basses-lumieres', 'Jo 0405', "https://live.staticflickr.com/5674/buddyicons/108339617@N08_r.jpg", 151, 698],
   ['168583569@N03', '168583569@N03', 'amalthus', "icons/photographer.svg", 32, 603],
@@ -204,8 +205,9 @@ members_list = [
   ['170935808@N08', 'dropiso', '( Daves.Pixel ) Photography', "https://live.staticflickr.com/5674/buddyicons/170935808@N08_r.jpg", 0, 0],
   ['196368204@N06', '196368204@N06', 'Richard Forensky', "https://live.staticflickr.com/5674/buddyicons/196368204@N06_r.jpg", 0, 0],
   ['96671573@N04', 'bennett-cachon', 'Gérard Cachon', "https://live.staticflickr.com/5674/buddyicons/96671573@N04_r.jpg", 276, 368],
-  ['87940223@N08', 'renato59', 'ReNato '59', "https://live.staticflickr.com/5674/buddyicons/87940223@N08_r.jpg", 424, 1465],
+  ['87940223@N08', 'renato59', 'ReNato \'59', "https://live.staticflickr.com/5674/buddyicons/87940223@N08_r.jpg", 424, 1465],
   ['86411192@N06', 'lucchesefabrizio', 'Fabrizio LUCCHESE', "https://live.staticflickr.com/5674/buddyicons/86411192@N06_r.jpg", 1227, 1230],
   ['196976091@N02', '196976091@N02', 'bernard notebom', "https://live.staticflickr.com/5674/buddyicons/196976091@N02_r.jpg", 0, 0],
+  ['15360731@N07', 'wa2wider', 'wa2wider', "https://live.staticflickr.com/5674/buddyicons/15360731@N07_r.jpg", 211, 234],
   ['35690321@N07', '35690321@N07', 'Julian Munilla Rio', "https://live.staticflickr.com/5674/buddyicons/35690321@N07_r.jpg", 958, 963]
 ]
