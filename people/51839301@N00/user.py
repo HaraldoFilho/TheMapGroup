@@ -4,6 +4,6 @@ user_info = {
   'name': 'Hans Pohl',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/51839301@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/51839301@N00/',
-  'markers': 3538,
-  'photos': 5328
+  'markers': 3539,
+  'photos': 5329
 }
