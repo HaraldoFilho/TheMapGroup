@@ -1,5 +1,5 @@
 members_list = [
-  ['30622510@N02', 'hpfilho', 'Haraldo Albergaria', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 564, 1026],
+  ['30622510@N02', 'hpfilho', 'Haraldo Albergaria', "https://live.staticflickr.com/5674/buddyicons/30622510@N02_r.jpg", 565, 1029],
   ['8121206@N07', 'chrispricephotography', 'Chris Price', "https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg", 950, 1329],
   ['79292646@N05', 'ellebedeva', 'Elena Lebedeva (IG: ellebedeva', "https://live.staticflickr.com/5674/buddyicons/79292646@N05_r.jpg", 229, 242],
   ['51839301@N00', '51839301@N00', 'Hans Pohl', "https://live.staticflickr.com/5674/buddyicons/51839301@N00_r.jpg", 3539, 5329],
@@ -46,7 +46,6 @@ members_list = [
   ['59509464@N00', 'iceland-ho', 'Hugi Ólafsson', "https://live.staticflickr.com/5674/buddyicons/59509464@N00_r.jpg", 2866, 2868],
   ['132920569@N02', '132920569@N02', 'Gilles Letang', "https://live.staticflickr.com/5674/buddyicons/132920569@N02_r.jpg", 176, 237],
   ['144107033@N04', '144107033@N04', 'Sebastián Aguilar', "https://live.staticflickr.com/5674/buddyicons/144107033@N04_r.jpg", 15119, 19700],
-  ['189226334@N08', 'peterrath', 'peter.rath', "https://live.staticflickr.com/5674/buddyicons/189226334@N08_r.jpg", 391, 710],
   ['100112015@N06', '100112015@N06', 'Francois Le Rumeur', "https://live.staticflickr.com/5674/buddyicons/100112015@N06_r.jpg", 172, 246],
   ['88123769@N02', 'volvob12b', 'Bernard Spragg. NZ', "https://live.staticflickr.com/5674/buddyicons/88123769@N02_r.jpg", 3630, 4895],
   ['123895834@N08', '123895834@N08', 'tquist24', "https://live.staticflickr.com/5674/buddyicons/123895834@N08_r.jpg", 3138, 4154],
