@@ -211,7 +211,7 @@ members_file = open("{}/members.py".format(repo_path), 'w')
 members_file.write("members_list = [\n")
 
 for i in range(len(members_list)):
-    members_file.write("  [\'{0}\', \'{1}\', \'{2}\', \"{3}\", {4}, {5}".format(members_list[i][0], members_list[i][1], members_list[i][2], members_list[i][3], members_list[i][4], members_list[i][5]))
+    members_file.write("  [\'{0}\', \'{1}\', \'{2}\', \"{3}\", {4}, {5}".format(members_list[i][0], members_list[i][1], members_list[i][2].replace("\'", "\\\'"), members_list[i][3], members_list[i][4], members_list[i][5]))
     if i < len(members_list)-1:
         members_file.write("],\n")
     else:
