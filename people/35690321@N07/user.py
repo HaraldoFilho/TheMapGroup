@@ -4,6 +4,6 @@ user_info = {
   'name': 'Julian Munilla Rio',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/35690321@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/35690321@N07/',
-  'markers': 959,
-  'photos': 964
+  'markers': 960,
+  'photos': 965
 }
