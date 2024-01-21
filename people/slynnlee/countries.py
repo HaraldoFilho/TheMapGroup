@@ -1,14 +1,15 @@
 countries_dict = {
-  'NL': ['Netherlands', 27, 37],
+  'FR': ['France', 1, 1],
   'IE': ['Ireland', 210, 953],
-  'US': ['United States', 326, 1825],
-  'VA': ['Vatican City', 1, 1],
-  'GB': ['United Kingdom', 369, 1835],
-  'PT': ['Portugal', 1, 2],
+  'RU': ['Russia', 2, 2],
+  'NL': ['Netherlands', 27, 37],
   'CA': ['Canada', 1, 39],
-  'AT': ['Austria', 3, 11],
+  'GB': ['United Kingdom', 369, 1835],
   'DE': ['Germany', 47, 204],
-  'AU': ['Australia', 11, 13],
+  'PT': ['Portugal', 1, 2],
+  'VA': ['Vatican City', 1, 1],
   'IT': ['Italy', 3, 3],
-  'RU': ['Russia', 2, 2]
+  'AT': ['Austria', 3, 11],
+  'US': ['United States', 326, 1825],
+  'AU': ['Australia', 11, 13]
 }
