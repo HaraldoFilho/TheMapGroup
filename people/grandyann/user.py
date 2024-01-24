@@ -4,6 +4,6 @@ user_info = {
   'name': 'Yann Pinczon du Sel',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/24482362@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/grandyann/',
-  'markers': 875,
-  'photos': 1157
+  'markers': 876,
+  'photos': 1158
 }
