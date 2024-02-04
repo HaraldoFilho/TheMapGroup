@@ -4,6 +4,6 @@ user_info = {
   'name': 'Matjaž Skrinar',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/130486903@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/130486903@N04/',
-  'markers': 246,
-  'photos': 254
+  'markers': 250,
+  'photos': 258
 }
