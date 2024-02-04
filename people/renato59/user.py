@@ -4,6 +4,6 @@ user_info = {
   'name': 'ReNato \'59',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/87940223@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/renato59/',
-  'markers': 429,
-  'photos': 1472
+  'markers': 433,
+  'photos': 1476
 }
