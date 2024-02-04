@@ -5,5 +5,5 @@ user_info = {
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/108339617@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/basses-lumieres/',
   'markers': 152,
-  'photos': 699
+  'photos': 700
 }
