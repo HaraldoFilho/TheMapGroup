@@ -1,9 +1,9 @@
 user_info = {
   'id': '25404639@N08',
   'alias': 'barbaraelaw',
-  'name': 'Barbara Lawrence',
+  'name': 'ManxieB- prefer comments!',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/25404639@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/barbaraelaw/',
-  'markers': 2461,
-  'photos': 3285
+  'markers': 2462,
+  'photos': 3286
 }
