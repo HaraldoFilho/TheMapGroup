@@ -4,6 +4,6 @@ user_info = {
   'name': 'YVES NEVEJANS',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/76410117@N04_r.jpg',
   'url': 'https://www.flickr.com/photos/76410117@N04/',
-  'markers': 1499,
-  'photos': 2679
+  'markers': 1501,
+  'photos': 2682
 }
