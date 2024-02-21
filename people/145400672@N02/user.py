@@ -4,6 +4,6 @@ user_info = {
   'name': 'Pit Spielmann',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/145400672@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/145400672@N02/',
-  'markers': 2442,
-  'photos': 3172
+  'markers': 2443,
+  'photos': 3173
 }
