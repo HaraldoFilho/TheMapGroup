@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dave Green',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/7126815@N05_r.jpg',
   'url': 'https://www.flickr.com/photos/misteroy/',
-  'markers': 4178,
-  'photos': 5979
+  'markers': 4179,
+  'photos': 5980
 }
