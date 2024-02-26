@@ -4,6 +4,6 @@ user_info = {
   'name': 'George Landis',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/38730049@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/38730049@N08/',
-  'markers': 898,
-  'photos': 51862
+  'markers': 899,
+  'photos': 51932
 }
