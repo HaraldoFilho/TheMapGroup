@@ -4,6 +4,6 @@ user_info = {
   'name': 'tquist24',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/123895834@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/123895834@N08/',
-  'markers': 3173,
-  'photos': 4192
+  'markers': 3174,
+  'photos': 4196
 }
