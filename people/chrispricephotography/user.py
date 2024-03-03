@@ -4,6 +4,6 @@ user_info = {
   'name': 'Chris Price',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/8121206@N07_r.jpg',
   'url': 'https://www.flickr.com/photos/chrispricephotography/',
-  'markers': 972,
-  'photos': 1356
+  'markers': 973,
+  'photos': 1357
 }
