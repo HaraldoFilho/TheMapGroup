@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dmitry Ivanov',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/140907479@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/140907479@N08/',
-  'markers': 781,
-  'photos': 949
+  'markers': 784,
+  'photos': 952
 }
