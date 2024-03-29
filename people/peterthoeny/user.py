@@ -4,6 +4,6 @@ user_info = {
   'name': 'Peter Thoeny - Quality HDR Pho',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/98786299@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/peterthoeny/',
-  'markers': 2146,
-  'photos': 3922
+  'markers': 2148,
+  'photos': 3924
 }
