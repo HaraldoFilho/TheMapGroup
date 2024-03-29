@@ -1,14 +1,14 @@
 countries_dict = {
-  'US': ['United States of America', 8, 90],
-  'ES': ['Spain', 707, 1816],
-  'RU': ['Russia', 1, 1],
-  'AR': ['Argentina', 61, 124],
-  'UY': ['Uruguay', 25, 184],
+  'GB': ['United Kingdom', 886, 2467],
+  'PT': ['Portugal', 2415, 5538],
+  'US': ['United States of America', 9, 91],
   'BR': ['Brazil', 2460, 6814],
+  'RU': ['Russia', 1, 1],
   'VA': ['Vatican City', 12, 16],
   'IT': ['Italy', 319, 615],
-  'GB': ['United Kingdom', 886, 2467],
+  'UY': ['Uruguay', 25, 184],
+  'CL': ['Chile', 1, 1],
+  'AR': ['Argentina', 61, 124],
   'FR': ['France', 6, 24],
-  'PT': ['Portugal', 2406, 5525],
-  'CL': ['Chile', 1, 1]
+  'ES': ['Spain', 709, 1818]
 }
