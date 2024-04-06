@@ -4,6 +4,6 @@ user_info = {
   'name': 'Ian & Marg',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/16938270@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/16938270@N00/',
-  'markers': 849,
-  'photos': 898
+  'markers': 850,
+  'photos': 899
 }
