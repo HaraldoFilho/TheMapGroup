@@ -4,6 +4,6 @@ user_info = {
   'name': 'Atif Hussain Photography',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/42102968@N00_r.jpg',
   'url': 'https://www.flickr.com/photos/atifhussainphotography/',
-  'markers': 507,
-  'photos': 513
+  'markers': 509,
+  'photos': 515
 }
