@@ -4,6 +4,6 @@ user_info = {
   'name': 'Dan Diffendale',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/7945858@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/dandiffendale/',
-  'markers': 1895,
-  'photos': 13230
+  'markers': 1896,
+  'photos': 13244
 }
