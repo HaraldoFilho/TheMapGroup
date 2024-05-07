@@ -4,6 +4,6 @@ user_info = {
   'name': 'Miguel RC',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/59150926@N02_r.jpg',
   'url': 'https://www.flickr.com/photos/miguelanxo57/',
-  'markers': 386,
-  'photos': 434
+  'markers': 387,
+  'photos': 435
 }
