@@ -1,7 +1,7 @@
 countries_dict = {
-  'BA': ['Bosnia and Herzegovina', 1, 1],
-  'DE': ['Germany', 16, 44],
-  'HR': ['Croatia', 2121, 4471],
+  'SI': ['Slovenia', 1, 14],
   'AT': ['Austria', 5, 5],
-  'SI': ['Slovenia', 1, 14]
+  'DE': ['Germany', 16, 44],
+  'HR': ['Croatia', 2123, 4474],
+  'BA': ['Bosnia and Herzegovina', 1, 1]
 }
