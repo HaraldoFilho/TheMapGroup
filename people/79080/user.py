@@ -4,6 +4,6 @@ user_info = {
   'name': 'Robert C. Abraham',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/31693521@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/79080/',
-  'markers': 174,
-  'photos': 189
+  'markers': 176,
+  'photos': 191
 }
