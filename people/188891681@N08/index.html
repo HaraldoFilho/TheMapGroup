@@ -122,12 +122,12 @@
       if (value[1].length <= 35) {
         new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
         .setLngLat(value[0])
-        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(htmlText))
+        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px',anchor:'bottom'}).setHTML(htmlText))
         .addTo(map);
       } else {
         new mapboxgl.Marker({color:'#C2185B',scale:0.7,draggable:false})
         .setLngLat(value[0])
-        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(htmlText))
+        .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px',anchor:'bottom'}).setHTML(htmlText))
         .addTo(map);
       }
 
