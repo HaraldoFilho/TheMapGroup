@@ -163,11 +163,11 @@
     if (value[4] <= 35) {
       marker = new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
       .setLngLat(value[0])
-      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px'}).setHTML(htmlText));
+      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'566px',anchor:'bottom'}).setHTML(htmlText));
     } else {
       marker = new mapboxgl.Marker({color:markerColor,scale:0.7,draggable:false})
       .setLngLat(value[0])
-      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px'}).setHTML(htmlText));
+      .setPopup(new mapboxgl.Popup({closeButton:false,maxWidth:'592px',anchor:'bottom'}).setHTML(htmlText));
     }
 
     if (member) {
