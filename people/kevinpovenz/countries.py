@@ -1,8 +1,8 @@
 countries_dict = {
   'BB': ['Barbados', 1, 1],
-  'LC': ['Saint Lucia', 2, 2],
+  'US': ['United States', 745, 2286],
   'SK': ['Slovakia', 3, 6],
-  'GP': ['Guadeloupe', 1, 2],
   'NL': ['Netherlands', 2, 2],
-  'US': ['United States', 745, 2285]
+  'LC': ['Saint Lucia', 2, 2],
+  'GP': ['Guadeloupe', 1, 2]
 }
