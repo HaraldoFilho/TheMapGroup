@@ -22,7 +22,7 @@ user_id = api_credentials.user_id
 
 group_url = "https://www.flickr.com/groups/the-map-group/"
 photos_url = "http://www.flickr.com/photos"
-map_group_url = "https://the-map-group.pictures"
+map_group_url = "https://the-map-group.github.io"
 
 # Flickr api access
 flickr = flickrapi.FlickrAPI(api_key, api_secret, format='parsed-json')
@@ -290,4 +290,3 @@ for member in members_dirs:
             if member in topic[1]:
                 reply_message = "[https://www.flickr.com/photos/{}/] Your map was removed. Feel free to come back anytime and a new map will be created for you.".format(member)
                 flickr.groups.discuss.replies.add(api_key=api_key, group_id=group_id, topic_id=topic[0], message=reply_message)
-
