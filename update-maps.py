@@ -22,7 +22,7 @@ user_id = api_credentials.user_id
 
 group_url = "https://www.flickr.com/groups/the-map-group/"
 photos_url = "http://www.flickr.com/photos"
-map_group_url = "https://the-map-group.github.io"
+map_group_url = "https://the-map-group.in"
 
 # Flickr api access
 flickr = flickrapi.FlickrAPI(api_key, api_secret, format='parsed-json')
