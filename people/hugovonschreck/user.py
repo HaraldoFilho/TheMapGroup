@@ -4,6 +4,6 @@ user_info = {
   'name': 'Heinz Dieter  Heil',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/74758246@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/hugovonschreck/',
-  'markers': 1538,
-  'photos': 5882
+  'markers': 1539,
+  'photos': 5883
 }
