@@ -408,13 +408,13 @@ function setSelectorPosition() {
 
 function addListenerToPeople(member) {
   if (member[4] > 0) {
-    var member_url = "https://the-map-group.github.io/people/".concat(member[1]);
+    var member_url = "people/".concat(member[1]);
     document.getElementById(member[0]).addEventListener('click', function() { window.location.href = member_url });
   }
 }
 
 function addListenerToCountries(country) {
-  var country_url = "https://the-map-group.github.io/countries/".concat(country[0].toLowerCase());
+  var country_url = "countries/".concat(country[0].toLowerCase());
   document.getElementById(country[0]).addEventListener('click', function() { window.location.href = country_url });
 }
 
