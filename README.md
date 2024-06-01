@@ -22,7 +22,7 @@ The markers have the same behaviour of the group's map.
 
 ### Map Data
 
-The maps data are generated using the script [FlickrMap](https://github.com/the-map-group/FlickrMap), writen in _**Python**_. This script uses the [_Flickr API_](https://www.flickr.com/services/api/)
+The maps data are generated using the script [FlickrMap](https://github.com/the-map-group/flickr-map), writen in _**Python**_. This script uses the [_Flickr API_](https://www.flickr.com/services/api/)
 to get the photos data. It generates the following files:
 
 - **locations.py**: Contains all the markers information, as coordinates and photos attached to them.
