@@ -4,6 +4,6 @@ user_info = {
   'name': 'Rubem Porto Jr',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/38795342@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/rubempjr/',
-  'markers': 7315,
-  'photos': 18522
+  'markers': 7316,
+  'photos': 18523
 }
