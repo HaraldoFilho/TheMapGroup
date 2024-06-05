@@ -189,7 +189,7 @@ for page_number in range(number_of_pages, 0, -1):
                 members_list[i][5] = member_n_photos
                 already_in_list = True
 
-        if not already_in_list:
+        if not already_in_list and member_n_places > 0:
             members_list.append([member_id, member_alias, member_name, member_avatar, member_n_places, member_n_photos])
 
         print("Finished!\n")
@@ -202,7 +202,7 @@ for page_number in range(number_of_pages, 0, -1):
             os.system("rm {}/user.py".format(member_path))
         os.system("rm -fr {}/__pycache__".format(member_path))
 
-# removed from the list members who left the group
+# remove from the list members who left the group
 for i in range(len(members_list)-1, -1, -1):
     if members_list[i][1] not in current_members:
         members_list.pop(i)
