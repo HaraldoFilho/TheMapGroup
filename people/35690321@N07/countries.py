@@ -1,7 +1,7 @@
 countries_dict = {
-  'BG': ['Bulgaria', 2, 2],
+  'IE': ['Ireland', 11, 11],
+  'ES': ['Spain', 837, 844],
   'NO': ['Norway', 11, 11],
-  'ES': ['Spain', 836, 843],
-  'PT': ['Portugal', 125, 125],
-  'IE': ['Ireland', 11, 11]
+  'BG': ['Bulgaria', 2, 2],
+  'PT': ['Portugal', 125, 125]
 }
