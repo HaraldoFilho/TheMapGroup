@@ -4,6 +4,6 @@ user_info = {
   'name': 'Steve Weston',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/58435673@N08_r.jpg',
   'url': 'https://www.flickr.com/photos/ultimax_1964/',
-  'markers': 245,
-  'photos': 637
+  'markers': 246,
+  'photos': 638
 }
