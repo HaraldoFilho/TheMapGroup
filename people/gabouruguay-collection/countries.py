@@ -1,11 +1,11 @@
 countries_dict = {
-  'CL': ['Chile', 7, 15],
-  'ES': ['Spain', 34, 71],
-  'AR': ['Argentina', 43, 128],
   'UY': ['Uruguay', 578, 2040],
-  'PE': ['Peru', 41, 82],
+  'AR': ['Argentina', 43, 128],
   'ZA': ['South Africa', 57, 130],
-  'JP': ['Japan', 22, 31],
+  'CL': ['Chile', 7, 15],
+  'PE': ['Peru', 41, 82],
+  'MX': ['Mexico', 26, 295],
   'DO': ['Dominican Republic', 11, 16],
-  'MX': ['Mexico', 26, 295]
+  'ES': ['Spain', 34, 71],
+  'JP': ['Japan', 23, 33]
 }
