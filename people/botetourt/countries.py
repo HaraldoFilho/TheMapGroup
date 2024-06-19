@@ -1,13 +1,13 @@
 countries_dict = {
-  'MX': ['Mexico', 8, 10],
-  'KE': ['Kenya', 158, 258],
-  'US': ['United States of America', 3519, 6188],
-  'GB': ['United Kingdom', 52, 95],
-  'TZ': ['Tanzania', 308, 911],
-  'CA': ['Canada', 10, 13],
+  'QA': ['Qatar', 3, 3],
   'NL': ['Netherlands', 1, 1],
-  'VA': ['Vatican City', 16, 19],
+  'CA': ['Canada', 10, 13],
+  'GB': ['United Kingdom', 52, 95],
   'IT': ['Italy', 349, 482],
+  'TZ': ['Tanzania', 308, 911],
+  'KE': ['Kenya', 158, 258],
+  'MX': ['Mexico', 8, 10],
+  'US': ['United States of America', 3520, 6189],
   'TR': ['Turkey', 1, 1],
-  'QA': ['Qatar', 3, 3]
+  'VA': ['Vatican City', 16, 19]
 }
