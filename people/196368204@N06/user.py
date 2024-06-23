@@ -4,6 +4,6 @@ user_info = {
   'name': 'Richard Forensky',
   'avatar': 'https://live.staticflickr.com/5674/buddyicons/196368204@N06_r.jpg',
   'url': 'https://www.flickr.com/photos/196368204@N06/',
-  'markers': 1,
-  'photos': 7
+  'markers': 0,
+  'photos': 0
 }
