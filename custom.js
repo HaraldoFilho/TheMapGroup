@@ -4,6 +4,7 @@ function custom() {
 
   addFavicon();
   addFooter();
+  addBmcLogo();
   createOverlay();
   createNavButton();
   fitBoundingBox(current_bbox);
@@ -473,4 +474,15 @@ function addFooter() {
   footer.setAttribute("class", "footer");
   footer.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API.<br>Map icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a>";
   document.body.append(footer);
+}
+
+function addBmcLogo() {
+  var bmc_link = document.createElement("A");
+  bmc_link.setAttribute("href", "https://buymeacoffee.com/haraldo");
+  bmc_link.setAttribute("target", "_blank")
+  var bmc_logo = document.createElement("IMG");
+  bmc_logo.setAttribute("class", "bmc_logo");
+  bmc_logo.setAttribute("src", "res/bmc-button.svg");
+  bmc_link.appendChild(bmc_logo);
+  document.body.append(bmc_link);
 }
