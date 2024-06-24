@@ -472,7 +472,7 @@ function changeGroupBackgroundColor() {
 function addFooter() {
   var footer = document.createElement("DIV");
   footer.setAttribute("class", "footer");
-  footer.innerHTML = "Generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API<br>Map icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a>";
+  footer.innerHTML = "Generated using the <a href=\"https://www.flickr.com/\" target=\"_blank\">Flick™</a> API<br>Map icon made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\" target=\"_blank\">Freepik</a>";
   document.body.append(footer);
 }
 
