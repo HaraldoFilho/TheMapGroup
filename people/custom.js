@@ -363,6 +363,6 @@ function addFooter() {
 function addAttribution() {
   var attrib = document.createElement("DIV");
   attrib.setAttribute("class", "attribution");
-  attrib.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\">Flick™</a> API.<br>Flag icons made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a>";
+  attrib.innerHTML = "Map generated using the <a href=\"https://www.flickr.com/\" target=\"_blank\">Flick™</a> API<br>Flag icons made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\" target=\"_blank\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\" target=\"_blank\">www.flaticon.com</a>";
   document.body.append(attrib);
 }
