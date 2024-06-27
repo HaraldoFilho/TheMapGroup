@@ -16,7 +16,7 @@ rm user.py
 git add countries.py
 git add locations.py
 git add user.py
-git commit -m "Reset map for $1"
+git commit -m "Reset map for member '$1'"
 git push origin master
 
 rm countries.py
